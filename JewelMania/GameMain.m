@@ -56,22 +56,21 @@ CGSize ws;
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super initWithColor:ccc4(0,0, 0, 1)]) ) {
         
-        //////// junaid ///////////
+        // Show a Chartboost Ad
         if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
         {
             [[Chartboost sharedChartboost] showInterstitial];
             [[Chartboost sharedChartboost] cacheInterstitial];
         }
+        
+        // Start Music
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
         float ip5OffSet;
-        //////////////////////////////
-        
         
         sd = [SharedData getSharedInstance];
 		ws=[[CCDirector sharedDirector]winSize];
         
-        
-        
+        // One minute of gameplay
         gameTime=1800;
         
         // number of rows and columns
@@ -107,12 +106,11 @@ CGSize ws;
         mainMenuSprite=[[CCSprite alloc]init];
         [self addChild:mainMenuSprite];
         
-
-        
+        // Main Menu
         if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
         {
            mainMengBG=[[CCSprite alloc]initWithFile:@"mainMenuBG-hd.png"];
-            mainMengBG.scaleX = 1.2;
+            mainMengBG.scaleX = 1.2; // why scale this?
             mainMengBG.scaleY = sd.imgScaleFactorY;
         }
         else
@@ -126,29 +124,26 @@ CGSize ws;
         [mainMenuSprite addChild:mainMengBG];
         
         
-      
-        startBtn=[self createButtonWithFile:@"startBtn.png" sel:@selector(startBtnHandler)];
-        startBtn.position=ccp(ws.width/2,ws.height-(258+ip5OffSet)*sd.scaleFactorY);
+        // Main Menu Buttons
+        
+        // Play button
+        startBtn=[self createButtonWithFile:@"buttonPlay_up.png" sel:@selector(startBtnHandler)];
+        startBtn.position=ccp(ws.width/2,ws.height-(270+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:startBtn];
       
-        /*
-        moreAppsBtn=[self createButtonWithFile:@"moreAppsBtn.png" sel:@selector(moreAppsBtnHandler)];
-        moreAppsBtn.position=ccp(ws.width/2,ws.height-(438+ip5OffSet)*sd.scaleFactorY);
-        [mainMenuSprite addChild:moreAppsBtn];
-        */
-        
-        /////// junaid //////////
-        
+        /* kill the locking
         if(![[NSUserDefaults standardUserDefaults] boolForKey:@"multiplayerUnlocked"])
         {
             multiPlayerBtn = [self createButtonWithFile:@"multiBtnlock.png" sel:@selector(multiPlayerBtnHandler)];
         }
-        else
-            multiPlayerBtn = [self createButtonWithFile:@"multiBtn.png" sel:@selector(multiPlayerBtnHandler)];
+        else */
+            
+        multiPlayerBtn = [self createButtonWithFile:@"multiBtn.png" sel:@selector(multiPlayerBtnHandler)];
+        
         multiPlayerBtn.position = ccp (ws.width/2,ws.height-(317+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:multiPlayerBtn];
         
-        
+        // Game Center Leaderboards
         leaderBtn = [self createButtonWithFile:@"leaderBtn.png" sel:@selector(leaderBtnHandler)];
         leaderBtn.position = ccp(ws.width/2,ws.height-(375+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:leaderBtn];
@@ -160,10 +155,8 @@ CGSize ws;
         restoreBtn = [self createButtonWithFile:@"restoreBtn.png" sel:@selector(restorBtnHandler)];
         restoreBtn.position = ccp(ws.width/2+ws.width/3.5,ws.height-25*sd.scaleFactorY);
         [mainMenuSprite addChild:restoreBtn];
-        //////////////////////////
-        
-        
-        
+
+        // IN GAME
         inGame=[[CCSprite alloc]init];
         inGame.position=ccp(0,ws.height);
         CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG2.png"];
@@ -181,30 +174,21 @@ CGSize ws;
         [inGame addChild:gemsCMC];
         [inGame addChild:IGBG z:-1];
         
-       
-        
-        
-        
-        
+
         inGame.visible=NO;
         [self addChild:inGame];
         
-        
-        
-        
-        
+        // QUIT GAME
         backBtn=[self createButtonWithFile:@"backBtn.png" sel:@selector(backHandler)];
          backBtn.position=ccp(ws.width-40*sd.scaleFactorX,-20*sd.scaleFactorY); //// 74
         [inGame addChild:backBtn];
         
-        ///////// junaid ////////
+        // Current Score
         scoreTextTTF = [CCLabelTTF labelWithString:@"99999999999" fontName:FONT_NAME fontSize:25.0*sd.scaleFactorY];
         scoreTextTTF.anchorPoint=ccp(0,0.5);
         [scoreTextTTF setString:[NSString stringWithFormat:@"0"]];
         scoreTextTTF.position=ccp(90*sd.scaleFactorX,-18*sd.scaleFactorY);  /// 74
         scoreTextTTF.color = kFontColor;
-        
-        ////////////////////////
         
         if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)
         {
@@ -213,12 +197,7 @@ CGSize ws;
         }
         
         
-        
-//        scoreText=[CCLabelBMFont labelWithString:@"99999999999" fntFile:@"game.fnt"];
-//        scoreText.anchorPoint=ccp(0,0.5);
-//        [scoreText setString:[NSString stringWithFormat:@"SCORE:0"]];
-//        scoreText.position=ccp(10,-74);
-        
+        // TIMER BAR
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
         timeBar.anchorPoint=ccp(0,1);
         if(ws.height == 1024 && [UIScreen mainScreen].scale == 1)
@@ -245,7 +224,7 @@ CGSize ws;
         
         [self addSingleTouch];
         
-        
+        // GAME OVER
         gameOver=[[CCSprite alloc]init];
         
         CCSprite *gameOverBG=[CCSprite spriteWithFile:@"gameOver.png"];
@@ -263,9 +242,7 @@ CGSize ws;
         
         [self addChild:gameOver];
         
-        
-        
-        ///////// junaid ////////
+        // FINAL SCORE
         scoreTextTTF2 = [CCLabelTTF labelWithString:@"99999999999" fontName:FONT_NAME fontSize:35.0*sd.scaleFactorY];
         scoreTextTTF2.anchorPoint=ccp(0.5,0.5);
         scoreTextTTF2.scale=1.5;
@@ -284,25 +261,22 @@ CGSize ws;
         {
             scoreTextTTF2.position=ccp(ws.width/2 ,-185);
         }
-        /////////////////////////
+
         
-//        scoreText2=[CCLabelBMFont labelWithString:@"99999999999" fntFile:@"game.fnt"];
-//        scoreText2.anchorPoint=ccp(0.5,0.5);
-//        scoreText2.scale=1.5;
-//        [scoreText2 setString:[NSString stringWithFormat:@"000000000"]];
-//        scoreText2.position=ccp(ws.width/2 ,-200);
         [gameOver addChild:scoreTextTTF2];
         gameOver.visible=NO;
         
-        
+        // Revmob FREE GAME ad button
         freeBtn = [self createButtonWithFile:@"freeBtn.png" sel:@selector(freeBtnHandler)];
         freeBtn.position = ccp(ws.width/2,-340*sd.scaleFactorY);
         [gameOver addChild:freeBtn];
 
+        // Done or Next or exit Button
         okBtn=[self createButtonWithFile:@"okBtn.png" sel:@selector(okHandler)];
         okBtn.position=ccp(ws.width/2,-400*sd.scaleFactorY);
         [gameOver addChild:okBtn];
         
+        // Chartboost More Games
         moreGamesBtnGameOver  = [self createButtonWithFile:@"moreAppsBtn.png" sel:@selector(moreAppsBtnHandler)];
         moreGamesBtnGameOver.position=ccp(ws.width/2,-280*sd.scaleFactorY);
         [gameOver addChild:moreGamesBtnGameOver];
@@ -313,14 +287,14 @@ CGSize ws;
 }
 
 -(void) backHandler{
-    
+// Show a chartboost ad
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {
         [[Chartboost sharedChartboost] showInterstitial];
         [[Chartboost sharedChartboost] cacheInterstitial];
     }
     
-    [self hideBanner];
+    // [self hideBanner];
     [self unschedule:@selector(loop)];
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -334,6 +308,7 @@ CGSize ws;
 }
 
 -(void) okHandler{
+    // This is where I want to hook up Mopub
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {
         [[Chartboost sharedChartboost] showInterstitial];
@@ -365,6 +340,7 @@ CGSize ws;
     }
 }
 
+// Game Logic ?
 -(Gem*) getAGemAvoidComboWithHID:(int)_hID vID:(int)_vID{
     Gem *gem;
    //NSMutableArray *allArr=[[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
@@ -431,8 +407,6 @@ CGSize ws;
         }
     
     }
-    
-    
     
     
     gem=[self createGemDifferentFromArray:debarArr];
@@ -662,14 +636,13 @@ CGSize ws;
     }
     
     
-    //重设下落的宝石，使数组对应
+    //Resetting the whereabouts of the gems to make the array corresponds to
     for (int _k=0; _k<positionChangedGemsArr.count; _k++) {
         Gem *__gem=[positionChangedGemsArr objectAtIndex:_k];
                  
         [[gem2DArr objectAtIndex:__gem->memoryIndexV] setObject:@"empty" atIndexedSubscript:__gem->indexH];
     }
     
-    //重设下落的宝石，使数组对应
     for (int _k=0; _k<positionChangedGemsArr.count; _k++) {
         Gem *__gem=[positionChangedGemsArr objectAtIndex:_k];
         [[gem2DArr objectAtIndex:__gem->indexV] setObject:__gem atIndexedSubscript:__gem->indexH];
@@ -681,7 +654,7 @@ CGSize ws;
     BOOL handlerAdded=NO;
     
     
-    //创建新宝石
+    //Create a new gem
     
     NSMutableArray *newGemsCreatedArr=[[NSMutableArray alloc]init];
     
@@ -721,7 +694,7 @@ CGSize ws;
         }
     }
     
-    //重设下落的宝石，使数组对应
+    //Resetting the whereabouts of the gems to make the array corresponds to
     for (int _k=0; _k<newGemsCreatedArr.count; _k++) {
         Gem *__gem=[newGemsCreatedArr objectAtIndex:_k];
         [[gem2DArr objectAtIndex:__gem->indexV] setObject:__gem atIndexedSubscript:__gem->indexH];
@@ -741,8 +714,6 @@ CGSize ws;
 
 -(void) newCreatedGemsMoveDownFinishedHandler{
     
-    
-    
     gemToBeExchanged=nil;
     gemMoved=nil;
     moveAble = YES;
@@ -758,8 +729,7 @@ CGSize ws;
             for (int i=0; i<___toRemoveArr.count; i++) {
                 Gem *gem=[___toRemoveArr objectAtIndex:i];
                 
-                
-                /////// junaid //////////
+                // Points gained text
                 CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:30*sd.scaleFactorY];
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
@@ -770,7 +740,6 @@ CGSize ws;
                                                          selector : @selector(removeVisualLabel : data:)
                                                               data:scoreVisual];
                 [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-                /////////////////////////////
                 
                 
                 id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
@@ -851,13 +820,11 @@ CGSize ws;
         if (arrayOfGemsToRemove.count>2) {
             score+=arrayOfGemsToRemove.count*10;
             
-            
-            
+            // Points text again???
             [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
             for (int i=0; i<arrayOfGemsToRemove.count; i++) {
                 Gem *gem=[arrayOfGemsToRemove objectAtIndex:i];
                 
-                /////// junaid //////////
                 CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:25*sd.scaleFactorY];
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
@@ -868,7 +835,7 @@ CGSize ws;
                                                          selector : @selector(removeVisualLabel : data:)
                                                               data:scoreVisual];
                 [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-                /////////////////////////////
+
                 
                 id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
                 id moveXEase=[CCEaseExponentialOut actionWithAction:scaleXY];
@@ -930,16 +897,8 @@ CGSize ws;
     
     if(memoryTouchedGem)
     {
-
-//        if(fabs(point.x-memoryTouchedGem->gx)>30*sd.scaleFactorX||fabs(point.y-(memoryTouchedGem->gy+gemWid))>30*sd.scaleFactorY)
         {
-            
             Gem *gem;
-//            if (fabs(point.x-memoryTouchedGem->gx)>fabs(point.y-(memoryTouchedGem->gy+gemWid)))
-//            {
-//                gem=[self getGemAtStagePointWithPoint:CGPointMake(point.x, memoryTouchedGem->gy+gemWid)];
-//            }
-//            else
             {
                 gem=[self getGemAtStagePointWithPoint:CGPointMake(point.x, point.y)];
             }
@@ -957,7 +916,6 @@ CGSize ws;
                     [arrayOfGemsToRemove addObject:gemMoved];
                     gemMoved->checkedInLine = YES;
                 }
-//                NSLog(@" current gem pos   %f %f     Last gem posiiton %f   %f ",gemToBeExchanged.position.x,gemToBeExchanged.position.y, positionOfLastGemInLine.x , positionOfLastGemInLine.y);
                 
                     if(((int)(gemToBeExchanged.position.x) == (int)(positionOfLastGemInLine.x+gemWid) && (int)(gemToBeExchanged.position.y) == (int)(positionOfLastGemInLine.y)) ||
                        ((int)(gemToBeExchanged.position.x) == (int)(positionOfLastGemInLine.x-gemWid) && (int)(gemToBeExchanged.position.y) == (int)(positionOfLastGemInLine.y)) ||
@@ -1031,56 +989,8 @@ CGSize ws;
                 }
             }
     
-//            [gemsCMC reorderChild:gemMoved z:[[gemsCMC children] count]-1];
-//            
-//            //gemMoved.position=ccp(gemMoved.position.x-30,gemMoved.position.y);
-//            
-//            gemMoved.scale=1.0;
-//            
-//            
-//            
-//            id moveX=[CCMoveTo actionWithDuration:0.4 position:ccp(gemToBeExchanged.position.x,gemToBeExchanged.position.y)];
-//            id moveXEase=[CCEaseExponentialOut actionWithAction:moveX];
-//            CCCallFunc *cccf=[CCCallFunc actionWithTarget:self selector:@selector(exChangeFinishedHandler)];
-//            CCSequence *seq=[CCSequence actions:moveXEase,cccf,nil];
-//            
-//            
-//            id moveX2=[CCMoveTo actionWithDuration:0.4 position:ccp(gemMoved.position.x,gemMoved.position.y)];
-//            id moveXEase2=[CCEaseExponentialOut actionWithAction:moveX2];
-//            CCCallFunc *cccf2=[CCCallFunc actionWithTarget:self selector:@selector(exChangeFinishedHandler2)];
-//            CCSequence *seq2=[CCSequence actions:moveXEase2,cccf2,nil];
-//            
-//            
-//            
-//            [gemMoved runAction:seq];
-//            [gemToBeExchanged runAction:seq2];
-//            
-//            memoryTouchedGem=nil;
-//            
-//            NSMutableArray *hArr=[gem2DArr objectAtIndex:gemToBeExchanged->indexV];
-//            
-//            [hArr setObject:gemMoved atIndexedSubscript:gemToBeExchanged->indexH];
-//            
-//            NSMutableArray *hArr2=[gem2DArr objectAtIndex:gemMoved->indexV];
-//            
-//            [hArr2 setObject:gemToBeExchanged atIndexedSubscript:gemMoved->indexH];
-//            
-//            int tempGemMovedIndexH=gemMoved->indexH;
-//            int tempGemMovedIndexV=gemMoved->indexV;
-//            
-//            int tempGemToBeExchangedIndexH=gemToBeExchanged->indexH;
-//            int tempGemToBeExchangedIndexV=gemToBeExchanged->indexV;
-//            
-//            gemMoved->indexH=tempGemToBeExchangedIndexH;
-//            gemMoved->indexV=tempGemToBeExchangedIndexV;
-//            
-//            gemToBeExchanged->indexH=tempGemMovedIndexH;
-//            gemToBeExchanged->indexV=tempGemMovedIndexV;
-            
-            
-//            [[SimpleAudioEngine sharedEngine] playEffect:@"move.mp3"];
+
             [self removeSingleTouch];
-                
                 
                 
             }
@@ -1111,13 +1021,11 @@ CGSize ws;
     if (___toRemoveArr.count>0) {
         score+=___toRemoveArr.count*10;
         
-
-        
+        // Points Code again???
         [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
         for (int i=0; i<___toRemoveArr.count; i++) {
             Gem *gem=[___toRemoveArr objectAtIndex:i];
             
-            /////// junaid //////////
             CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:25*sd.scaleFactorY];
             [scoreVisual setPosition:gem.position];
             scoreVisual.color = kFontColor;
@@ -1128,7 +1036,7 @@ CGSize ws;
                                                        selector : @selector(removeVisualLabel : data:)
                                                             data:scoreVisual];
             [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-            /////////////////////////////
+
             
             id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
             id moveXEase=[CCEaseExponentialOut actionWithAction:scaleXY];
@@ -1151,7 +1059,7 @@ CGSize ws;
        
     }
     else{
-        //把宝石复位
+        //Reset the gems
         id moveX=[CCMoveTo actionWithDuration:0.4 position:ccp(gemToBeExchanged.position.x,gemToBeExchanged.position.y)];
         id moveXEase=[CCEaseExponentialOut actionWithAction:moveX];
         CCCallFunc *cccf=[CCCallFunc actionWithTarget:self selector:@selector(fw_exChangeFinishedHandler)];
@@ -1173,11 +1081,6 @@ CGSize ws;
     if(gameIsOver){
         return;
     }
-//    for (int i=0; i<___toRemoveArr.count; i++) {
-//        Gem *gem=[___toRemoveArr objectAtIndex:i];
-//        
-//        [gem.parent removeChild:gem cleanup:YES];
-//    }
     for (int i=0; i<arrayOfGemsToRemove.count; i++)
     {
         Gem *gem=[arrayOfGemsToRemove objectAtIndex:i];
@@ -1197,7 +1100,7 @@ CGSize ws;
     [self addNewGemsToTheTop];
 }
 
-//复位完成
+//Reset is complete
 -(void) fw_exChangeFinishedHandler{
     if(gameIsOver){
         return;
@@ -1234,7 +1137,7 @@ CGSize ws;
 -(void) exChangeFinishedHandler2{}
 
 
-
+// TIME REMAINING PROGRESS BAR
 -(void)loop{
     time-=1;
     
@@ -1252,12 +1155,6 @@ CGSize ws;
     }
     
     if (time<=0) {
-        [self hideBanner];
-        if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
-        {
-            [ALInterstitialAd showOver:[[UIApplication sharedApplication] keyWindow]];
-            
-        }
         [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [[SimpleAudioEngine sharedEngine] playEffect:@"gameover.mp3"];
         NSString *category =[[[NSBundle mainBundle] bundleIdentifier] stringByAppendingString:@".leaderboard"];
@@ -1347,11 +1244,12 @@ CGSize ws;
     
  
 -(void)startBtnHandler{
+    /* Hide this applovin banner ad for now
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {
         [self showBanner];
     }
-
+*/
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
@@ -1370,12 +1268,10 @@ CGSize ws;
 
 -(void) moreAppsBtnHandler{
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-    //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://google.com"]];
     [[Chartboost sharedChartboost] showMoreApps];
 
 }
 
-/////////// junaid ///////
 -(void) multiplayerUnlocked{
     
     CCArray * a = [multiPlayerBtn children];
@@ -1386,22 +1282,22 @@ CGSize ws;
     
     
 }
+// Nextpeer multiplayer
 -(void) multiPlayerBtnHandler{
     
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-    
+    // Kill the locking
+    /*
     if(! [[NSUserDefaults standardUserDefaults] boolForKey:@"multiplayerUnlocked"])
     {
-//        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [AdColony playVideoAdForZone:ADCOLONY_ZONE_ID withDelegate:(AppController*)[[UIApplication sharedApplication] delegate] withV4VCPrePopup:YES andV4VCPostPopup:YES];
     }
     else
-    {
-        
+    { */
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
         [Nextpeer launchDashboard];
         isMultiPlayer = true;
-    }
+   // }
     
 
 }
@@ -1446,7 +1342,7 @@ CGSize ws;
     [gemsCMC removeChild:toRemove cleanup:YES];
 }
 
-///////////////////////////
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
@@ -1467,9 +1363,5 @@ CGSize ws;
 	[[app navController] dismissModalViewControllerAnimated:YES];
 }
 
-//-(void) leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
-//{
-//	AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-//	[[app navController] dismissModalViewControllerAnimated:YES];
-//}
+
 @end
