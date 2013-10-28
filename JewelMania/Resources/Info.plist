@@ -82,6 +82,9 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Illuminate.ttf</string>
+		<string>bang whack pow.ttf</string>
+		<string>Rabbit On The Moon.ttf</string>
 		<string>coolvetica.ttf</string>
 	</array>
 	<key>UIPrerenderedIcon</key>

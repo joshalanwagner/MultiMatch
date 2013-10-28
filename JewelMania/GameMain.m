@@ -25,7 +25,7 @@
 
 
 //// font name
-#define FONT_NAME @ "coolvetica"
+#define FONT_NAME @ "Illuminate"
 
 
 
@@ -148,11 +148,11 @@ CGSize ws;
         leaderBtn.position = ccp(ws.width/2,ws.height-(375+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:leaderBtn];
         
-        removAdBtn = [self createButtonWithFile:@"upgradeBtn.png" sel:@selector(removAdBtnHandler)];
+        removAdBtn = [self createButtonWithFile:@"buttonNoAds_up.png" sel:@selector(removAdBtnHandler)];
         removAdBtn.position = ccp(ws.width/2-ws.width/3.5,ws.height-25*sd.scaleFactorY);
         [mainMenuSprite addChild:removAdBtn];
         
-        restoreBtn = [self createButtonWithFile:@"restoreBtn.png" sel:@selector(restorBtnHandler)];
+        restoreBtn = [self createButtonWithFile:@"buttonRestore_up.png" sel:@selector(restorBtnHandler)];
         restoreBtn.position = ccp(ws.width/2+ws.width/3.5,ws.height-25*sd.scaleFactorY);
         [mainMenuSprite addChild:restoreBtn];
 
