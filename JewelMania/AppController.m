@@ -24,18 +24,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Hide this stuff for now to speed up game launch
     
-    [AdColony configureWithAppID:ADCOLONY_ID zoneIDs:@[ADCOLONY_ZONE_ID] delegate:self logging:YES];
+    //[AdColony configureWithAppID:ADCOLONY_ID zoneIDs:@[ADCOLONY_ZONE_ID] delegate:self logging:YES];
+    //[RevMobAds startSessionWithAppID:REVMOB_ID];
+    //[ALSdk initializeSdk];
+    //if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
+    //{
+    //    [[RevMobAds session] showFullscreen];
+    //}
     
-    [RevMobAds startSessionWithAppID:REVMOB_ID];
-    [self initializeNextpeer];
-    [ALSdk initializeSdk];
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
-    {
-        [[RevMobAds session] showFullscreen];
-    }
+    //[self initializeNextpeer];
     
-    
+    // Is this Game Center???
     [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error) {
         if (error == nil)
         {
@@ -109,7 +110,7 @@
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
 	[director_ pushScene: [IntroLayer scene]]; 
 
-    /// junaid
+    /// Seems like we should be setting a scale factor of 1.2 for SD iPads?
     if ([UIScreen mainScreen].bounds.size.width == 768 && [UIScreen mainScreen].bounds.size.height == 1024)
     {
         SharedData * sd =   [SharedData getSharedInstance];
@@ -219,7 +220,8 @@
 
 
 
-/////// junaid ///////////
+// NEXT PEER MULTIPLAYER
+
 
 - (void)initializeNextpeer
 {
@@ -263,6 +265,8 @@
     
     return NO;
 }
+
+
 
 
 - (void) showLeaderboard{

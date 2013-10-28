@@ -119,8 +119,8 @@ CGSize ws;
         }
         
 		
-        mainMengBG.anchorPoint=ccp(0,1);
-        mainMengBG.position=ccp(0,ws.height);
+        mainMengBG.anchorPoint=ccp(0,0.5);
+        mainMengBG.position=ccp(0,ws.height/2);
         [mainMenuSprite addChild:mainMengBG];
         
         
@@ -130,38 +130,32 @@ CGSize ws;
         startBtn=[self createButtonWithFile:@"buttonPlay_up.png" sel:@selector(startBtnHandler)];
         startBtn.position=ccp(ws.width/2,ws.height-(270+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:startBtn];
-      
-        /* kill the locking
-        if(![[NSUserDefaults standardUserDefaults] boolForKey:@"multiplayerUnlocked"])
-        {
-            multiPlayerBtn = [self createButtonWithFile:@"multiBtnlock.png" sel:@selector(multiPlayerBtnHandler)];
-        }
-        else */
-            
-        multiPlayerBtn = [self createButtonWithFile:@"multiBtn.png" sel:@selector(multiPlayerBtnHandler)];
-        
-        multiPlayerBtn.position = ccp (ws.width/2,ws.height-(317+ip5OffSet)*sd.scaleFactorY);
+
+        // Nextpeer Multiplayer
+        multiPlayerBtn = [self createButtonWithFile:@"buttonMultiplay_up.png" sel:@selector(multiPlayerBtnHandler)];
+        multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (65 * sd.scaleFactorY));
         [mainMenuSprite addChild:multiPlayerBtn];
         
         // Game Center Leaderboards
-        leaderBtn = [self createButtonWithFile:@"leaderBtn.png" sel:@selector(leaderBtnHandler)];
-        leaderBtn.position = ccp(ws.width/2,ws.height-(375+ip5OffSet)*sd.scaleFactorY);
+        leaderBtn = [self createButtonWithFile:@"buttonLeaderboards_up.png" sel:@selector(leaderBtnHandler)];
+        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (50 * sd.scaleFactorY));
         [mainMenuSprite addChild:leaderBtn];
         
         removAdBtn = [self createButtonWithFile:@"buttonNoAds_up.png" sel:@selector(removAdBtnHandler)];
-        removAdBtn.position = ccp(ws.width/2-ws.width/3.5,ws.height-25*sd.scaleFactorY);
+        removAdBtn.position = ccp(ws.width * 0.37 , leaderBtn.position.y - (50 * sd.scaleFactorY));
         [mainMenuSprite addChild:removAdBtn];
         
         restoreBtn = [self createButtonWithFile:@"buttonRestore_up.png" sel:@selector(restorBtnHandler)];
-        restoreBtn.position = ccp(ws.width/2+ws.width/3.5,ws.height-25*sd.scaleFactorY);
+        restoreBtn.position = ccp(ws.width * 0.68 , removAdBtn.position.y);
         [mainMenuSprite addChild:restoreBtn];
 
         // IN GAME
         inGame=[[CCSprite alloc]init];
         inGame.position=ccp(0,ws.height);
-        CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG2.png"];
+        CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG.png"];
         IGBG.anchorPoint=ccp(0,1);
         
+        // Looks like a tweak for SD iPads
         if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
         {
             IGBG.scaleX = 1.2;
@@ -200,21 +194,9 @@ CGSize ws;
         // TIMER BAR
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
         timeBar.anchorPoint=ccp(0,1);
-        if(ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-        {
-            timeBar.position=ccp(0,-40*(sd.scaleFactorY-sd.imgScaleFactorY/2.9));  // 90
-            timeBar.scaleX= sd.scaleFactorX*640/10;
-        }
-        else if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)
-        {
-            timeBar.position=ccp(0,-40*(sd.scaleFactorY-sd.imgScaleFactorY/1.4));
-            timeBar.scaleX= sd.scaleFactorX* 640/10;
-        }
-        else
-        {
-            timeBar.position=ccp(0,-40);  // 90
-            timeBar.scaleX=640/10;
-        }
+        timeBar.position=ccp(0,-ws.height+(40 * sd.imgScaleFactorY));  // 90
+        timeBar.scaleX= ws.width/10;
+
         
         
         [inGame addChild:timeBar];
@@ -1141,17 +1123,13 @@ CGSize ws;
 -(void)loop{
     time-=1;
     
-   if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)
+   if(ws.height == 1024 )
     {
-    timeBar.scaleX= sd.scaleFactorX* 64.0f*(time/gameTime);
+    timeBar.scaleX= (ws.width/10) * (time/gameTime);
     }
-   else if(ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-   {
-       timeBar.scaleX= sd.scaleFactorX/2* 64.0f*(time/gameTime);
-   }
     else
     {
-        timeBar.scaleX= 64.0f*(time/gameTime);
+        timeBar.scaleX= (ws.width/5) * (time/gameTime);
     }
     
     if (time<=0) {
