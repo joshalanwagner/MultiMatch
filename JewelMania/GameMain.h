@@ -17,8 +17,9 @@
 @interface GameMain : CCLayerColor<GKAchievementViewControllerDelegate>
 {
     @public
-    CCSprite *mainMengBG;
+    CCSprite *mainMenuBG;
     CCMenu *startBtn;
+    CCMenu *startOverBtn;
     CCMenu *moreAppsBtn;
     
     
@@ -59,7 +60,8 @@
     ///// junaid ///////
     CCLabelTTF * scoreTextTTF;
     CCLabelTTF * scoreTextTTF2;
-    ////////////////////
+    CCLabelTTF * wellPlayedText;
+    CCLabelTTF * newHighText;
     CCLabelBMFont *scoreText;
     CCLabelBMFont *scoreText2;
     
@@ -72,7 +74,8 @@
     CCSprite *timeBar;
     CCSprite *timeBarTray;
     CCSprite *topBar;
-    
+    CCSprite *lockup;
+    CCSprite *highScorePanel;
     int hNum;
     int score;
     float time;

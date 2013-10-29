@@ -45,37 +45,20 @@
 	
     sd = [SharedData getSharedInstance];
 	
-    if ( size.height == 1024 && [UIScreen mainScreen].scale == 1)
-    {
-        background = [CCSprite spriteWithFile:@"mainMenuBG.png"];
-        background.scaleX = 1.2;
-        background.scaleY = sd.imgScaleFactorY;
-    }
-    else
-    {
-        background = [CCSprite spriteWithFile:@"mainMenuBG.png"];
-    }
-    
-    
-    background.anchorPoint=ccp(0,1);
-    
-    if(size.height == 568)
-    {
-        background.scaleY = 1.2;
-    }
-
-	
-	background.position = ccp(0, size.height);
+    background=[[CCSprite alloc]initWithFile:@"menuBG.png"];
+    background.anchorPoint=ccp(0.5,0.5);
+    background.position=ccp(size.width/2 , size.height/2);
 
 	// add the label as a child to this Layer
 	[self addChild: background];
 	
-	// In one second transition to the new scene
-	[self scheduleOnce:@selector(makeTransition:) delay:2];
+	// In one second transition to the new scene: Why wait here?
+	[self scheduleOnce:@selector(makeTransition:) delay:0];
 }
 
 -(void) makeTransition:(ccTime)dt
 {
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameMain scene] withColor:ccBLACK]];
+    [[CCDirector sharedDirector] pushScene: [GameMain scene]];
+//	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameMain scene] withColor:ccBLACK]];
 }
 @end

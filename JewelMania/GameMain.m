@@ -21,8 +21,8 @@
 
 
 #define kFontColor      ccc3(255,255,255);     // Red, Green, Blue
-
-
+#define blackColor      ccc3(0,0,0);
+#define blueColor       ccc3(48,140,200);
 
 //// font name
 #define FONT_NAME @ "Illuminate"
@@ -71,7 +71,7 @@ CGSize ws;
 		ws=[[CCDirector sharedDirector]winSize];
         
         // One minute of gameplay
-        gameTime=1800;
+       gameTime = 60 * 60;
         
         // number of rows and columns
         if (ws.height==568) {
@@ -87,7 +87,7 @@ CGSize ws;
         }
         
         // size of jellies
-        gemWid=45*sd.scaleFactorX;
+        gemWid=45*sd.scaleFactorX; // need to fix this.
         
         gem2DArr=[[NSMutableArray alloc]init];
         
@@ -107,61 +107,65 @@ CGSize ws;
         [self addChild:mainMenuSprite];
         
         // Main Menu
-        if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-        {
-           mainMengBG=[[CCSprite alloc]initWithFile:@"mainMenuBG-hd.png"];
-          //  mainMengBG.scaleX = 1.2; // why scale this?
-          //  mainMengBG.scaleY = sd.imgScaleFactorY;
-        }
-        else
-        {
-            mainMengBG=[[CCSprite alloc]initWithFile:@"mainMenuBG.png"];
-        }
+        // background
+        mainMenuBG=[[CCSprite alloc]initWithFile:@"menuBG.png"];
+        mainMenuBG.anchorPoint=ccp(0.5,0.5);
+        mainMenuBG.position=ccp(ws.width/2 , ws.height/2);
+        [mainMenuSprite addChild:mainMenuBG];
         
-		
-        mainMengBG.anchorPoint=ccp(0.5,0.5);
-        mainMengBG.position=ccp(ws.width/2 , ws.height/2);
-        [mainMenuSprite addChild:mainMengBG];
+        // Lockup
+        lockup=[[CCSprite alloc]initWithFile:@"lockup.png"];
+        lockup.position=ccp(ws.width/2,ws.height * 0.85);
+        [mainMenuSprite addChild:lockup];
         
+        // High Score
+        highScorePanel=[[CCSprite alloc]initWithFile:@"highScorePanel.png"];
+        highScorePanel.position=ccp(ws.width/2,ws.height * 0.65);
+        [mainMenuSprite addChild:highScorePanel];
         
         // Main Menu Buttons
         
         // Play button
         startBtn=[self createButtonWithFile:@"buttonPlay_up.png" sel:@selector(startBtnHandler)];
-        startBtn.position=ccp(ws.width/2,ws.height-(270+ip5OffSet)*sd.scaleFactorY);
         [mainMenuSprite addChild:startBtn];
 
         // Nextpeer Multiplayer
         multiPlayerBtn = [self createButtonWithFile:@"buttonMultiplay_up.png" sel:@selector(multiPlayerBtnHandler)];
-        multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (65 * sd.scaleFactorY));
         [mainMenuSprite addChild:multiPlayerBtn];
         
         // Game Center Leaderboards
         leaderBtn = [self createButtonWithFile:@"buttonLeaderboards_up.png" sel:@selector(leaderBtnHandler)];
-        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (50 * sd.scaleFactorY));
         [mainMenuSprite addChild:leaderBtn];
         
         removAdBtn = [self createButtonWithFile:@"buttonNoAds_up.png" sel:@selector(removAdBtnHandler)];
-        removAdBtn.position = ccp(ws.width * 0.37 , leaderBtn.position.y - (50 * sd.scaleFactorY));
         [mainMenuSprite addChild:removAdBtn];
         
         restoreBtn = [self createButtonWithFile:@"buttonRestore_up.png" sel:@selector(restorBtnHandler)];
-        restoreBtn.position = ccp(ws.width * 0.68 , removAdBtn.position.y);
         [mainMenuSprite addChild:restoreBtn];
 
+        // position buttons
+        startBtn.position=ccp(ws.width/2,ws.height * 0.5);
+        multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (60 * sd.scaleFactorY));
+        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (50 * sd.scaleFactorY));
+        removAdBtn.position = ccp(ws.width * 0.37 , leaderBtn.position.y - (50 * sd.scaleFactorY));
+        restoreBtn.position = ccp(ws.width * 0.68 , removAdBtn.position.y);
+        
         // IN GAME
         inGame=[[CCSprite alloc]init];
         inGame.position=ccp(0,ws.height);
+        
         CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG.png"];
-        IGBG.anchorPoint=ccp(0,1);
+        IGBG.anchorPoint=ccp(0.5,1);
+        IGBG.position=ccp(ws.width/2,0);
         
         // Looks like a tweak for SD iPads
+        /*
         if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
         {
             IGBG.scaleX = 1.2;
             IGBG.scaleY = sd.imgScaleFactorY;
         }
-        
+        */
          
         gemsCMC=[[CCSprite alloc]init];
         gemsCMC.position=ccp(gemWid/2+2+1,-70*sd.scaleFactorY);
@@ -213,7 +217,7 @@ CGSize ws;
         // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
         timeBar.anchorPoint=ccp(0,0.5);
-        timeBar.position=ccp(timeBarTray.contentSize.height*0.21, -ws.height + (timeBarTray.contentSize.height/2));
+        timeBar.position=ccp(timeBarTray.boundingBox.size.height*0.21, -ws.height + (timeBarTray.boundingBox.size.height/2));
         timeBar.scaleX= ws.width/10;
 
         [inGame addChild:timeBarTray];
@@ -225,62 +229,61 @@ CGSize ws;
         
         [self addSingleTouch];
         
-        // GAME OVER
+        // GAME OVER Dialog
         gameOver=[[CCSprite alloc]init];
-        
-        CCSprite *gameOverBG=[CCSprite spriteWithFile:@"gameOver.png"];
-        gameOverBG.anchorPoint=ccp(0,1);
-        
-        if(ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-        {
-            gameOverBG.scaleX = 1.2;
-            gameOverBG.scaleY  =sd.imgScaleFactorY;
-        }
-        
-        [gameOver addChild:gameOverBG];
-        
-        gameOver.position=ccp(0,ws.height);
-        
         [self addChild:gameOver];
         
-        // FINAL SCORE
-        scoreTextTTF2 = [CCLabelTTF labelWithString:@"99999999999" fontName:FONT_NAME fontSize:35.0*sd.scaleFactorY];
-        scoreTextTTF2.anchorPoint=ccp(0.5,0.5);
-        scoreTextTTF2.scale=1.5;
-        scoreTextTTF2.color = kFontColor;
-        [scoreTextTTF2 setString:[NSString stringWithFormat:@"000000000"]];
+        CCSprite *gameOverBG=[CCSprite spriteWithFile:@"menuBG.png"];
+        gameOverBG.anchorPoint=ccp(0.5,0.5);
+        gameOverBG.position=ccp(ws.width/2 , ws.height/2);
+        [gameOver addChild:gameOverBG];
         
-        if(ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-        {
-            scoreTextTTF2.position=ccp(ws.width/2 ,-185*sd.scaleFactorY+60.0);
-        }
-        else if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)
-        {
-            scoreTextTTF2.position=ccp(ws.width/2 ,-185*sd.scaleFactorY);
-        }
-        else
-        {
-            scoreTextTTF2.position=ccp(ws.width/2 ,-185);
-        }
-
+        // Was it a high score?
+        newHighText = [CCLabelTTF labelWithString:@"NEW HIGH SCORE!" fontName:FONT_NAME fontSize:15.0 * sd.scaleFactorY];
+        newHighText.anchorPoint=ccp(0.5,0.5);
+        newHighText.color = kFontColor;
+        newHighText.position=ccp(ws.width/2 ,ws.height * 0.84);
+        [gameOver addChild:newHighText];
+        
+        // FINAL SCORE
+        scoreTextTTF2 = [CCLabelTTF labelWithString:@"99999999" fontName:FONT_NAME fontSize:60.0 * sd.scaleFactorY];
+        scoreTextTTF2.anchorPoint=ccp(0.5,0.5);
+        scoreTextTTF2.color = blackColor;
+        [scoreTextTTF2 setString:[NSString stringWithFormat:@"000000000"]]; // ? what does this do?
+        scoreTextTTF2.position=ccp(ws.width/2 ,ws.height * 0.72);
         
         [gameOver addChild:scoreTextTTF2];
         gameOver.visible=NO;
         
-        // Revmob FREE GAME ad button
-        freeBtn = [self createButtonWithFile:@"freeBtn.png" sel:@selector(freeBtnHandler)];
-        freeBtn.position = ccp(ws.width/2,-340*sd.scaleFactorY);
-        [gameOver addChild:freeBtn];
+        wellPlayedText = [CCLabelTTF labelWithString:@"Well Played!" fontName:FONT_NAME fontSize:24.0 * sd.scaleFactorY];
+        wellPlayedText.anchorPoint=ccp(0.5,0.5);
+        wellPlayedText.color = blueColor;
+        wellPlayedText.position=ccp(ws.width/2 ,ws.height * 0.6);
+        [gameOver addChild:wellPlayedText];
+        
+        // Start Button
+        startOverBtn=[self createButtonWithFile:@"buttonPlay_up.png" sel:@selector(startBtnHandler)];
+        startOverBtn.position=ccp(ws.width/2, ws.height * 0.47);
+        [gameOver addChild:startOverBtn];
 
-        // Done or Next or exit Button
-        okBtn=[self createButtonWithFile:@"okBtn.png" sel:@selector(okHandler)];
-        okBtn.position=ccp(ws.width/2,-400*sd.scaleFactorY);
+        // Back to Main Menu
+        okBtn=[self createButtonWithFile:@"buttonMainMenu_up.png" sel:@selector(okHandler)];
+        okBtn.position=ccp(ws.width/2, ws.height * 0.36);
         [gameOver addChild:okBtn];
         
-        // Chartboost More Games
-        moreGamesBtnGameOver  = [self createButtonWithFile:@"moreAppsBtn.png" sel:@selector(moreAppsBtnHandler)];
-        moreGamesBtnGameOver.position=ccp(ws.width/2,-280*sd.scaleFactorY);
-        [gameOver addChild:moreGamesBtnGameOver];
+        // Revmob FREE GAME ad button - Hiding for now
+        //freeBtn = [self createButtonWithFile:@"freeBtn.png" sel:@selector(freeBtnHandler)];
+        //freeBtn.position = ccp(ws.width/2,-340*sd.scaleFactorY);
+        //[gameOver addChild:freeBtn];
+
+        // Chartboost More Games - Hiding for now
+        //moreGamesBtnGameOver  = [self createButtonWithFile:@"moreAppsBtn.png" sel:@selector(moreAppsBtnHandler)];
+        //moreGamesBtnGameOver.position=ccp(ws.width/2,-280*sd.scaleFactorY);
+        //[gameOver addChild:moreGamesBtnGameOver];
+        
+
+        
+
         
     
 	}
