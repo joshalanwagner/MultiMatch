@@ -70,8 +70,8 @@ CGSize ws;
         sd = [SharedData getSharedInstance];
 		ws=[[CCDirector sharedDirector]winSize];
         
-        // One minute of gameplay
-       gameTime = 60 * 60;
+        //  Gameplay duration (one minute blitz)
+       gameTime = 60 * 6 ;
         
         // number of rows and columns
         if (ws.height==568) {
@@ -87,7 +87,7 @@ CGSize ws;
         }
         
         // size of jellies
-        gemWid=45*sd.scaleFactorX; // need to fix this.
+        gemWid=45*sd.scaleFactorX; // need to fix this: base it off screen width?
         
         gem2DArr=[[NSMutableArray alloc]init];
         
@@ -217,7 +217,7 @@ CGSize ws;
         // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
         timeBar.anchorPoint=ccp(0,0.5);
-        timeBar.position=ccp(timeBarTray.boundingBox.size.height*0.21, -ws.height + (timeBarTray.boundingBox.size.height/2));
+        timeBar.position=ccp(timeBarTray.boundingBox.size.height*0.16, -ws.height + (timeBarTray.boundingBox.size.height/2));
         timeBar.scaleX= ws.width/10;
 
         [inGame addChild:timeBarTray];
@@ -889,8 +889,6 @@ CGSize ws;
 }
 
 
-
-
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event{
     if(gameIsOver){
         return;
@@ -957,7 +955,7 @@ CGSize ws;
                                 {
                                     lineRect = CGRectMake(0, 0, gemWid, 10.0*sd.scaleFactorY);
                                 }
-                                
+                                // Dragging connector line???
                                 CCSprite *line = [CCSprite spriteWithFile:@"line.png" rect:lineRect];
                                 [line setAnchorPoint:ccp(0.0f, 0.5f)];
                                 [line setPosition:b];
