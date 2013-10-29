@@ -110,8 +110,8 @@ CGSize ws;
         if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
         {
            mainMengBG=[[CCSprite alloc]initWithFile:@"mainMenuBG-hd.png"];
-            mainMengBG.scaleX = 1.2; // why scale this?
-            mainMengBG.scaleY = sd.imgScaleFactorY;
+          //  mainMengBG.scaleX = 1.2; // why scale this?
+          //  mainMengBG.scaleY = sd.imgScaleFactorY;
         }
         else
         {
@@ -119,8 +119,8 @@ CGSize ws;
         }
         
 		
-        mainMengBG.anchorPoint=ccp(0,0.5);
-        mainMengBG.position=ccp(0,ws.height/2);
+        mainMengBG.anchorPoint=ccp(0.5,0.5);
+        mainMengBG.position=ccp(ws.width/2 , ws.height/2);
         [mainMenuSprite addChild:mainMengBG];
         
         
