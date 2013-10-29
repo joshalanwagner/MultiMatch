@@ -777,13 +777,15 @@ CGSize ws;
     CGPoint point = CGPointMake(location.x, location.y);
     if(moveAble&&!gameIsOver){
         memoryTouchedGem=[self getGemAtStagePointWithPoint:point];
-        NSString * selectedState = [NSString stringWithFormat:@"gem%@b.png",memoryTouchedGem->type];
-        CCSprite * newImg = [CCSprite spriteWithFile:selectedState];
-        [memoryTouchedGem->img setTexture:[newImg texture]];
-        arrayOfGemsToRemove = [[NSMutableArray alloc] init];
-        arrayOfLines = [[NSMutableArray alloc] init];
-//        NSLog(@"touch pos =  %f %f     gem pos   %f %f ",point.x,point.y,memoryTouchedGem.position.x,memoryTouchedGem.position.y);
-        positionOfLastGemInLine = memoryTouchedGem.position;
+        if(memoryTouchedGem)
+        {
+            NSString * selectedState = [NSString stringWithFormat:@"gem%@b.png",memoryTouchedGem->type];
+            CCSprite * newImg = [CCSprite spriteWithFile:selectedState];
+            [memoryTouchedGem->img setTexture:[newImg texture]];
+            arrayOfGemsToRemove = [[NSMutableArray alloc] init];
+            arrayOfLines = [[NSMutableArray alloc] init];
+            positionOfLastGemInLine = memoryTouchedGem.position;
+        }
     }
         
   
