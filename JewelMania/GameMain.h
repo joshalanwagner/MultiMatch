@@ -71,6 +71,7 @@
     CCSprite *gameOver;
     CCSprite *timeBar;
     CCSprite *timeBarTray;
+    CCSprite *topBar;
     
     int hNum;
     int score;

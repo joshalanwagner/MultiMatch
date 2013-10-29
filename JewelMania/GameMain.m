@@ -172,6 +172,11 @@ CGSize ws;
         inGame.visible=NO;
         [self addChild:inGame];
         
+        topBar=[CCSprite spriteWithFile:@"topBar.png"];
+        topBar.anchorPoint=ccp(0,1);
+        topBar.position=ccp(0,0);
+        [inGame addChild:topBar];
+        
         // QUIT GAME
         backBtn=[self createButtonWithFile:@"backBtn.png" sel:@selector(backHandler)];
          backBtn.position=ccp(ws.width-40*sd.scaleFactorX,-20*sd.scaleFactorY); //// 74
@@ -179,9 +184,9 @@ CGSize ws;
         
         // Current Score
         scoreTextTTF = [CCLabelTTF labelWithString:@"99999999999" fontName:FONT_NAME fontSize:25.0*sd.scaleFactorY];
-        scoreTextTTF.anchorPoint=ccp(0,0.5);
+        scoreTextTTF.anchorPoint=ccp(0.5,0.5);
         [scoreTextTTF setString:[NSString stringWithFormat:@"0"]];
-        scoreTextTTF.position=ccp(90*sd.scaleFactorX,-18*sd.scaleFactorY);  /// 74
+        scoreTextTTF.position=ccp(ws.width/2 , -topBar.contentSize.height * .5);
         scoreTextTTF.color = kFontColor;
         
         if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)

@@ -236,6 +236,9 @@
 		AD3EF703181F26FB00766A47 /* timeBarTray-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */; };
 		AD3EF704181F26FB00766A47 /* timeBarTray-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */; };
 		AD3EF705181F26FB00766A47 /* timeBarTray.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF702181F26FB00766A47 /* timeBarTray.png */; };
+		AD3EF709181F3A9800766A47 /* topBar-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF706181F3A9800766A47 /* topBar-hd.png */; };
+		AD3EF70A181F3A9800766A47 /* topBar-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF707181F3A9800766A47 /* topBar-ipadhd.png */; };
+		AD3EF70B181F3A9800766A47 /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF708181F3A9800766A47 /* topBar.png */; };
 		AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */; };
 		AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */; };
 		AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */; };
@@ -658,6 +661,9 @@
 		AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBarTray-hd.png"; path = "Resources/Z_IMAGES/timeBarTray-hd.png"; sourceTree = "<group>"; };
 		AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBarTray-ipadhd.png"; path = "Resources/Z_IMAGES/timeBarTray-ipadhd.png"; sourceTree = "<group>"; };
 		AD3EF702181F26FB00766A47 /* timeBarTray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeBarTray.png; path = Resources/Z_IMAGES/timeBarTray.png; sourceTree = "<group>"; };
+		AD3EF706181F3A9800766A47 /* topBar-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topBar-hd.png"; path = "Resources/Z_IMAGES/topBar-hd.png"; sourceTree = "<group>"; };
+		AD3EF707181F3A9800766A47 /* topBar-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topBar-ipadhd.png"; path = "Resources/Z_IMAGES/topBar-ipadhd.png"; sourceTree = "<group>"; };
+		AD3EF708181F3A9800766A47 /* topBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topBar.png; path = Resources/Z_IMAGES/topBar.png; sourceTree = "<group>"; };
 		AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-hd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-hd.png"; sourceTree = "<group>"; };
 		AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboards_up.png; path = Resources/Z_IMAGES/buttonLeaderboards_up.png; sourceTree = "<group>"; };
@@ -1256,6 +1262,9 @@
 		ACDC23FF17912B2500280F36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AD3EF706181F3A9800766A47 /* topBar-hd.png */,
+				AD3EF707181F3A9800766A47 /* topBar-ipadhd.png */,
+				AD3EF708181F3A9800766A47 /* topBar.png */,
 				AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */,
 				AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */,
 				AD3EF702181F26FB00766A47 /* timeBarTray.png */,
@@ -1414,6 +1423,7 @@
 				AD936430181EF3010091F54C /* buttonRestore_up-hd.png in Resources */,
 				ACDC227E1791014300280F36 /* fps_images-hd.png in Resources */,
 				ACDC22801791014300280F36 /* fps_images-ipadhd.png in Resources */,
+				AD3EF70B181F3A9800766A47 /* topBar.png in Resources */,
 				ACDC228F1791014500280F36 /* iTunesArtwork.png in Resources */,
 				ACDC23CD1791015300280F36 /* ChangeLog in Resources */,
 				ACDC241417912B4300280F36 /* gem1-hd.png in Resources */,
@@ -1465,6 +1475,7 @@
 				5E879A221807C1D10089BC1D /* gem6b.png in Resources */,
 				AD936426181EF04F0091F54C /* Illuminate.ttf in Resources */,
 				5EE142BC17ABA11F0007E256 /* leaderBtn.png in Resources */,
+				AD3EF70A181F3A9800766A47 /* topBar-ipadhd.png in Resources */,
 				5EE142BD17ABA11F0007E256 /* multiBtn-hd.png in Resources */,
 				AD606F00181F15AD006E89F2 /* inGameBG-ipadhd.png in Resources */,
 				5E879A111807C1D10089BC1D /* gem1b-hd.png in Resources */,
@@ -1481,6 +1492,7 @@
 				5EE142C617ABB2BF0007E256 /* inGameBG2.png in Resources */,
 				5EE142D617ABB9AE0007E256 /* README.md in Resources */,
 				5EE142DB17ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle in Resources */,
+				AD3EF709181F3A9800766A47 /* topBar-hd.png in Resources */,
 				AD936424181EEDC60091F54C /* bang whack pow.ttf in Resources */,
 				5E6F6D5417ABD2130008100D /* button.mp3 in Resources */,
 				5E6F6D5517ABD2130008100D /* clear.mp3 in Resources */,
