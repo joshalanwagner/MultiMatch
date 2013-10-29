@@ -62,6 +62,7 @@
     CCLabelTTF * scoreTextTTF2;
     CCLabelTTF * wellPlayedText;
     CCLabelTTF * newHighText;
+    CCLabelTTF * highScoreText;
     CCLabelBMFont *scoreText;
     CCLabelBMFont *scoreText2;
     
@@ -78,6 +79,7 @@
     CCSprite *highScorePanel;
     int hNum;
     int score;
+    int savedHighScore;
     float time;
     
     BOOL moveAble;

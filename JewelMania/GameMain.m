@@ -26,7 +26,7 @@
 
 //// font name
 #define FONT_NAME @ "Illuminate"
-
+#define highScoreKey @"highScoreKey"
 
 
 // GameMain implementation
@@ -70,8 +70,9 @@ CGSize ws;
         sd = [SharedData getSharedInstance];
 		ws=[[CCDirector sharedDirector]winSize];
         
+        
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 60 ;
+       gameTime = 60 * 5 ;
         
         // number of rows and columns
         hNum=6;
@@ -123,6 +124,15 @@ CGSize ws;
         highScorePanel=[[CCSprite alloc]initWithFile:@"highScorePanel.png"];
         highScorePanel.position=ccp(ws.width/2,ws.height * 0.65);
         [mainMenuSprite addChild:highScorePanel];
+        
+        savedHighScore = [[NSUserDefaults standardUserDefaults] integerForKey:highScoreKey];
+        
+        highScoreText = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",savedHighScore]
+                                           fontName:FONT_NAME fontSize:34.0 * sd.scaleFactorY];
+        highScoreText.anchorPoint=ccp(0.5,0.8);
+        highScoreText.position=ccp(ws.width/2 ,highScorePanel.position.y);
+        highScoreText.color = blueColor;
+        [mainMenuSprite addChild:highScoreText];
         
         // Main Menu Buttons
         
@@ -229,6 +239,7 @@ CGSize ws;
         gameOverBG.anchorPoint=ccp(0.5,0.5);
         gameOverBG.position=ccp(ws.width/2 , ws.height/2);
         [gameOver addChild:gameOverBG];
+        
         
         // Was it a high score?
         newHighText = [CCLabelTTF labelWithString:@"NEW HIGH SCORE!" fontName:FONT_NAME fontSize:15.0 * sd.scaleFactorY];
@@ -1182,6 +1193,19 @@ CGSize ws;
         gameOver.visible=YES;
         
         [scoreTextTTF2 setString:[NSString stringWithFormat:@"%i",score]];
+
+        // Was it a high score?
+        if (score > savedHighScore) {
+            savedHighScore = score;
+            [highScoreText setString:[NSString stringWithFormat:@"%i",savedHighScore]];
+            [newHighText setVisible:YES];
+            // Save the high score
+            [[NSUserDefaults standardUserDefaults] setInteger:score forKey:highScoreKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        else {
+            [newHighText setVisible:NO];
+        }
         
         [self unschedule:_cmd];
     }
