@@ -192,12 +192,26 @@ CGSize ws;
         
         
         // TIMER BAR
+        // Tray
+        timeBarTray=[CCSprite spriteWithFile:@"timeBarTray.png"];
+        timeBarTray.anchorPoint=ccp(0,0);
+        timeBarTray.position=ccp(0,-ws.height);
+        if(ws.height == 1024)
+        {
+            timeBarTray.scale = 1.0;
+        }
+        else
+        {
+            timeBarTray.scale=1.0/1.2;
+        }
+        
+        // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
-        timeBar.anchorPoint=ccp(0,1);
-        timeBar.position=ccp(0,-ws.height+(40 * sd.imgScaleFactorY));  // 90
+        timeBar.anchorPoint=ccp(0,0.5);
+        timeBar.position=ccp(timeBarTray.contentSize.height*0.21, -ws.height + (timeBarTray.contentSize.height/2));
         timeBar.scaleX= ws.width/10;
 
-        
+        [inGame addChild:timeBarTray];
         
         [inGame addChild:timeBar];
         
@@ -1123,13 +1137,14 @@ CGSize ws;
 -(void)loop{
     time-=1;
     
-   if(ws.height == 1024 )
+    // I don't understand what's causing this discrepancy -JW
+   if(ws.height == 1024)
     {
-    timeBar.scaleX= (ws.width/10) * (time/gameTime);
+    timeBar.scaleX= (ws.width/10) * 0.965 * (time/gameTime);
     }
     else
     {
-        timeBar.scaleX= (ws.width/5) * (time/gameTime);
+        timeBar.scaleX= (ws.width/5) * 0.965 *(time/gameTime);
     }
     
     if (time<=0) {

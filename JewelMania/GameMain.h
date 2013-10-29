@@ -69,11 +69,10 @@
     BOOL closeAble;
     
     CCSprite *gameOver;
-    
     CCSprite *timeBar;
+    CCSprite *timeBarTray;
+    
     int hNum;
-    
-    
     int score;
     float time;
     

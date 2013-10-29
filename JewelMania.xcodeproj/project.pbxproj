@@ -233,6 +233,9 @@
 		ACDC2430179134A500280F36 /* moreAppsBtn-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC242E179134A500280F36 /* moreAppsBtn-hd.png */; };
 		ACDC2431179134A500280F36 /* moreAppsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC242F179134A500280F36 /* moreAppsBtn.png */; };
 		ACDC243A17914C8300280F36 /* Gem.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC243917914C8300280F36 /* Gem.m */; };
+		AD3EF703181F26FB00766A47 /* timeBarTray-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */; };
+		AD3EF704181F26FB00766A47 /* timeBarTray-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */; };
+		AD3EF705181F26FB00766A47 /* timeBarTray.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF702181F26FB00766A47 /* timeBarTray.png */; };
 		AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */; };
 		AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */; };
 		AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */; };
@@ -652,6 +655,9 @@
 		ACDC242F179134A500280F36 /* moreAppsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moreAppsBtn.png; path = Resources/Z_IMAGES/moreAppsBtn.png; sourceTree = "<group>"; };
 		ACDC243817914C8300280F36 /* Gem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gem.h; sourceTree = "<group>"; };
 		ACDC243917914C8300280F36 /* Gem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gem.m; sourceTree = "<group>"; };
+		AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBarTray-hd.png"; path = "Resources/Z_IMAGES/timeBarTray-hd.png"; sourceTree = "<group>"; };
+		AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBarTray-ipadhd.png"; path = "Resources/Z_IMAGES/timeBarTray-ipadhd.png"; sourceTree = "<group>"; };
+		AD3EF702181F26FB00766A47 /* timeBarTray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeBarTray.png; path = Resources/Z_IMAGES/timeBarTray.png; sourceTree = "<group>"; };
 		AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-hd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-hd.png"; sourceTree = "<group>"; };
 		AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboards_up.png; path = Resources/Z_IMAGES/buttonLeaderboards_up.png; sourceTree = "<group>"; };
@@ -1250,6 +1256,9 @@
 		ACDC23FF17912B2500280F36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AD3EF700181F26FB00766A47 /* timeBarTray-hd.png */,
+				AD3EF701181F26FB00766A47 /* timeBarTray-ipadhd.png */,
+				AD3EF702181F26FB00766A47 /* timeBarTray.png */,
 				AD606EFC181F15AD006E89F2 /* inGameBG-hd.png */,
 				AD606EFD181F15AD006E89F2 /* inGameBG-ipadhd.png */,
 				AD606EFE181F15AD006E89F2 /* inGameBG.png */,
@@ -1428,6 +1437,7 @@
 				ACDC241F17912B4300280F36 /* gem6.png in Resources */,
 				AD936431181EF3010091F54C /* buttonRestore_up-ipadhd.png in Resources */,
 				AD93642F181EF3010091F54C /* buttonNoAds_up.png in Resources */,
+				AD3EF704181F26FB00766A47 /* timeBarTray-ipadhd.png in Resources */,
 				ACDC242217912B4300280F36 /* mainMenuBG-hd.png in Resources */,
 				ACDC242617912B4300280F36 /* startBtn-hd.png in Resources */,
 				ACDC242717912B4300280F36 /* startBtn.png in Resources */,
@@ -1495,12 +1505,14 @@
 				5E17732917DD8D3E007FBB46 /* inGameBG2-ipadhd.png in Resources */,
 				AD93641A181EDD2D0091F54C /* buttonPlay_up.png in Resources */,
 				5E17732A17DD8D3E007FBB46 /* gem5-ipadhd.png in Resources */,
+				AD3EF703181F26FB00766A47 /* timeBarTray-hd.png in Resources */,
 				5EE06105180ABD3D0052684A /* line.png in Resources */,
 				5E17732B17DD8D3E007FBB46 /* gem6-ipadhd.png in Resources */,
 				5E17732D17DD8D3E007FBB46 /* gem1-ipadhd.png in Resources */,
 				5E879A1D1807C1D10089BC1D /* gem5b-hd.png in Resources */,
 				5E17732E17DD8D3E007FBB46 /* gem2-ipadhd.png in Resources */,
 				AD936432181EF3010091F54C /* buttonRestore_up.png in Resources */,
+				AD3EF705181F26FB00766A47 /* timeBarTray.png in Resources */,
 				AD606EFF181F15AD006E89F2 /* inGameBG-hd.png in Resources */,
 				5E17732F17DD8D3E007FBB46 /* gem3-ipadhd.png in Resources */,
 				AD936418181EDD2D0091F54C /* buttonPlay_up-hd.png in Resources */,
