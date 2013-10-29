@@ -71,23 +71,24 @@ CGSize ws;
 		ws=[[CCDirector sharedDirector]winSize];
         
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 6 ;
+       gameTime = 60 * 60 ;
         
         // number of rows and columns
+        hNum=6;
         if (ws.height==568) {
-            hNum=7;
-            vNum=10;
+            vNum=8;
             ip5OffSet = 50.0;
         }
         
         else{
-            hNum=7;
-            vNum=8;
+            vNum=7;
             ip5OffSet = 0.0;
         }
         
-        // size of jellies
-        gemWid=45*sd.scaleFactorX; // need to fix this: base it off screen width?
+        // size of grid unit
+        gemWid=52*sd.scaleFactorX;
+        
+        // need to fix actual size of guys: base it off screen width?
         
         gem2DArr=[[NSMutableArray alloc]init];
         
@@ -158,20 +159,11 @@ CGSize ws;
         IGBG.anchorPoint=ccp(0.5,1);
         IGBG.position=ccp(ws.width/2,0);
         
-        // Looks like a tweak for SD iPads
-        /*
-        if ( ws.height == 1024 && [UIScreen mainScreen].scale == 1)
-        {
-            IGBG.scaleX = 1.2;
-            IGBG.scaleY = sd.imgScaleFactorY;
-        }
-        */
-         
+        // game grid
         gemsCMC=[[CCSprite alloc]init];
-        gemsCMC.position=ccp(gemWid/2+2+1,-70*sd.scaleFactorY);
+        gemsCMC.position=ccp(gemWid/2+2+1 , -100 * sd.scaleFactorY);
         [inGame addChild:gemsCMC];
         [inGame addChild:IGBG z:-1];
-        
 
         inGame.visible=NO;
         [self addChild:inGame];
@@ -726,14 +718,20 @@ CGSize ws;
         return;
     }
     ___toRemoveArr=[self tryRemove];
+    
+    // Points gained text? This was probably for Bejeweled when another match could happen...
     if (___toRemoveArr.count>0) {
-        score+=___toRemoveArr.count*10;
-        [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
+        // add points to the score
+        
         
             for (int i=0; i<___toRemoveArr.count; i++) {
-                Gem *gem=[___toRemoveArr objectAtIndex:i];
                 
-                // Points gained text
+                score+= (i*10)+10;
+                [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
+                
+                
+                Gem *gem=[___toRemoveArr objectAtIndex:i];
+            
                 CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:30*sd.scaleFactorY];
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
@@ -822,14 +820,14 @@ CGSize ws;
         }
 
         if (arrayOfGemsToRemove.count>2) {
-            score+=arrayOfGemsToRemove.count*10;
-            
-            // Points text again???
-            [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
+                // This is the actual Points text
             for (int i=0; i<arrayOfGemsToRemove.count; i++) {
-                Gem *gem=[arrayOfGemsToRemove objectAtIndex:i];
+                score+=(i*10)+10;
+                [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
                 
-                CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:25*sd.scaleFactorY];
+                Gem *gem=[arrayOfGemsToRemove objectAtIndex:i];
+                // add an additional 10 points for each additional match
+                CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"+%d",(i*10)+10] fontName:FONT_NAME fontSize:24*sd.scaleFactorY];
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
                 [gemsCMC addChild:scoreVisual z:10];
