@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
-#import "Nextpeer/Nextpeer.h"
+#import <Nextpeer/Nextpeer.h>
 #import <GameKit/GameKit.h>
 #import <AdColony/AdColony.h>
 

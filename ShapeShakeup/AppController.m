@@ -7,7 +7,7 @@
 //
 
 #import "cocos2d.h"
-#import "Nextpeer/Nextpeer.h"
+#import <Nextpeer/Nextpeer.h>
 #import "AppController.h"
 #import "IntroLayer.h"
 #import "SharedData.h"
