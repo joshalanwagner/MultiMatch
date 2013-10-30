@@ -15,7 +15,7 @@
 #define CB_APPID @"525b080XXXXXXXXXX4000008"
 #define CB_SIGNATURE @"66c945989ab11cb5da6cXXXXXXXXXXc47afd8f9f"
 #define REVMOB_ID @"525b07d1XXXXXXXXXX000006"
-#define REMOVE_AD_ID @"com.company.name.removeads"
+#define REMOVE_AD_ID @"SSRemoveAds"
 #define ADCOLONY_ID  @"appab576XXXXXXXXXXa9f2bc6"
 #define ADCOLONY_ZONE_ID @"vz8203cXXXXXXXXXXa84f749"
 
