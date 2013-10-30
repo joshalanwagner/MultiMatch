@@ -748,6 +748,7 @@ CGSize ws;
     
 }
 
+// This is being used
 -(void) newCreatedGemsMoveDownFinishedHandler{
     
     gemToBeExchanged=nil;
@@ -759,52 +760,9 @@ CGSize ws;
     }
     ___toRemoveArr=[self tryRemove];
     
-    // Points gained text? This was probably for Bejeweled when another match could happen...
-    if (___toRemoveArr.count>0) {
-        // add points to the score
-        
-        
-            for (int i=0; i<___toRemoveArr.count; i++) {
-                
-                score+= (i*10)+10;
-                [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
-                
-                
-                Gem *gem=[___toRemoveArr objectAtIndex:i];
-            
-                CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:30*sd.scaleFactorY];
-                [scoreVisual setPosition:gem.position];
-                scoreVisual.color = kFontColor;
-                [gemsCMC addChild:scoreVisual z:10];
-                id fadein = [CCFadeOut actionWithDuration:.5];
-                
-                id actionRemove =  [CCCallFuncND  actionWithTarget: self
-                                                         selector : @selector(removeVisualLabel : data:)
-                                                              data:scoreVisual];
-                [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-                
-                
-                id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
-                id moveXEase=[CCEaseExponentialOut actionWithAction:scaleXY];
-                CCCallFunc *cccf;
-                CCSequence *seq;
-                if (i==0)
-                {
-                    cccf=[CCCallFunc actionWithTarget:self selector:@selector(removeGemFinishedHandler)];
-                    seq=[CCSequence actions:moveXEase,cccf,nil];
-                }
-                else{
-                    seq=[CCSequence actions:moveXEase,nil];
-                }
-                [((NSMutableArray*)[gem2DArr objectAtIndex:gem->indexV]) setObject:@"empty" atIndexedSubscript:gem->indexH];
-                [gem runAction:seq];
-            }
-        
-    }
-    else{
-        [self addSingleTouch];
-    }
+
 }
+
 
 -(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
    
@@ -1055,70 +1013,6 @@ CGSize ws;
     //[[[CCDirector sharedDirector] touchDispatcher] removeAllDelegates];
 }
 
--(void) exChangeFinishedHandler{
-    if(gameIsOver){
-        return;
-    }
-    ___toRemoveArr=[self tryRemove];
-    if (___toRemoveArr.count>0) {
-        score+=___toRemoveArr.count*10;
-        
-        // Points Code again???
-        [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
-        for (int i=0; i<___toRemoveArr.count; i++) {
-            Gem *gem=[___toRemoveArr objectAtIndex:i];
-            
-            CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",10] fontName:FONT_NAME fontSize:25*sd.scaleFactorY];
-            [scoreVisual setPosition:gem.position];
-            scoreVisual.color = kFontColor;
-            [gemsCMC addChild:scoreVisual z:10];
-            id fadein = [CCFadeOut actionWithDuration:.5];
-            
-            id actionRemove =  [CCCallFuncND  actionWithTarget: self
-                                                       selector : @selector(removeVisualLabel : data:)
-                                                            data:scoreVisual];
-            [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-
-            
-            id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
-            id moveXEase=[CCEaseExponentialOut actionWithAction:scaleXY];
-            CCCallFunc *cccf;
-            CCSequence *seq;
-            if (i==0) {
-                cccf=[CCCallFunc actionWithTarget:self selector:@selector(removeGemFinishedHandler)];
-                seq=[CCSequence actions:moveXEase,cccf,nil];
-            }
-            else{
-                seq=[CCSequence actions:moveXEase,nil];
-            }
-            
-            [((NSMutableArray*)[gem2DArr objectAtIndex:gem->indexV]) setObject:@"empty" atIndexedSubscript:gem->indexH];
-            
-            [gem runAction:seq];
-        }
-        
-        
-       
-    }
-    else{
-        //Reset the gems
-        id moveX=[CCMoveTo actionWithDuration:0.4 position:ccp(gemToBeExchanged.position.x,gemToBeExchanged.position.y)];
-        id moveXEase=[CCEaseExponentialOut actionWithAction:moveX];
-        CCCallFunc *cccf=[CCCallFunc actionWithTarget:self selector:@selector(fw_exChangeFinishedHandler)];
-        CCSequence *seq=[CCSequence actions:moveXEase,cccf,nil];
-        
-        
-        id moveX2=[CCMoveTo actionWithDuration:0.4 position:ccp(gemMoved.position.x,gemMoved.position.y)];
-        id moveXEase2=[CCEaseExponentialOut actionWithAction:moveX2];
-        CCCallFunc *cccf2=[CCCallFunc actionWithTarget:self selector:@selector(fw_exChangeFinishedHandler2)];
-        CCSequence *seq2=[CCSequence actions:moveXEase2,cccf2,nil];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"error.mp3"];
-        [gemMoved runAction:seq];
-        [gemToBeExchanged runAction:seq2];
-        
-    }
-}
-
 -(void) removeGemFinishedHandler{
     if(gameIsOver){
         return;
@@ -1176,7 +1070,6 @@ CGSize ws;
 
 
 -(void) fw_exChangeFinishedHandler2{}
--(void) exChangeFinishedHandler2{}
 
 
 // TIME REMAINING PROGRESS BAR
