@@ -8,15 +8,13 @@
 
 #import "cocos2d.h"
 #import "Chartboost.h"
-#import <RevMobAds/RevMobAds.h>
-#import "Nextpeer/Nextpeer.h"
-#import "ALSdk.h"
 #import "AppController.h"
 #import "IntroLayer.h"
 #import "SharedData.h"
 #import "SimpleAudioEngine.h"
 #import "MopubSDK/MPInterstitialAdController.h" // not needed?
-
+#import "RevMobAds/RevMobAds.h"
+#import "Nextpeer/Nextpeer.h"
 
 @implementation AppController
 
