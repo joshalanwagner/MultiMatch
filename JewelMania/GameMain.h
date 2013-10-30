@@ -63,6 +63,7 @@
     CCLabelTTF * wellPlayedText;
     CCLabelTTF * newHighText;
     CCLabelTTF * highScoreText;
+    CCLabelTTF * hsLabel;
     CCLabelBMFont *scoreText;
     CCLabelBMFont *scoreText2;
     

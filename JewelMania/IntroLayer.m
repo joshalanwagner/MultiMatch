@@ -45,8 +45,9 @@
 	
     sd = [SharedData getSharedInstance];
 	
-    background=[[CCSprite alloc]initWithFile:@"menuBG.png"];
+    background=[[CCSprite alloc]initWithFile:@"menuBG.pvr.ccz"];
     background.anchorPoint=ccp(0.5,0.5);
+    background.scaleY = 1.11;
     background.position=ccp(size.width/2 , size.height/2);
 
 	// add the label as a child to this Layer

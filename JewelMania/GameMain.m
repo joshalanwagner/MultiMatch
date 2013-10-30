@@ -23,6 +23,7 @@
 #define kFontColor      ccc3(255,255,255);     // Red, Green, Blue
 #define blackColor      ccc3(0,0,0);
 #define blueColor       ccc3(48,140,200);
+#define lightBlueColor  ccc3(98,188,255);
 
 //// font name
 #define FONT_NAME @ "Illuminate"
@@ -72,7 +73,7 @@ CGSize ws;
         
         
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 5 ;
+       gameTime = 60 * 60 ;
         
         // number of rows and columns
         hNum=6;
@@ -109,30 +110,42 @@ CGSize ws;
         [self addChild:mainMenuSprite];
         
         // Main Menu
-        // background
-        mainMenuBG=[[CCSprite alloc]initWithFile:@"menuBG.png"];
-        mainMenuBG.anchorPoint=ccp(0.5,0.5);
+        
+        // background grass
+        CCSprite *grass=[[CCSprite alloc]initWithFile:@"inGameBG.pvr.ccz"];
+        grass.scale = 1.11;
+        grass.position=ccp(ws.width/2 , ws.height/2);
+        [mainMenuSprite addChild:grass];
+        
+        // blue menu background
+        mainMenuBG=[[CCSprite alloc]initWithFile:@"menuBG.pvr.ccz"];
+        mainMenuBG.scaleY = 1.11;
         mainMenuBG.position=ccp(ws.width/2 , ws.height/2);
         [mainMenuSprite addChild:mainMenuBG];
         
         // Lockup
         lockup=[[CCSprite alloc]initWithFile:@"lockup.png"];
-        lockup.position=ccp(ws.width/2,ws.height * 0.85);
+        lockup.position=ccp(ws.width/2,ws.height * 0.77);
         [mainMenuSprite addChild:lockup];
         
-        // High Score
-        highScorePanel=[[CCSprite alloc]initWithFile:@"highScorePanel.png"];
-        highScorePanel.position=ccp(ws.width/2,ws.height * 0.65);
-        [mainMenuSprite addChild:highScorePanel];
+        hsLabel = [CCLabelTTF labelWithString:@"HIGH\nSCORE"
+                              dimensions:CGSizeMake (200,100)
+                              hAlignment:kCCTextAlignmentLeft
+                              fontName:FONT_NAME
+                              fontSize:9.0 * sd.scaleFactorY ];
+        hsLabel.anchorPoint = ccp(0,1);
+        hsLabel.position = ccp(lockup.contentSize.width * 0.03 , lockup.contentSize.height * 0.22);
+        hsLabel.color = lightBlueColor;
+        [lockup addChild:hsLabel];
         
         savedHighScore = [[NSUserDefaults standardUserDefaults] integerForKey:highScoreKey];
         
         highScoreText = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",savedHighScore]
-                                           fontName:FONT_NAME fontSize:34.0 * sd.scaleFactorY];
-        highScoreText.anchorPoint=ccp(0.5,0.8);
-        highScoreText.position=ccp(ws.width/2 ,highScorePanel.position.y);
-        highScoreText.color = blueColor;
-        [mainMenuSprite addChild:highScoreText];
+                                           fontName:FONT_NAME fontSize:32.0 * sd.scaleFactorY];
+        highScoreText.anchorPoint=ccp(0.5,0.5);
+        highScoreText.position=ccp(lockup.contentSize.width/2 ,lockup.contentSize.height * 0.12);
+        highScoreText.color = kFontColor;
+        [lockup addChild:highScoreText];
         
         // Main Menu Buttons
         
@@ -157,16 +170,32 @@ CGSize ws;
         // position buttons
         startBtn.position=ccp(ws.width/2,ws.height * 0.5);
         multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (60 * sd.scaleFactorY));
-        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (50 * sd.scaleFactorY));
-        removAdBtn.position = ccp(ws.width * 0.37 , leaderBtn.position.y - (50 * sd.scaleFactorY));
-        restoreBtn.position = ccp(ws.width * 0.68 , removAdBtn.position.y);
+        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (60 * sd.scaleFactorY));
         
+        // Buttons are ignoring anchorpoint >:(
+        // button.contentSizes are not behaving as expected >:(
+        
+        if(ws.width == 768) {
+            removAdBtn.position = ccp((ws.width/2) - (startBtn.contentSize.width*0.125) ,
+                                       leaderBtn.position.y - (50 * sd.scaleFactorY));
+            restoreBtn.position = ccp((ws.width/2) + (startBtn.contentSize.width*0.15) ,
+                                       removAdBtn.position.y);
+        }
+        else {
+            removAdBtn.position = ccp((ws.width/2) - (startBtn.contentSize.width*0.145) ,
+                                      leaderBtn.position.y - (50 * sd.scaleFactorY));
+            restoreBtn.position = ccp((ws.width/2) + (startBtn.contentSize.width*0.175) ,
+                                      removAdBtn.position.y);
+        }
+            
+            
         // IN GAME
         inGame=[[CCSprite alloc]init];
         inGame.position=ccp(0,ws.height);
         
-        CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG.png"];
+        CCSprite *IGBG=[[CCSprite alloc]initWithFile:@"inGameBG.pvr.ccz"];
         IGBG.anchorPoint=ccp(0.5,1);
+        IGBG.scale = 1.11;
         IGBG.position=ccp(ws.width/2,0);
         
         // game grid
