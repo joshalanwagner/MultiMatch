@@ -655,8 +655,9 @@ CGSize ws;
                 if (gem->hasToMove) {
                     CCCallFunc *cccf;
                     CCSequence *seq;
-                    id move=[CCMoveTo actionWithDuration:0.6 position:ccp(gem.position.x,-gem->indexV*gemWid)];
-                    id moveXEase=[CCEaseBounceOut actionWithAction:move];
+                    // existing guys fall down
+                    id move=[CCMoveTo actionWithDuration:0.25 position:ccp(gem.position.x,-gem->indexV*gemWid)];
+                    id moveXEase=[CCEaseBackOut actionWithAction:move ]; // rate:3.5 1:bad, 3:natural,slow 4:ok, 6:ok.
                     cccf=[CCCallFunc actionWithTarget:self selector:@selector(moveDownGemsFinishedHandler)];
                     seq=[CCSequence actions:moveXEase,cccf,nil];
                     [gem runAction:seq];
@@ -690,7 +691,7 @@ CGSize ws;
     BOOL handlerAdded=NO;
     
     
-    //Create a new gem
+    // New Gems drop down.
     
     NSMutableArray *newGemsCreatedArr=[[NSMutableArray alloc]init];
     
@@ -709,8 +710,8 @@ CGSize ws;
                 newGem.position=ccp(newGem->indexH*gemWid,-newGem->indexV*gemWid+gemWid*4);
                 [gemsCMC addChild:newGem];
                 
-                id moveNew=[CCMoveTo actionWithDuration:0.6 position:ccp(newGem.position.x,-newGem->indexV*gemWid)];
-                id moveXEaseNew=[CCEaseBounceOut actionWithAction:moveNew];
+                id moveNew=[CCMoveTo actionWithDuration:0.26 position:ccp(newGem.position.x,-newGem->indexV*gemWid)];
+                id moveXEaseNew=[CCEaseBackOut actionWithAction:moveNew ];
                 
                 if(!handlerAdded){
                     cccfNew=[CCCallFunc actionWithTarget:self selector:@selector(newCreatedGemsMoveDownFinishedHandler)];
@@ -827,20 +828,22 @@ CGSize ws;
                 
                 Gem *gem=[arrayOfGemsToRemove objectAtIndex:i];
                 // add an additional 10 points for each additional match
-                CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"+%d",(i*10)+10] fontName:FONT_NAME fontSize:24*sd.scaleFactorY];
+                CCLabelTTF * scoreVisual = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"+%d",(i*10)+10] fontName:FONT_NAME fontSize: (i*1) + 15 * sd.scaleFactorY];
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
                 [gemsCMC addChild:scoreVisual z:10];
-                id fadein = [CCFadeOut actionWithDuration:.5];
+                
+                //  guys don't wait for this to finish before dropping down.
+                id fadein = [CCFadeOut actionWithDuration:1.5];
                 
                 id actionRemove =  [CCCallFuncND  actionWithTarget: self
                                                          selector : @selector(removeVisualLabel : data:)
                                                               data:scoreVisual];
                 [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
 
-                
-                id scaleXY=[CCScaleTo actionWithDuration:0.2 scale:0];
-                id moveXEase=[CCEaseExponentialOut actionWithAction:scaleXY];
+                // This is an action on the guys, which holds up the drop.
+                id scaleXY=[CCScaleTo actionWithDuration:0.06 scale:0.2];
+                id moveXEase=[CCEaseIn actionWithAction:scaleXY];
                 CCCallFunc *cccf;
                 CCSequence *seq;
                 if (i == arrayOfGemsToRemove.count-1)
