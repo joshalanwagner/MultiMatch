@@ -7,10 +7,7 @@
 //
 
 #import "cocos2d.h"
-#import "Chartboost.h"
-#import <RevMobAds/RevMobAds.h>
 #import "Nextpeer/Nextpeer.h"
-#import "ALSdk.h"
 #import "AppController.h"
 #import "IntroLayer.h"
 #import "SharedData.h"
@@ -24,19 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Hide this stuff for now to speed up game launch
+    // Interstitial ad placeholder
     
-    //[AdColony configureWithAppID:ADCOLONY_ID zoneIDs:@[ADCOLONY_ZONE_ID] delegate:self logging:YES];
-    //[RevMobAds startSessionWithAppID:REVMOB_ID];
-    //[ALSdk initializeSdk];
-    //if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
-    //{
-    //    [[RevMobAds session] showFullscreen];
-    //}
-    
-    //[self initializeNextpeer];
-    
-    // Is this Game Center???
+    // Game Center???
     [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error) {
         if (error == nil)
         {
@@ -157,25 +144,6 @@
 // call got rejected
 -(void) applicationDidBecomeActive:(UIApplication *)application
 {
-    /////// junaid /////////////
-    Chartboost *cb = [Chartboost sharedChartboost];
-    
-    cb.appId = CB_APPID;
-    cb.appSignature = CB_SIGNATURE;
-    
-    // Required for use of delegate methods. See "Advanced Topics" section below.
-    cb.delegate = nil;
-    
-    // Begin a user session. Must not be dependent on user actions or any prior network requests.
-    // Must be called every time your app becomes active.
-    [cb startSession];
-    [cb cacheInterstitial];
-    [cb cacheMoreApps];
-    // Show an interstitial
-//    [cb showInterstitial];
-    
-    /////////////////////////////////////
-    
 	if( [navController_ visibleViewController] == director_ )
 		[director_ resume];
 }

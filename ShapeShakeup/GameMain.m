@@ -9,9 +9,6 @@
 
 // Import the interfaces
 #import "GameMain.h"
-#import "ALInterstitialAd.h"
-#import "Chartboost.h"
-#import <RevMobAds/RevMobAds.h>
 #import "SimpleAudioEngine.h"
 #import "InAppManager.h"
 // Needed to obtain the Navigation Controller
@@ -57,12 +54,11 @@ CGSize ws;
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super initWithColor:ccc4(0,0, 0, 1)]) ) {
         
-        // Show a Chartboost Ad
+        // interstitial ad placeholder
+        /*
         if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
         {
-            [[Chartboost sharedChartboost] showInterstitial];
-            [[Chartboost sharedChartboost] cacheInterstitial];
-        }
+        } */
         
         // Start Music
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
@@ -310,34 +306,18 @@ CGSize ws;
         okBtn.position=ccp(ws.width/2, ws.height * 0.36);
         [gameOver addChild:okBtn];
         
-        // Revmob FREE GAME ad button - Hiding for now
-        //freeBtn = [self createButtonWithFile:@"freeBtn.png" sel:@selector(freeBtnHandler)];
-        //freeBtn.position = ccp(ws.width/2,-340*sd.scaleFactorY);
-        //[gameOver addChild:freeBtn];
 
-        // Chartboost More Games - Hiding for now
-        //moreGamesBtnGameOver  = [self createButtonWithFile:@"moreAppsBtn.png" sel:@selector(moreAppsBtnHandler)];
-        //moreGamesBtnGameOver.position=ccp(ws.width/2,-280*sd.scaleFactorY);
-        //[gameOver addChild:moreGamesBtnGameOver];
-        
-
-        
-
-        
-    
 	}
 	return self;
 }
 
 -(void) backHandler{
-// Show a chartboost ad
+// interstitial ad placeholder
+    /*
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {
-        [[Chartboost sharedChartboost] showInterstitial];
-        [[Chartboost sharedChartboost] cacheInterstitial];
-    }
+    }*/
     
-    // [self hideBanner];
     [self unschedule:@selector(loop)];
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
@@ -352,11 +332,12 @@ CGSize ws;
 
 -(void) okHandler{
     // This is where I want to hook up Mopub
+    /*
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {
-        [[Chartboost sharedChartboost] showInterstitial];
-        [[Chartboost sharedChartboost] cacheInterstitial];
     }
+     */
+    
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
@@ -386,7 +367,6 @@ CGSize ws;
 // Game Logic ?
 -(Gem*) getAGemAvoidComboWithHID:(int)_hID vID:(int)_vID{
     Gem *gem;
-   //NSMutableArray *allArr=[[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
     NSMutableArray *debarArr=[[NSMutableArray alloc]init];
     //left 
     
@@ -767,7 +747,6 @@ CGSize ws;
         return;
     }
     ___toRemoveArr=[self tryRemove];
-    
 
 }
 
@@ -1015,12 +994,11 @@ CGSize ws;
 -(void) addSingleTouch{
     moveAble=YES;
     closeAble=YES;
-    //[[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];
 }
+
 -(void) removeSingleTouch{
     closeAble=NO;
     moveAble=NO;
-    //[[[CCDirector sharedDirector] touchDispatcher] removeAllDelegates];
 }
 
 -(void) removeGemFinishedHandler{
@@ -1199,12 +1177,10 @@ CGSize ws;
     
  
 -(void)startBtnHandler{
-    /* Hide this applovin banner ad for now
+    /* Banner Ad placeholder
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
-    {
-        [self showBanner];
-    }
-*/
+    {}
+    */
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
@@ -1221,11 +1197,6 @@ CGSize ws;
     }
 }
 
--(void) moreAppsBtnHandler{
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-    [[Chartboost sharedChartboost] showMoreApps];
-
-}
 
 -(void) multiplayerUnlocked{
     
@@ -1241,20 +1212,9 @@ CGSize ws;
 -(void) multiPlayerBtnHandler{
     
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-    // Kill the locking
-    /*
-    if(! [[NSUserDefaults standardUserDefaults] boolForKey:@"multiplayerUnlocked"])
-    {
-        [AdColony playVideoAdForZone:ADCOLONY_ZONE_ID withDelegate:(AppController*)[[UIApplication sharedApplication] delegate] withV4VCPrePopup:YES andV4VCPostPopup:YES];
-    }
-    else
-    { */
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
         [Nextpeer launchDashboard];
         isMultiPlayer = true;
-   // }
-    
-
 }
 
 -(void) leaderBtnHandler{
@@ -1270,27 +1230,13 @@ CGSize ws;
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[InAppManager sharedManager] restorePurchases];
 }
--(void)  freeBtnHandler{
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-    [[RevMobAds session] openAdLinkWithDelegate:nil];
-}
--(void) showBanner{
-    
-    CGRect tempRect = [[(AppController *)[[UIApplication sharedApplication] delegate] window] bounds];
-    appLovinBanner =  [[ALAdView alloc] initBannerAd];
-    appLovinBanner.frame = CGRectMake( 0,  tempRect.size.height - appLovinBanner.frame.size.height,
-                                      appLovinBanner.frame.size.width,
-                                      appLovinBanner.frame.size.height );
-    
-    [[(AppController *)[[UIApplication sharedApplication] delegate] window] addSubview:appLovinBanner];
-    
-    [appLovinBanner loadNextAd];
-}
--(void) hideBanner{
-    [appLovinBanner removeFromSuperview];
-    appLovinBanner = nil;
-}
 
+/* banner ad placeholder
+-(void) showBanner{
+    CGRect tempRect = [[(AppController *)[[UIApplication sharedApplication] delegate] window] bounds];
+}
+*/
+ 
  -(void)removeVisualLabel : (id) sender data:(void*)aObject
 {
     CCLabelTTF * toRemove = (CCLabelTTF *) aObject;

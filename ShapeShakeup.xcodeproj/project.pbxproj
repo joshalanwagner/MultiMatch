@@ -25,7 +25,6 @@
 		5E6F6D5717ABD2130008100D /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F6D5017ABD2130008100D /* gameover.mp3 */; };
 		5E6F6D5817ABD2130008100D /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F6D5117ABD2130008100D /* gameplay.mp3 */; };
 		5E6F6D5917ABD2130008100D /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E6F6D5217ABD2130008100D /* menu.mp3 */; };
-		5E6F6D6917ABD53B0008100D /* libAppLovinSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F6D6817ABD53B0008100D /* libAppLovinSdk.a */; };
 		5E879A111807C1D10089BC1D /* gem1b-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8799FC1807C1D10089BC1D /* gem1b-hd.png */; };
 		5E879A121807C1D10089BC1D /* gem1b-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8799FD1807C1D10089BC1D /* gem1b-ipadhd.png */; };
 		5E879A131807C1D10089BC1D /* gem1b.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8799FE1807C1D10089BC1D /* gem1b.png */; };
@@ -58,8 +57,6 @@
 		5EE142CC17ABB9790007E256 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142CB17ABB9790007E256 /* SystemConfiguration.framework */; };
 		5EE142CE17ABB9910007E256 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142CD17ABB9910007E256 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5EE142D017ABB9950007E256 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142CF17ABB9950007E256 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		5EE142D517ABB9AD0007E256 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142D317ABB9AD0007E256 /* libChartboost.a */; };
-		5EE142D617ABB9AE0007E256 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EE142D417ABB9AD0007E256 /* README.md */; };
 		5EE142DB17ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EE142D917ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle */; };
 		5EE142DC17ABBD1B0007E256 /* Nextpeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142DA17ABBD1B0007E256 /* Nextpeer.framework */; };
 		5EE142DE17ABBD440007E256 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE142DD17ABBD440007E256 /* CFNetwork.framework */; };
@@ -250,7 +247,6 @@
 		C0272F8F17DE2973006106BB /* Icon@57.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F8E17DE2973006106BB /* Icon@57.png */; };
 		C0272F9117DE299A006106BB /* Icon@72.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F9017DE299A006106BB /* Icon@72.png */; };
 		C0272F9317DE29A4006106BB /* Icon@144.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F9217DE29A4006106BB /* Icon@144.png */; };
-		C034915D180BA21600C84230 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E879A281807C6990089BC1D /* RevMobAds.framework */; };
 		C034915E180BA24000C84230 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E879A261807C5F20089BC1D /* AdColony.framework */; };
 		C0C864E8180F22A8007C8291 /* Icon@76.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C864E5180F22A7007C8291 /* Icon@76.png */; };
 		C0C864E9180F22A8007C8291 /* Icon@120.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C864E6180F22A7007C8291 /* Icon@120.png */; };
@@ -278,18 +274,6 @@
 		5E6F6D5017ABD2130008100D /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
 		5E6F6D5117ABD2130008100D /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
 		5E6F6D5217ABD2130008100D /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
-		5E6F6D5D17ABD53B0008100D /* ALAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAd.h; sourceTree = "<group>"; };
-		5E6F6D5E17ABD53B0008100D /* ALAdDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdDisplayDelegate.h; sourceTree = "<group>"; };
-		5E6F6D5F17ABD53B0008100D /* ALAdLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdLoadDelegate.h; sourceTree = "<group>"; };
-		5E6F6D6017ABD53B0008100D /* ALAdService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdService.h; sourceTree = "<group>"; };
-		5E6F6D6117ABD53B0008100D /* ALAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdSize.h; sourceTree = "<group>"; };
-		5E6F6D6217ABD53B0008100D /* ALAdUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdUpdateDelegate.h; sourceTree = "<group>"; };
-		5E6F6D6317ABD53B0008100D /* ALAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdView.h; sourceTree = "<group>"; };
-		5E6F6D6417ABD53B0008100D /* ALInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALInterstitialAd.h; sourceTree = "<group>"; };
-		5E6F6D6517ABD53B0008100D /* ALSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdk.h; sourceTree = "<group>"; };
-		5E6F6D6617ABD53B0008100D /* ALSdkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdkSettings.h; sourceTree = "<group>"; };
-		5E6F6D6717ABD53B0008100D /* ALTargetingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTargetingData.h; sourceTree = "<group>"; };
-		5E6F6D6817ABD53B0008100D /* libAppLovinSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppLovinSdk.a; sourceTree = "<group>"; };
 		5E8799FC1807C1D10089BC1D /* gem1b-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gem1b-hd.png"; path = "Resources/Z_IMAGES/gem1b-hd.png"; sourceTree = "<group>"; };
 		5E8799FD1807C1D10089BC1D /* gem1b-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gem1b-ipadhd.png"; path = "Resources/Z_IMAGES/gem1b-ipadhd.png"; sourceTree = "<group>"; };
 		5E8799FE1807C1D10089BC1D /* gem1b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gem1b.png; path = Resources/Z_IMAGES/gem1b.png; sourceTree = "<group>"; };
@@ -309,7 +293,6 @@
 		5E879A0C1807C1D10089BC1D /* gem6b-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gem6b-ipadhd.png"; path = "Resources/Z_IMAGES/gem6b-ipadhd.png"; sourceTree = "<group>"; };
 		5E879A0D1807C1D10089BC1D /* gem6b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gem6b.png; path = Resources/Z_IMAGES/gem6b.png; sourceTree = "<group>"; };
 		5E879A261807C5F20089BC1D /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
-		5E879A281807C6990089BC1D /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevMobAds.framework; path = libs/RevMobAds.framework; sourceTree = "<group>"; };
 		5E879A2A1807C7D20089BC1D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5E879A2C1807C7D90089BC1D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5E879A2E1807C7E20089BC1D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -326,9 +309,6 @@
 		5EE142CB17ABB9790007E256 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5EE142CD17ABB9910007E256 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5EE142CF17ABB9950007E256 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		5EE142D217ABB9AD0007E256 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		5EE142D317ABB9AD0007E256 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		5EE142D417ABB9AD0007E256 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5EE142D917ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = NPResources_iPhone_Portrait.bundle; path = libs/NPResources_iPhone_Portrait.bundle; sourceTree = "<group>"; };
 		5EE142DA17ABBD1B0007E256 /* Nextpeer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nextpeer.framework; path = libs/Nextpeer.framework; sourceTree = "<group>"; };
 		5EE142DD17ABBD440007E256 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -689,10 +669,7 @@
 				ACDC226C1791014200280F36 /* AVFoundation.framework in Frameworks */,
 				ACDC226E1791014200280F36 /* UIKit.framework in Frameworks */,
 				ACDC22701791014200280F36 /* Foundation.framework in Frameworks */,
-				5EE142D517ABB9AD0007E256 /* libChartboost.a in Frameworks */,
 				5EE142DC17ABBD1B0007E256 /* Nextpeer.framework in Frameworks */,
-				5E6F6D6917ABD53B0008100D /* libAppLovinSdk.a in Frameworks */,
-				C034915D180BA21600C84230 /* RevMobAds.framework in Frameworks */,
 				C034915E180BA24000C84230 /* AdColony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,45 +699,6 @@
 			);
 			name = Sounds;
 			path = Resources/Sounds;
-			sourceTree = "<group>";
-		};
-		5E6F6D5B17ABD53B0008100D /* applovin-ios-sdk-2.0.94 */ = {
-			isa = PBXGroup;
-			children = (
-				5E6F6D5C17ABD53B0008100D /* headers */,
-				5E6F6D6817ABD53B0008100D /* libAppLovinSdk.a */,
-			);
-			name = "applovin-ios-sdk-2.0.94";
-			path = "libs/applovin-ios-sdk-2.0.94";
-			sourceTree = "<group>";
-		};
-		5E6F6D5C17ABD53B0008100D /* headers */ = {
-			isa = PBXGroup;
-			children = (
-				5E6F6D5D17ABD53B0008100D /* ALAd.h */,
-				5E6F6D5E17ABD53B0008100D /* ALAdDisplayDelegate.h */,
-				5E6F6D5F17ABD53B0008100D /* ALAdLoadDelegate.h */,
-				5E6F6D6017ABD53B0008100D /* ALAdService.h */,
-				5E6F6D6117ABD53B0008100D /* ALAdSize.h */,
-				5E6F6D6217ABD53B0008100D /* ALAdUpdateDelegate.h */,
-				5E6F6D6317ABD53B0008100D /* ALAdView.h */,
-				5E6F6D6417ABD53B0008100D /* ALInterstitialAd.h */,
-				5E6F6D6517ABD53B0008100D /* ALSdk.h */,
-				5E6F6D6617ABD53B0008100D /* ALSdkSettings.h */,
-				5E6F6D6717ABD53B0008100D /* ALTargetingData.h */,
-			);
-			path = headers;
-			sourceTree = "<group>";
-		};
-		5EE142D117ABB9AD0007E256 /* Chartboost */ = {
-			isa = PBXGroup;
-			children = (
-				5EE142D217ABB9AD0007E256 /* Chartboost.h */,
-				5EE142D317ABB9AD0007E256 /* libChartboost.a */,
-				5EE142D417ABB9AD0007E256 /* README.md */,
-			);
-			name = Chartboost;
-			path = libs/Chartboost;
 			sourceTree = "<group>";
 		};
 		AC527B5E1792D5EA00D4306E /* fonts */ = {
@@ -872,11 +810,8 @@
 		ACDC22901791014500280F36 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				5E879A281807C6990089BC1D /* RevMobAds.framework */,
-				5E6F6D5B17ABD53B0008100D /* applovin-ios-sdk-2.0.94 */,
 				5EE142D917ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle */,
 				5EE142DA17ABBD1B0007E256 /* Nextpeer.framework */,
-				5EE142D117ABB9AD0007E256 /* Chartboost */,
 				ACDC23A71791015100280F36 /* LICENSE_cocos2d.txt */,
 				ACDC23B61791015200280F36 /* LICENSE_CocosDenshion.txt */,
 				ACDC23E81791015400280F36 /* LICENSE_Kazmath.txt */,
@@ -1415,7 +1350,6 @@
 				AD3EF71A181F790B00766A47 /* lockup.png in Resources */,
 				5E879A171807C1D10089BC1D /* gem3b-hd.png in Resources */,
 				5E879A1E1807C1D10089BC1D /* gem5b-ipadhd.png in Resources */,
-				5EE142D617ABB9AE0007E256 /* README.md in Resources */,
 				5EE142DB17ABBD1B0007E256 /* NPResources_iPhone_Portrait.bundle in Resources */,
 				AD3EF709181F3A9800766A47 /* topBar-hd.png in Resources */,
 				AD936424181EEDC60091F54C /* bang whack pow.ttf in Resources */,
@@ -1657,11 +1591,7 @@
 				HEADER_SEARCH_PATHS = "\"ShapeShakeup/libs/kazmath/include\"";
 				INFOPLIST_FILE = ShapeShakeup/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ShapeShakeup/libs/Chartboost\"",
-					"\"$(SRCROOT)/ShapeShakeup/libs/applovin-ios-sdk-2.0.94\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1697,11 +1627,7 @@
 				HEADER_SEARCH_PATHS = "\"ShapeShakeup/libs/kazmath/include\"";
 				INFOPLIST_FILE = ShapeShakeup/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ShapeShakeup/libs/Chartboost\"",
-					"\"$(SRCROOT)/ShapeShakeup/libs/applovin-ios-sdk-2.0.94\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

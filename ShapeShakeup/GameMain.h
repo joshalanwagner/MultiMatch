@@ -8,7 +8,6 @@
 
 
 #import <GameKit/GameKit.h>
-#import "ALAdView.h"
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "SharedData.h"
@@ -32,7 +31,6 @@
     CCMenu  *freeBtn;
     CCMenu  *moreGamesBtnGameOver;
     bool isMultiPlayer;
-    ALAdView *appLovinBanner;
     ///////////////////////////////
     
     
