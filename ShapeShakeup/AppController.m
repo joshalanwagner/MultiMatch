@@ -15,12 +15,12 @@
 #import "IntroLayer.h"
 #import "SharedData.h"
 #import "SimpleAudioEngine.h"
-
+#import "MopubSDK/MPInterstitialAdController.h" // not needed?
 
 
 @implementation AppController
 
-@synthesize window=window_, navController=navController_, director=director_;
+@synthesize window=window_, navController=navController_, director=director_,interstitial;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -35,6 +35,15 @@
     //}
     
     //[self initializeNextpeer];
+    
+    // MOPUB: load an ad.
+    NSString *adUnitID = iPadDevice ? moPubAdUnitID_fullScreenTablet : moPubAdUnitID_fullScreenPhone;
+    self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:adUnitID];
+    interstitial.delegate = self;
+    [interstitial loadAd];
+    // MOPUB: Try to show ad - longer delay gives better chance of ad loading?
+    [self performSelector:@selector(showMoPubAds) withObject:nil afterDelay:3.5];
+    
     
     // Is this Game Center???
     [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error) {

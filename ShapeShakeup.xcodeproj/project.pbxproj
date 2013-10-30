@@ -920,6 +920,14 @@
 		ADABE3A81821A1D500C2ABB0 /* MPCloseButtonX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MPCloseButtonX.png; sourceTree = "<group>"; };
 		ADABE3A91821A1D500C2ABB0 /* MPCloseButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MPCloseButtonX@2x.png"; sourceTree = "<group>"; };
 		ADABE3AA1821A1D500C2ABB0 /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
+		ADABE4021821AE3C00C2ABB0 /* libMMSDK_5.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMSDK_5.1.1.a; sourceTree = "<group>"; };
+		ADABE4031821AE3C00C2ABB0 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		ADABE4041821AE3C00C2ABB0 /* MMAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAdView.h; sourceTree = "<group>"; };
+		ADABE4051821AE3C00C2ABB0 /* MMInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMInterstitial.h; sourceTree = "<group>"; };
+		ADABE4061821AE3C00C2ABB0 /* MMRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRequest.h; sourceTree = "<group>"; };
+		ADABE4071821AE3C00C2ABB0 /* MMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSDK.h; sourceTree = "<group>"; };
+		ADABE4081821AE3C00C2ABB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		ADABE40A1821AE3C00C2ABB0 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
 		C0272F7617DE26C9006106BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C0272F7A17DE26DF006106BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C0272F7C17DE26F4006106BB /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -1094,6 +1102,7 @@
 		ACDC22621791014200280F36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADABE4011821AE3C00C2ABB0 /* SDK */,
 				ADABE2DC18219F7000C2ABB0 /* PassKit.framework */,
 				ADABE2DA18219F4E00C2ABB0 /* iAd.framework */,
 				ADABE2D818219EC700C2ABB0 /* CoreLocation.framework */,
@@ -1956,6 +1965,30 @@
 				ADABE3AA1821A1D500C2ABB0 /* MRAID.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADABE4011821AE3C00C2ABB0 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ADABE4021821AE3C00C2ABB0 /* libMMSDK_5.1.1.a */,
+				ADABE4031821AE3C00C2ABB0 /* LICENSE.txt */,
+				ADABE4041821AE3C00C2ABB0 /* MMAdView.h */,
+				ADABE4051821AE3C00C2ABB0 /* MMInterstitial.h */,
+				ADABE4061821AE3C00C2ABB0 /* MMRequest.h */,
+				ADABE4071821AE3C00C2ABB0 /* MMSDK.h */,
+				ADABE4081821AE3C00C2ABB0 /* README.md */,
+				ADABE4091821AE3C00C2ABB0 /* SpeechKit */,
+			);
+			name = SDK;
+			path = ShapeShakeup/MoPubSDK/AdNetworkSupport/Millennial/SDK;
+			sourceTree = "<group>";
+		};
+		ADABE4091821AE3C00C2ABB0 /* SpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				ADABE40A1821AE3C00C2ABB0 /* SpeechKit.framework */,
+			);
+			path = SpeechKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

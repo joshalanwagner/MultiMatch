@@ -19,8 +19,12 @@
 #define REMOVE_AD_ID @"SSRemoveAds"
 #define ADCOLONY_ID  @"appab576XXXXXXXXXXa9f2bc6"
 #define ADCOLONY_ZONE_ID @"vz8203cXXXXXXXXXXa84f749"
+//MOPUB
+#define iPadDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define moPubAdUnitID_fullScreenTablet @"c43a5a0bd76a4f168cc3304186afe165"
+#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640"
 
-@interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate,NPTournamentDelegate,NextpeerDelegate,GKLeaderboardViewControllerDelegate,AdColonyDelegate,AdColonyAdDelegate>
+@interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate,NPTournamentDelegate,NextpeerDelegate,GKLeaderboardViewControllerDelegate,AdColonyDelegate,AdColonyAdDelegate,MPInterstitialAdControllerDelegate>
 {
 	UIWindow *window_;
 	UINavigationController *navController_;
@@ -31,6 +35,7 @@
 @property (nonatomic, retain) UIWindow *window;
 @property (readonly) UINavigationController *navController;
 @property (readonly) CCDirectorIOS *director;
+@property (nonatomic, retain) MPInterstitialAdController *interstitial; //mopub
 
 -(void) initializeNextpeer;
 - (void) showLeaderboard;
