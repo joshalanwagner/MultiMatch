@@ -264,7 +264,7 @@ CGSize ws;
         gameOver=[[CCSprite alloc]init];
         [self addChild:gameOver];
         
-        CCSprite *gameOverBG=[CCSprite spriteWithFile:@"menuBG.png"];
+        CCSprite *gameOverBG=[CCSprite spriteWithFile:@"menuBG.pvr.ccz"];
         gameOverBG.anchorPoint=ccp(0.5,0.5);
         gameOverBG.position=ccp(ws.width/2 , ws.height/2);
         [gameOver addChild:gameOverBG];

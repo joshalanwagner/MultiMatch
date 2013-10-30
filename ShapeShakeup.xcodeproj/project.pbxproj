@@ -341,7 +341,7 @@
 		AC527B571792CCCD00D4306E /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backBtn.png; path = Resources/Z_IMAGES/backBtn.png; sourceTree = "<group>"; };
 		AC527B581792CCCD00D4306E /* timeBar-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBar-hd.png"; path = "Resources/Z_IMAGES/timeBar-hd.png"; sourceTree = "<group>"; };
 		AC527B591792CCCD00D4306E /* timeBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeBar.png; path = Resources/Z_IMAGES/timeBar.png; sourceTree = "<group>"; };
-		ACDC22601791014200280F36 /* JewelMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACDC22601791014200280F36 /* ShapeShakeup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeShakeup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDC22631791014200280F36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACDC22651791014200280F36 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		ACDC22671791014200280F36 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -797,7 +797,7 @@
 				5EE142CF17ABB9950007E256 /* AdSupport.framework */,
 				5EE142CD17ABB9910007E256 /* StoreKit.framework */,
 				5EE142CB17ABB9790007E256 /* SystemConfiguration.framework */,
-				ACDC22751791014200280F36 /* JewelMania */,
+				ACDC22751791014200280F36 /* ShapeShakeup */,
 				ACDC22621791014200280F36 /* Frameworks */,
 				ACDC22611791014200280F36 /* Products */,
 			);
@@ -806,7 +806,7 @@
 		ACDC22611791014200280F36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACDC22601791014200280F36 /* JewelMania.app */,
+				ACDC22601791014200280F36 /* ShapeShakeup.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -833,7 +833,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ACDC22751791014200280F36 /* JewelMania */ = {
+		ACDC22751791014200280F36 /* ShapeShakeup */ = {
 			isa = PBXGroup;
 			children = (
 				5E91F84317D4510300A2C6FA /* SharedData.h */,
@@ -851,7 +851,7 @@
 				ACDC22901791014500280F36 /* libs */,
 				ACDC23E91791015400280F36 /* Supporting Files */,
 			);
-			path = JewelMania;
+			path = ShapeShakeup;
 			sourceTree = "<group>";
 		};
 		ACDC22761791014300280F36 /* Resources */ = {
@@ -1312,9 +1312,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACDC225F1791014200280F36 /* JewelMania */ = {
+		ACDC225F1791014200280F36 /* ShapeShakeup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACDC23F81791015400280F36 /* Build configuration list for PBXNativeTarget "JewelMania" */;
+			buildConfigurationList = ACDC23F81791015400280F36 /* Build configuration list for PBXNativeTarget "ShapeShakeup" */;
 			buildPhases = (
 				ACDC225C1791014200280F36 /* Sources */,
 				ACDC225D1791014200280F36 /* Frameworks */,
@@ -1324,9 +1324,9 @@
 			);
 			dependencies = (
 			);
-			name = JewelMania;
+			name = ShapeShakeup;
 			productName = JewelMania;
-			productReference = ACDC22601791014200280F36 /* JewelMania.app */;
+			productReference = ACDC22601791014200280F36 /* ShapeShakeup.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1337,7 +1337,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = ACDC225B1791014200280F36 /* Build configuration list for PBXProject "JewelMania" */;
+			buildConfigurationList = ACDC225B1791014200280F36 /* Build configuration list for PBXProject "ShapeShakeup" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1349,7 +1349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ACDC225F1791014200280F36 /* JewelMania */,
+				ACDC225F1791014200280F36 /* ShapeShakeup */,
 			);
 		};
 /* End PBXProject section */
@@ -1643,31 +1643,31 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/JewelMania/libs\\\\\\\"",
+					"\\\\\\\"$(SRCROOT)/ShapeShakeup/libs\\\\\\\"",
 					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code",
-					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code/JewelMania/libs",
-					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code/JewelMania/libs",
+					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code/ShapeShakeup/libs",
+					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code/ShapeShakeup/libs",
 					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code",
-					"\"$(SRCROOT)/JewelMania/libs\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JewelMania/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"JewelMania/libs/kazmath/include\"";
-				INFOPLIST_FILE = JewelMania/Resources/Info.plist;
+				GCC_PREFIX_HEADER = ShapeShakeup/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"ShapeShakeup/libs/kazmath/include\"";
+				INFOPLIST_FILE = ShapeShakeup/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/JewelMania/libs/Chartboost\"",
-					"\"$(SRCROOT)/JewelMania/libs/applovin-ios-sdk-2.0.94\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs/Chartboost\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs/applovin-ios-sdk-2.0.94\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShapeShakeup;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1684,30 +1684,30 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/JewelMania/libs\\\\\\\"",
+					"\\\\\\\"$(SRCROOT)/ShapeShakeup/libs\\\\\\\"",
 					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code",
-					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code/JewelMania/libs",
-					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code/JewelMania/libs",
+					"/Users/granjur/Desktop/junaid/chris/Jelly\\ Match\\ Code/ShapeShakeup/libs",
+					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code/ShapeShakeup/libs",
 					"/Users/ChrisSilveira/Desktop/Jelly\\ Match\\ Code",
-					"\"$(SRCROOT)/JewelMania/libs\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JewelMania/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"JewelMania/libs/kazmath/include\"";
-				INFOPLIST_FILE = JewelMania/Resources/Info.plist;
+				GCC_PREFIX_HEADER = ShapeShakeup/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"ShapeShakeup/libs/kazmath/include\"";
+				INFOPLIST_FILE = ShapeShakeup/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/JewelMania/libs/Chartboost\"",
-					"\"$(SRCROOT)/JewelMania/libs/applovin-ios-sdk-2.0.94\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs/Chartboost\"",
+					"\"$(SRCROOT)/ShapeShakeup/libs/applovin-ios-sdk-2.0.94\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShapeShakeup;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1719,7 +1719,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACDC225B1791014200280F36 /* Build configuration list for PBXProject "JewelMania" */ = {
+		ACDC225B1791014200280F36 /* Build configuration list for PBXProject "ShapeShakeup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACDC23F61791015400280F36 /* Debug */,
@@ -1728,7 +1728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACDC23F81791015400280F36 /* Build configuration list for PBXNativeTarget "JewelMania" */ = {
+		ACDC23F81791015400280F36 /* Build configuration list for PBXNativeTarget "ShapeShakeup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACDC23F91791015400280F36 /* Debug */,

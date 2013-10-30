@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ACDC225F1791014200280F36"
-               BuildableName = "JewelMania.app"
-               BlueprintName = "JewelMania"
-               ReferencedContainer = "container:JewelMania.xcodeproj">
+               BuildableName = "ShapeShakeup.app"
+               BlueprintName = "ShapeShakeup"
+               ReferencedContainer = "container:ShapeShakeup.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACDC225F1791014200280F36"
-            BuildableName = "JewelMania.app"
-            BlueprintName = "JewelMania"
-            ReferencedContainer = "container:JewelMania.xcodeproj">
+            BuildableName = "ShapeShakeup.app"
+            BlueprintName = "ShapeShakeup"
+            ReferencedContainer = "container:ShapeShakeup.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACDC225F1791014200280F36"
-            BuildableName = "JewelMania.app"
-            BlueprintName = "JewelMania"
-            ReferencedContainer = "container:JewelMania.xcodeproj">
+            BuildableName = "ShapeShakeup.app"
+            BlueprintName = "ShapeShakeup"
+            ReferencedContainer = "container:ShapeShakeup.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ACDC225F1791014200280F36"
-            BuildableName = "JewelMania.app"
-            BlueprintName = "JewelMania"
-            ReferencedContainer = "container:JewelMania.xcodeproj">
+            BuildableName = "ShapeShakeup.app"
+            BlueprintName = "ShapeShakeup"
+            ReferencedContainer = "container:ShapeShakeup.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
