@@ -22,7 +22,7 @@
 
 #define kFontColor      ccc3(255,255,255);     // Red, Green, Blue
 #define blackColor      ccc3(0,0,0);
-#define blueColor       ccc3(48,140,200);
+#define blueColor       ccc3(20,140,255);
 #define lightBlueColor  ccc3(98,188,255);
 
 //// font name
@@ -73,7 +73,7 @@ CGSize ws;
         
         
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 60 ;
+       gameTime = 60 * 10 ;
         
         // number of rows and columns
         hNum=6;
@@ -264,8 +264,15 @@ CGSize ws;
         gameOver=[[CCSprite alloc]init];
         [self addChild:gameOver];
         
+        // background grass
+        CCSprite *grass2=[[CCSprite alloc]initWithFile:@"inGameBG.pvr.ccz"];
+        grass2.scale = 1.11;
+        grass2.position=ccp(ws.width/2 , ws.height/2);
+        [gameOver addChild:grass2];
+        
         CCSprite *gameOverBG=[CCSprite spriteWithFile:@"menuBG.pvr.ccz"];
         gameOverBG.anchorPoint=ccp(0.5,0.5);
+        gameOverBG.scaleY = 1.11;
         gameOverBG.position=ccp(ws.width/2 , ws.height/2);
         [gameOver addChild:gameOverBG];
         
