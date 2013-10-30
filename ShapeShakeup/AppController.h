@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "Nextpeer/Nextpeer.h"
 #import <GameKit/GameKit.h>
-#import "MopubSDK/MPInterstitialAdController.h"
-#import <Nextpeer/Nextpeer.h>
 #import <AdColony/AdColony.h>
+#import "MopubSDK/MPInterstitialAdController.h"
 
 #define CB_APPID @"525b080XXXXXXXXXX4000008"
 #define CB_SIGNATURE @"66c945989ab11cb5da6cXXXXXXXXXXc47afd8f9f"
@@ -22,7 +22,7 @@
 //MOPUB
 #define iPadDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define moPubAdUnitID_fullScreenTablet @"c43a5a0bd76a4f168cc3304186afe165"
-#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640" 
+#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640"
 
 @interface AppController : NSObject <UIApplicationDelegate, CCDirectorDelegate,NPTournamentDelegate,NextpeerDelegate,GKLeaderboardViewControllerDelegate,AdColonyDelegate,AdColonyAdDelegate,MPInterstitialAdControllerDelegate>
 {

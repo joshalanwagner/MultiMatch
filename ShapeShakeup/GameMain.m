@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "GameMain.h"
+#import "ALInterstitialAd.h"
 #import "Chartboost.h"
 #import <RevMobAds/RevMobAds.h>
 #import "SimpleAudioEngine.h"
@@ -1198,7 +1199,12 @@ CGSize ws;
     
  
 -(void)startBtnHandler{
-
+    /* Hide this applovin banner ad for now
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
+    {
+        [self showBanner];
+    }
+*/
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
@@ -1268,6 +1274,29 @@ CGSize ws;
     [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
     [[RevMobAds session] openAdLinkWithDelegate:nil];
 }
+-(void) showBanner{
+    
+    CGRect tempRect = [[(AppController *)[[UIApplication sharedApplication] delegate] window] bounds];
+    appLovinBanner =  [[ALAdView alloc] initBannerAd];
+    appLovinBanner.frame = CGRectMake( 0,  tempRect.size.height - appLovinBanner.frame.size.height,
+                                      appLovinBanner.frame.size.width,
+                                      appLovinBanner.frame.size.height );
+    
+    [[(AppController *)[[UIApplication sharedApplication] delegate] window] addSubview:appLovinBanner];
+    
+    [appLovinBanner loadNextAd];
+}
+-(void) hideBanner{
+    [appLovinBanner removeFromSuperview];
+    appLovinBanner = nil;
+}
+
+ -(void)removeVisualLabel : (id) sender data:(void*)aObject
+{
+    CCLabelTTF * toRemove = (CCLabelTTF *) aObject;
+    [gemsCMC removeChild:toRemove cleanup:YES];
+}
+
 
 
 // on "dealloc" you need to release all your retained objects
