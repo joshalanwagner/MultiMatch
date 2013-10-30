@@ -11,7 +11,6 @@
 #import "Nextpeer/Nextpeer.h"
 #import <GameKit/GameKit.h>
 #import <AdColony/AdColony.h>
-#import "MopubSDK/MPInterstitialAdController.h"
 
 #define CB_APPID @"525b080XXXXXXXXXX4000008"
 #define CB_SIGNATURE @"66c945989ab11cb5da6cXXXXXXXXXXc47afd8f9f"
