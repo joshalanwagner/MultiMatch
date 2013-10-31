@@ -2973,7 +2973,6 @@
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
-					"-all_load",
 				);
 				PRODUCT_NAME = ShapeShakeup;
 				PROVISIONING_PROFILE = "";
@@ -3012,7 +3011,6 @@
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
-					"-all_load",
 				);
 				PRODUCT_NAME = ShapeShakeup;
 				PROVISIONING_PROFILE = "";
