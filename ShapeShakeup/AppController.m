@@ -12,7 +12,7 @@
 #import "IntroLayer.h"
 #import "SharedData.h"
 #import "SimpleAudioEngine.h"
-
+#import "Flurry.h"
 
 
 @implementation AppController
@@ -22,6 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Interstitial ad placeholder
+    
+    //Flurry
+    [Flurry setCrashReportingEnabled:YES];
+    //note: iOS only allows one crash reporting tool per app; if using another, set to: NO
+    [Flurry startSession:@"NGGMTV763VRK3DVMZ78R"];
     
     // Game Center???
     [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error) {
