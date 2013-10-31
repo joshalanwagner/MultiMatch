@@ -333,7 +333,6 @@
 		ADDBE6DF1821D7BC009ABA8A /* _flurry_ad_delegate_8h_source.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6491821D7BC009ABA8A /* _flurry_ad_delegate_8h_source.html */; };
 		ADDBE6E01821D7BC009ABA8A /* _flurry_ads_8h_source.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE64A1821D7BC009ABA8A /* _flurry_ads_8h_source.html */; };
 		ADDBE6E11821D7BC009ABA8A /* annotated.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE64B1821D7BC009ABA8A /* annotated.html */; };
-		ADDBE6E21821D7BC009ABA8A /* annotated.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE64C1821D7BC009ABA8A /* annotated.js */; };
 		ADDBE6E31821D7BC009ABA8A /* bc_s.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE64D1821D7BC009ABA8A /* bc_s.png */; };
 		ADDBE6E41821D7BC009ABA8A /* bdwn.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE64E1821D7BC009ABA8A /* bdwn.png */; };
 		ADDBE6E51821D7BC009ABA8A /* class_flurry-members.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE64F1821D7BC009ABA8A /* class_flurry-members.html */; };
@@ -342,18 +341,12 @@
 		ADDBE6E81821D7BC009ABA8A /* closed.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6521821D7BC009ABA8A /* closed.png */; };
 		ADDBE6E91821D7BC009ABA8A /* deprecated.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6531821D7BC009ABA8A /* deprecated.html */; };
 		ADDBE6EA1821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6541821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.html */; };
-		ADDBE6EB1821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6551821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.js */; };
 		ADDBE6EC1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6561821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.html */; };
-		ADDBE6ED1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6571821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.js */; };
 		ADDBE6EE1821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6581821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.html */; };
-		ADDBE6EF1821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6591821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.js */; };
 		ADDBE6F01821D7BC009ABA8A /* dir_63745280448c2ee80dfc9889b44c7a70.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE65A1821D7BC009ABA8A /* dir_63745280448c2ee80dfc9889b44c7a70.html */; };
-		ADDBE6F11821D7BC009ABA8A /* dir_63745280448c2ee80dfc9889b44c7a70.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE65B1821D7BC009ABA8A /* dir_63745280448c2ee80dfc9889b44c7a70.js */; };
 		ADDBE6F21821D7BC009ABA8A /* doxygen.css in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE65C1821D7BC009ABA8A /* doxygen.css */; };
 		ADDBE6F31821D7BC009ABA8A /* doxygen.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE65D1821D7BC009ABA8A /* doxygen.png */; };
-		ADDBE6F41821D7BC009ABA8A /* dynsections.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE65E1821D7BC009ABA8A /* dynsections.js */; };
 		ADDBE6F51821D7BC009ABA8A /* files.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE65F1821D7BC009ABA8A /* files.html */; };
-		ADDBE6F61821D7BC009ABA8A /* files.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6601821D7BC009ABA8A /* files.js */; };
 		ADDBE6F71821D7BC009ABA8A /* ftv2blank.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6611821D7BC009ABA8A /* ftv2blank.png */; };
 		ADDBE6F81821D7BC009ABA8A /* ftv2cl.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6621821D7BC009ABA8A /* ftv2cl.png */; };
 		ADDBE6F91821D7BC009ABA8A /* ftv2doc.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6631821D7BC009ABA8A /* ftv2doc.png */; };
@@ -373,84 +366,49 @@
 		ADDBE7071821D7BC009ABA8A /* functions.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6711821D7BC009ABA8A /* functions.html */; };
 		ADDBE7081821D7BC009ABA8A /* functions_func.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6721821D7BC009ABA8A /* functions_func.html */; };
 		ADDBE7091821D7BC009ABA8A /* hierarchy.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6731821D7BC009ABA8A /* hierarchy.html */; };
-		ADDBE70A1821D7BC009ABA8A /* hierarchy.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6741821D7BC009ABA8A /* hierarchy.js */; };
 		ADDBE70B1821D7BC009ABA8A /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6751821D7BC009ABA8A /* index.html */; };
 		ADDBE70C1821D7BC009ABA8A /* interface_flurry.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6761821D7BC009ABA8A /* interface_flurry.html */; };
 		ADDBE70D1821D7BC009ABA8A /* interface_flurry_ads.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6771821D7BC009ABA8A /* interface_flurry_ads.html */; };
-		ADDBE70E1821D7BC009ABA8A /* jquery.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6781821D7BC009ABA8A /* jquery.js */; };
 		ADDBE70F1821D7BC009ABA8A /* nav_f.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6791821D7BC009ABA8A /* nav_f.png */; };
 		ADDBE7101821D7BC009ABA8A /* nav_g.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE67A1821D7BC009ABA8A /* nav_g.png */; };
 		ADDBE7111821D7BC009ABA8A /* nav_h.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE67B1821D7BC009ABA8A /* nav_h.png */; };
 		ADDBE7121821D7BC009ABA8A /* navtree.css in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE67C1821D7BC009ABA8A /* navtree.css */; };
-		ADDBE7131821D7BC009ABA8A /* navtree.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE67D1821D7BC009ABA8A /* navtree.js */; };
-		ADDBE7141821D7BC009ABA8A /* navtreeindex0.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE67E1821D7BC009ABA8A /* navtreeindex0.js */; };
 		ADDBE7151821D7BC009ABA8A /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE67F1821D7BC009ABA8A /* open.png */; };
 		ADDBE7161821D7BC009ABA8A /* pages.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6801821D7BC009ABA8A /* pages.html */; };
 		ADDBE7171821D7BC009ABA8A /* protocol_flurry_ad_delegate-p-members.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6811821D7BC009ABA8A /* protocol_flurry_ad_delegate-p-members.html */; };
 		ADDBE7181821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6821821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.html */; };
-		ADDBE7191821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6831821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.js */; };
-		ADDBE71A1821D7BC009ABA8A /* resize.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6841821D7BC009ABA8A /* resize.js */; };
 		ADDBE71B1821D7BC009ABA8A /* all_5f.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6861821D7BC009ABA8A /* all_5f.html */; };
-		ADDBE71C1821D7BC009ABA8A /* all_5f.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6871821D7BC009ABA8A /* all_5f.js */; };
 		ADDBE71D1821D7BC009ABA8A /* all_61.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6881821D7BC009ABA8A /* all_61.html */; };
-		ADDBE71E1821D7BC009ABA8A /* all_61.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6891821D7BC009ABA8A /* all_61.js */; };
 		ADDBE71F1821D7BC009ABA8A /* all_63.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE68A1821D7BC009ABA8A /* all_63.html */; };
-		ADDBE7201821D7BC009ABA8A /* all_63.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE68B1821D7BC009ABA8A /* all_63.js */; };
 		ADDBE7211821D7BC009ABA8A /* all_64.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE68C1821D7BC009ABA8A /* all_64.html */; };
-		ADDBE7221821D7BC009ABA8A /* all_64.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE68D1821D7BC009ABA8A /* all_64.js */; };
 		ADDBE7231821D7BC009ABA8A /* all_65.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE68E1821D7BC009ABA8A /* all_65.html */; };
-		ADDBE7241821D7BC009ABA8A /* all_65.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE68F1821D7BC009ABA8A /* all_65.js */; };
 		ADDBE7251821D7BC009ABA8A /* all_66.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6901821D7BC009ABA8A /* all_66.html */; };
-		ADDBE7261821D7BC009ABA8A /* all_66.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6911821D7BC009ABA8A /* all_66.js */; };
 		ADDBE7271821D7BC009ABA8A /* all_67.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6921821D7BC009ABA8A /* all_67.html */; };
-		ADDBE7281821D7BC009ABA8A /* all_67.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6931821D7BC009ABA8A /* all_67.js */; };
 		ADDBE7291821D7BC009ABA8A /* all_69.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6941821D7BC009ABA8A /* all_69.html */; };
-		ADDBE72A1821D7BC009ABA8A /* all_69.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6951821D7BC009ABA8A /* all_69.js */; };
 		ADDBE72B1821D7BC009ABA8A /* all_6c.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6961821D7BC009ABA8A /* all_6c.html */; };
-		ADDBE72C1821D7BC009ABA8A /* all_6c.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6971821D7BC009ABA8A /* all_6c.js */; };
 		ADDBE72D1821D7BC009ABA8A /* all_70.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6981821D7BC009ABA8A /* all_70.html */; };
-		ADDBE72E1821D7BC009ABA8A /* all_70.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6991821D7BC009ABA8A /* all_70.js */; };
 		ADDBE72F1821D7BC009ABA8A /* all_72.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE69A1821D7BC009ABA8A /* all_72.html */; };
-		ADDBE7301821D7BC009ABA8A /* all_72.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE69B1821D7BC009ABA8A /* all_72.js */; };
 		ADDBE7311821D7BC009ABA8A /* all_73.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE69C1821D7BC009ABA8A /* all_73.html */; };
-		ADDBE7321821D7BC009ABA8A /* all_73.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE69D1821D7BC009ABA8A /* all_73.js */; };
 		ADDBE7331821D7BC009ABA8A /* all_76.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE69E1821D7BC009ABA8A /* all_76.html */; };
-		ADDBE7341821D7BC009ABA8A /* all_76.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE69F1821D7BC009ABA8A /* all_76.js */; };
 		ADDBE7351821D7BC009ABA8A /* classes_66.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A01821D7BC009ABA8A /* classes_66.html */; };
-		ADDBE7361821D7BC009ABA8A /* classes_66.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6A11821D7BC009ABA8A /* classes_66.js */; };
 		ADDBE7371821D7BC009ABA8A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A21821D7BC009ABA8A /* close.png */; };
 		ADDBE7381821D7BC009ABA8A /* functions_5f.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A31821D7BC009ABA8A /* functions_5f.html */; };
-		ADDBE7391821D7BC009ABA8A /* functions_5f.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6A41821D7BC009ABA8A /* functions_5f.js */; };
 		ADDBE73A1821D7BC009ABA8A /* functions_61.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A51821D7BC009ABA8A /* functions_61.html */; };
-		ADDBE73B1821D7BC009ABA8A /* functions_61.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6A61821D7BC009ABA8A /* functions_61.js */; };
 		ADDBE73C1821D7BC009ABA8A /* functions_63.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A71821D7BC009ABA8A /* functions_63.html */; };
-		ADDBE73D1821D7BC009ABA8A /* functions_63.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6A81821D7BC009ABA8A /* functions_63.js */; };
 		ADDBE73E1821D7BC009ABA8A /* functions_64.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6A91821D7BC009ABA8A /* functions_64.html */; };
-		ADDBE73F1821D7BC009ABA8A /* functions_64.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6AA1821D7BC009ABA8A /* functions_64.js */; };
 		ADDBE7401821D7BC009ABA8A /* functions_65.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6AB1821D7BC009ABA8A /* functions_65.html */; };
-		ADDBE7411821D7BC009ABA8A /* functions_65.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6AC1821D7BC009ABA8A /* functions_65.js */; };
 		ADDBE7421821D7BC009ABA8A /* functions_66.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6AD1821D7BC009ABA8A /* functions_66.html */; };
-		ADDBE7431821D7BC009ABA8A /* functions_66.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6AE1821D7BC009ABA8A /* functions_66.js */; };
 		ADDBE7441821D7BC009ABA8A /* functions_67.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6AF1821D7BC009ABA8A /* functions_67.html */; };
-		ADDBE7451821D7BC009ABA8A /* functions_67.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6B01821D7BC009ABA8A /* functions_67.js */; };
 		ADDBE7461821D7BC009ABA8A /* functions_69.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6B11821D7BC009ABA8A /* functions_69.html */; };
-		ADDBE7471821D7BC009ABA8A /* functions_69.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6B21821D7BC009ABA8A /* functions_69.js */; };
 		ADDBE7481821D7BC009ABA8A /* functions_6c.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6B31821D7BC009ABA8A /* functions_6c.html */; };
-		ADDBE7491821D7BC009ABA8A /* functions_6c.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6B41821D7BC009ABA8A /* functions_6c.js */; };
 		ADDBE74A1821D7BC009ABA8A /* functions_70.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6B51821D7BC009ABA8A /* functions_70.html */; };
-		ADDBE74B1821D7BC009ABA8A /* functions_70.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6B61821D7BC009ABA8A /* functions_70.js */; };
 		ADDBE74C1821D7BC009ABA8A /* functions_72.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6B71821D7BC009ABA8A /* functions_72.html */; };
-		ADDBE74D1821D7BC009ABA8A /* functions_72.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6B81821D7BC009ABA8A /* functions_72.js */; };
 		ADDBE74E1821D7BC009ABA8A /* functions_73.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6B91821D7BC009ABA8A /* functions_73.html */; };
-		ADDBE74F1821D7BC009ABA8A /* functions_73.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6BA1821D7BC009ABA8A /* functions_73.js */; };
 		ADDBE7501821D7BC009ABA8A /* functions_76.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6BB1821D7BC009ABA8A /* functions_76.html */; };
-		ADDBE7511821D7BC009ABA8A /* functions_76.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6BC1821D7BC009ABA8A /* functions_76.js */; };
 		ADDBE7521821D7BC009ABA8A /* mag_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6BD1821D7BC009ABA8A /* mag_sel.png */; };
 		ADDBE7531821D7BC009ABA8A /* nomatches.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6BE1821D7BC009ABA8A /* nomatches.html */; };
 		ADDBE7541821D7BC009ABA8A /* pages_64.html in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6BF1821D7BC009ABA8A /* pages_64.html */; };
-		ADDBE7551821D7BC009ABA8A /* pages_64.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6C01821D7BC009ABA8A /* pages_64.js */; };
 		ADDBE7561821D7BC009ABA8A /* search.css in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6C11821D7BC009ABA8A /* search.css */; };
-		ADDBE7571821D7BC009ABA8A /* search.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE6C21821D7BC009ABA8A /* search.js */; };
 		ADDBE7581821D7BC009ABA8A /* search_l.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6C31821D7BC009ABA8A /* search_l.png */; };
 		ADDBE7591821D7BC009ABA8A /* search_m.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6C41821D7BC009ABA8A /* search_m.png */; };
 		ADDBE75A1821D7BC009ABA8A /* search_r.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6C51821D7BC009ABA8A /* search_r.png */; };
@@ -2677,27 +2635,22 @@
 				001DA1361822B1D800B8BF1D /* MPBaseBannerAdapter.m in Sources */,
 				ACDC22941791014500280F36 /* CCAction.m in Sources */,
 				001DA1621822B1D800B8BF1D /* MPError.m in Sources */,
-				ADDBE72C1821D7BC009ABA8A /* all_6c.js in Sources */,
 				ACDC22971791014500280F36 /* CCActionCamera.m in Sources */,
 				001DA16C1822B1D800B8BF1D /* MPBannerCustomEvent.m in Sources */,
 				ACDC229A1791014500280F36 /* CCActionCatmullRom.m in Sources */,
 				ACDC229D1791014600280F36 /* CCActionEase.m in Sources */,
 				001DA1501822B1D800B8BF1D /* MPMRAIDBannerCustomEvent.m in Sources */,
-				ADDBE73B1821D7BC009ABA8A /* functions_61.js in Sources */,
 				ACDC22A01791014600280F36 /* CCActionGrid.m in Sources */,
 				ACDC22A31791014600280F36 /* CCActionGrid3D.m in Sources */,
 				ACDC22A61791014600280F36 /* CCActionInstant.m in Sources */,
 				001DA1681822B1D800B8BF1D /* MPStoreKitProvider.m in Sources */,
 				ACDC22A91791014600280F36 /* CCActionInterval.m in Sources */,
 				ACDC22AC1791014700280F36 /* CCActionManager.m in Sources */,
-				ADDBE73D1821D7BC009ABA8A /* functions_63.js in Sources */,
 				ACDC22AF1791014700280F36 /* CCActionPageTurn3D.m in Sources */,
 				ACDC22B21791014700280F36 /* CCActionProgressTimer.m in Sources */,
 				ACDC22B51791014700280F36 /* CCActionTiledGrid.m in Sources */,
 				ACDC22B81791014700280F36 /* CCActionTween.m in Sources */,
-				ADDBE71C1821D7BC009ABA8A /* all_5f.js in Sources */,
 				ACDC22BB1791014700280F36 /* CCAnimation.m in Sources */,
-				ADDBE7131821D7BC009ABA8A /* navtree.js in Sources */,
 				001DA1201822B1D800B8BF1D /* MPiAdBannerCustomEvent.m in Sources */,
 				ACDC22BE1791014800280F36 /* CCAnimationCache.m in Sources */,
 				001DA15B1822B1D800B8BF1D /* MRPictureManager.m in Sources */,
@@ -2712,17 +2665,14 @@
 				001DA1691822B1D800B8BF1D /* MPTimer.m in Sources */,
 				001DA13E1822B1D800B8BF1D /* MPAdServerCommunicator.m in Sources */,
 				001DA1671822B1D800B8BF1D /* MPSessionTracker.m in Sources */,
-				ADDBE74D1821D7BC009ABA8A /* functions_72.js in Sources */,
 				001DA1231822B1D800B8BF1D /* MPMillennialInterstitialCustomEvent.m in Sources */,
 				001DA1281822B1D800B8BF1D /* CDataScanner.m in Sources */,
 				001DA1401822B1D800B8BF1D /* MPFacebookKeywordProvider.m in Sources */,
 				001DA1221822B1D800B8BF1D /* MPMillennialBannerCustomEvent.m in Sources */,
 				ACDC22D11791014800280F36 /* CCDrawingPrimitives.m in Sources */,
-				ADDBE7431821D7BC009ABA8A /* functions_66.js in Sources */,
 				001DA13F1822B1D800B8BF1D /* MPAdServerURLBuilder.m in Sources */,
 				ACDC22D41791014800280F36 /* CCGLProgram.m in Sources */,
 				ACDC22D71791014800280F36 /* ccGLStateCache.m in Sources */,
-				ADDBE7281821D7BC009ABA8A /* all_67.js in Sources */,
 				001DA16D1822B1D800B8BF1D /* MPInterstitialAdController.m in Sources */,
 				001DA1421822B1D800B8BF1D /* MPProgressOverlayView.m in Sources */,
 				ACDC22DA1791014900280F36 /* CCGrabber.m in Sources */,
@@ -2731,46 +2681,34 @@
 				ACDC22DD1791014900280F36 /* CCGrid.m in Sources */,
 				ACDC22E01791014900280F36 /* CCLabelAtlas.m in Sources */,
 				ACDC22E31791014900280F36 /* CCLabelBMFont.m in Sources */,
-				ADDBE7241821D7BC009ABA8A /* all_65.js in Sources */,
 				ACDC22E61791014900280F36 /* CCLabelTTF.m in Sources */,
 				ACDC22E91791014900280F36 /* CCLayer.m in Sources */,
 				ACDC22ED1791014900280F36 /* CCMenu.m in Sources */,
 				001DA1601822B1D800B8BF1D /* UIWebView+MPAdditions.m in Sources */,
 				001DA1371822B1D800B8BF1D /* MPLegacyBannerCustomEventAdapter.m in Sources */,
 				001DA16A1822B1D800B8BF1D /* MPAdConversionTracker.m in Sources */,
-				ADDBE7141821D7BC009ABA8A /* navtreeindex0.js in Sources */,
 				ACDC22F01791014900280F36 /* CCMenuItem.m in Sources */,
 				ACDC22F31791014A00280F36 /* CCMotionStreak.m in Sources */,
 				ACDC22F61791014A00280F36 /* CCNode+Debug.m in Sources */,
 				001DA15E1822B1D800B8BF1D /* NSURL+MPAdditions.m in Sources */,
-				ADDBE7361821D7BC009ABA8A /* classes_66.js in Sources */,
 				001DA1661822B1D800B8BF1D /* MPReachability.m in Sources */,
 				001DA1441822B1D800B8BF1D /* MPAdWebView.m in Sources */,
 				001DA12D1822B1D800B8BF1D /* CDataScanner_Extensions.m in Sources */,
 				001DA16B1822B1D800B8BF1D /* MPAdView.m in Sources */,
-				ADDBE70E1821D7BC009ABA8A /* jquery.js in Sources */,
 				ACDC22F91791014A00280F36 /* CCNode.m in Sources */,
 				001DA12E1822B1D800B8BF1D /* NSDictionary_JSONExtensions.m in Sources */,
 				ACDC22FC1791014A00280F36 /* CCParallaxNode.m in Sources */,
 				ACDC22FF1791014A00280F36 /* CCParticleBatchNode.m in Sources */,
 				ACDC23021791014A00280F36 /* CCParticleExamples.m in Sources */,
-				ADDBE7391821D7BC009ABA8A /* functions_5f.js in Sources */,
 				ACDC23051791014A00280F36 /* CCParticleSystem.m in Sources */,
-				ADDBE6F41821D7BC009ABA8A /* dynsections.js in Sources */,
-				ADDBE6F11821D7BC009ABA8A /* dir_63745280448c2ee80dfc9889b44c7a70.js in Sources */,
 				ACDC23081791014A00280F36 /* CCParticleSystemQuad.m in Sources */,
-				ADDBE7261821D7BC009ABA8A /* all_66.js in Sources */,
 				ACDC230B1791014A00280F36 /* CCProgressTimer.m in Sources */,
-				ADDBE70A1821D7BC009ABA8A /* hierarchy.js in Sources */,
 				ACDC230F1791014B00280F36 /* CCRenderTexture.m in Sources */,
 				001DA1631822B1D800B8BF1D /* MPGlobal.m in Sources */,
 				ACDC23121791014B00280F36 /* CCScene.m in Sources */,
-				ADDBE6E21821D7BC009ABA8A /* annotated.js in Sources */,
-				ADDBE7491821D7BC009ABA8A /* functions_6c.js in Sources */,
 				ACDC23151791014B00280F36 /* CCScheduler.m in Sources */,
 				001DA12C1822B1D800B8BF1D /* CJSONSerializedData.m in Sources */,
 				ACDC23251791014C00280F36 /* CCShaderCache.m in Sources */,
-				ADDBE72E1821D7BC009ABA8A /* all_70.js in Sources */,
 				ACDC23281791014C00280F36 /* ccShaders.m in Sources */,
 				001DA1581822B1D800B8BF1D /* MRDimmingView.m in Sources */,
 				ACDC232B1791014C00280F36 /* CCSprite.m in Sources */,
@@ -2783,14 +2721,12 @@
 				ACDC23341791014D00280F36 /* CCSpriteFrameCache.m in Sources */,
 				ACDC23371791014D00280F36 /* CCTexture2D.m in Sources */,
 				ACDC233A1791014D00280F36 /* CCTextureAtlas.m in Sources */,
-				ADDBE72A1821D7BC009ABA8A /* all_69.js in Sources */,
 				001DA1541822B1D800B8BF1D /* MRAdViewDisplayController.m in Sources */,
 				ACDC233D1791014D00280F36 /* CCTextureCache.m in Sources */,
 				001DA14A1822B1D800B8BF1D /* MPInterstitialAdManager.m in Sources */,
 				ACDC23401791014D00280F36 /* CCTexturePVR.m in Sources */,
 				ACDC23431791014D00280F36 /* CCTileMapAtlas.m in Sources */,
 				001DA1521822B1D800B8BF1D /* MPMRAIDInterstitialViewController.m in Sources */,
-				ADDBE7471821D7BC009ABA8A /* functions_69.js in Sources */,
 				ACDC23461791014E00280F36 /* CCTMXLayer.m in Sources */,
 				ACDC23491791014E00280F36 /* CCTMXObjectGroup.m in Sources */,
 				001DA13D1822B1D800B8BF1D /* MPAdDestinationDisplayAgent.m in Sources */,
@@ -2800,24 +2736,20 @@
 				001DA15F1822B1D800B8BF1D /* UIViewController+MPAdditions.m in Sources */,
 				001DA1551822B1D800B8BF1D /* MRBundleManager.m in Sources */,
 				001DA1381822B1D800B8BF1D /* MPAdAlertGestureRecognizer.m in Sources */,
-				ADDBE74F1821D7BC009ABA8A /* functions_73.js in Sources */,
 				001DA1391822B1D800B8BF1D /* MPAdAlertManager.m in Sources */,
 				001DA1461822B1D800B8BF1D /* MPHTMLBannerCustomEvent.m in Sources */,
 				001DA1511822B1D800B8BF1D /* MPMRAIDInterstitialCustomEvent.m in Sources */,
 				001DA14B1822B1D800B8BF1D /* MPInterstitialCustomEventAdapter.m in Sources */,
 				ACDC23521791014E00280F36 /* CCTransition.m in Sources */,
-				ADDBE7551821D7BC009ABA8A /* pages_64.js in Sources */,
 				001DA1481822B1D800B8BF1D /* MPHTMLInterstitialViewController.m in Sources */,
 				001DA14C1822B1D800B8BF1D /* MPInterstitialViewController.m in Sources */,
 				ACDC23551791014E00280F36 /* CCTransitionPageTurn.m in Sources */,
 				ACDC23581791014E00280F36 /* CCTransitionProgress.m in Sources */,
 				ACDC235C1791014E00280F36 /* cocos2d.m in Sources */,
 				ACDC23631791014F00280F36 /* CCDirectorIOS.m in Sources */,
-				ADDBE7301821D7BC009ABA8A /* all_72.js in Sources */,
 				001DA15C1822B1D800B8BF1D /* MRProperty.m in Sources */,
 				ACDC23661791014F00280F36 /* CCES2Renderer.m in Sources */,
 				ACDC236A1791014F00280F36 /* CCGLView.m in Sources */,
-				ADDBE7201821D7BC009ABA8A /* all_63.js in Sources */,
 				ACDC236E1791014F00280F36 /* CCTouchDispatcher.m in Sources */,
 				ACDC23711791014F00280F36 /* CCTouchHandler.m in Sources */,
 				001DA1451822B1D800B8BF1D /* MPAdWebViewAgent.m in Sources */,
@@ -2833,9 +2765,7 @@
 				ACDC23881791015000280F36 /* ccCArray.m in Sources */,
 				ACDC238B1791015000280F36 /* CCFileUtils.m in Sources */,
 				ACDC238E1791015000280F36 /* CCProfiling.m in Sources */,
-				ADDBE6ED1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.js in Sources */,
 				ACDC23901791015000280F36 /* ccUtils.c in Sources */,
-				ADDBE71A1821D7BC009ABA8A /* resize.js in Sources */,
 				ACDC23941791015000280F36 /* CCVertex.m in Sources */,
 				ACDC23971791015100280F36 /* CGPointExtension.m in Sources */,
 				ACDC239A1791015100280F36 /* NSThread+performBlock.m in Sources */,
@@ -2845,34 +2775,23 @@
 				ACDC23A61791015100280F36 /* ZipUtils.m in Sources */,
 				ACDC23AB1791015100280F36 /* CDAudioManager.m in Sources */,
 				001DA1301822B1D800B8BF1D /* CJSONScanner.m in Sources */,
-				ADDBE7511821D7BC009ABA8A /* functions_76.js in Sources */,
 				ACDC23AF1791015200280F36 /* CDOpenALSupport.m in Sources */,
-				ADDBE71E1821D7BC009ABA8A /* all_61.js in Sources */,
 				ACDC23B21791015200280F36 /* CocosDenshion.m in Sources */,
-				ADDBE7191821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.js in Sources */,
 				001DA1411822B1D800B8BF1D /* MPLastResortDelegate.m in Sources */,
 				ACDC23B51791015200280F36 /* SimpleAudioEngine.m in Sources */,
-				ADDBE7571821D7BC009ABA8A /* search.js in Sources */,
 				ACDC23CB1791015300280F36 /* aabb.c in Sources */,
 				ACDC23D11791015300280F36 /* mat4stack.c in Sources */,
-				ADDBE73F1821D7BC009ABA8A /* functions_64.js in Sources */,
-				ADDBE6EF1821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.js in Sources */,
 				001DA1531822B1D800B8BF1D /* MRAdView.m in Sources */,
 				001DA13C1822B1D800B8BF1D /* MPAdConfiguration.m in Sources */,
 				001DA1571822B1D800B8BF1D /* MRCommand.m in Sources */,
 				001DA1561822B1D800B8BF1D /* MRCalendarManager.m in Sources */,
 				ACDC23D31791015300280F36 /* matrix.c in Sources */,
-				ADDBE7451821D7BC009ABA8A /* functions_67.js in Sources */,
-				ADDBE74B1821D7BC009ABA8A /* functions_70.js in Sources */,
-				ADDBE6EB1821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.js in Sources */,
 				ACDC23D51791015300280F36 /* mat3.c in Sources */,
 				ACDC23D71791015300280F36 /* mat4.c in Sources */,
 				ACDC23D91791015300280F36 /* neon_matrix_impl.c in Sources */,
 				001DA12A1822B1D800B8BF1D /* CJSONDeserializer_BlocksExtensions.m in Sources */,
 				001DA1591822B1D800B8BF1D /* MRImageDownloader.m in Sources */,
 				ACDC23DB1791015300280F36 /* plane.c in Sources */,
-				ADDBE7411821D7BC009ABA8A /* functions_65.js in Sources */,
-				ADDBE6F61821D7BC009ABA8A /* files.js in Sources */,
 				ACDC23DD1791015300280F36 /* quaternion.c in Sources */,
 				ACDC23DF1791015400280F36 /* ray2.c in Sources */,
 				ACDC23E11791015400280F36 /* utility.c in Sources */,
@@ -2884,13 +2803,10 @@
 				ACDC23EF1791015400280F36 /* AppController.m in Sources */,
 				001DA14D1822B1D800B8BF1D /* MPLegacyInterstitialCustomEventAdapter.m in Sources */,
 				001DA13A1822B1D800B8BF1D /* MPAdBrowserController.m in Sources */,
-				ADDBE7221821D7BC009ABA8A /* all_64.js in Sources */,
 				ACDC23F51791015400280F36 /* IntroLayer.m in Sources */,
 				ACDC243A17914C8300280F36 /* Gem.m in Sources */,
-				ADDBE7321821D7BC009ABA8A /* all_73.js in Sources */,
 				5E6F6D4A17ABD0010008100D /* InAppManager.mm in Sources */,
 				5E6F6D4B17ABD0010008100D /* StoreObserver.mm in Sources */,
-				ADDBE7341821D7BC009ABA8A /* all_76.js in Sources */,
 				001DA1211822B1D800B8BF1D /* MPiAdInterstitialCustomEvent.m in Sources */,
 				001DA15D1822B1D800B8BF1D /* MRVideoPlayerManager.m in Sources */,
 				5E8A0E2217AF691400F93C07 /* GameMain.m in Sources */,
