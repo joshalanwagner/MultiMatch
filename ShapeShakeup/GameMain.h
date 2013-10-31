@@ -12,8 +12,9 @@
 #import "cocos2d.h"
 #import "SharedData.h"
 #import "Gem.h"
+#import "MPInterstitialAdController.h"
 // HelloWorldLayer
-@interface GameMain : CCLayerColor<GKAchievementViewControllerDelegate>
+@interface GameMain : CCLayerColor <GKAchievementViewControllerDelegate, MPInterstitialAdControllerDelegate>
 {
     @public
     CCSprite *mainMenuBG;
@@ -96,6 +97,8 @@
     NSMutableArray * arrayOfLines;
     CGPoint positionOfLastGemInLine;
 }
+
+@property (nonatomic, retain) MPInterstitialAdController *interstitial;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;

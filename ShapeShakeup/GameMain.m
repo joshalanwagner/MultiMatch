@@ -26,10 +26,14 @@
 #define FONT_NAME @ "Illuminate"
 #define highScoreKey @"highScoreKey"
 
+#define moPubAdUnitID_fullScreenTablet @"c43a5a0bd76a4f168cc3304186afe165"
+#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640"
+#define iPadDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 // GameMain implementation
 CGSize ws;
 @implementation GameMain
+@synthesize interstitial;
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -59,6 +63,12 @@ CGSize ws;
         if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
         {
         } */
+        
+        // instantiate MPInterstitialAdController for Mopub ads
+        NSString *adUnitID = iPadDevice ? moPubAdUnitID_fullScreenTablet : moPubAdUnitID_fullScreenPhone;
+        self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:adUnitID];
+        interstitial.delegate = self;
+        [interstitial loadAd];
         
         // Start Music
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
@@ -1117,6 +1127,12 @@ CGSize ws;
             [newHighText setVisible:NO];
         }
         
+        // show Mopub ads
+        if (interstitial.ready) {
+            AppController *appController = (AppController *)[UIApplication sharedApplication].delegate;
+            [interstitial showFromViewController:appController.navController];
+        }
+        
         [self unschedule:_cmd];
     }
     
@@ -1243,16 +1259,9 @@ CGSize ws;
     [gemsCMC removeChild:toRemove cleanup:YES];
 }
 
-
-
-// on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
+    [interstitial release];
 	[super dealloc];
 }
 
