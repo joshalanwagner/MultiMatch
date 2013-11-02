@@ -14,6 +14,10 @@
 @interface IntroLayer : CCLayerColor
 {
     SharedData * sd;
+    
+@public
+    CCSprite *mainMenuBG;
+    CCSprite *tutorial;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

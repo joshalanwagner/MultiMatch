@@ -45,16 +45,27 @@
 	
     sd = [SharedData getSharedInstance];
 	
-    background=[[CCSprite alloc]initWithFile:@"menuBG.pvr.ccz"];
-    background.anchorPoint=ccp(0.5,0.5);
-    background.scaleY = 1.11;
+    background=[[CCSprite alloc]initWithFile:@"inGameBG.pvr.ccz"];
+    //background.anchorPoint=ccp(0.5,0.5);
+    background.scale = 1.11;
     background.position=ccp(size.width/2 , size.height/2);
-
-	// add the label as a child to this Layer
 	[self addChild: background];
+    
+    // blue menu background
+    mainMenuBG=[[CCSprite alloc]initWithFile:@"menuBG.pvr.ccz"];
+    //mainMenuBG.anchorPoint=ccp(0.5,0.5);
+    mainMenuBG.scaleY = 1.11;
+    mainMenuBG.position=ccp(size.width/2 , size.height/2);
+    [self addChild:mainMenuBG];
+    
+    // tutorial image
+    tutorial=[[CCSprite alloc]initWithFile:@"tutorialScreen.png"];
+    tutorial.position=ccp(size.width/2 , size.height/2);
+    [self addChild:tutorial];
+    
 	
 	// In one second transition to the new scene: Why wait here?
-	[self scheduleOnce:@selector(makeTransition:) delay:0];
+	[self scheduleOnce:@selector(makeTransition:) delay:6];
 }
 
 -(void) makeTransition:(ccTime)dt

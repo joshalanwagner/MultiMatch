@@ -431,6 +431,12 @@
 		ADDBE76B1821D7BC009ABA8A /* Flurry_AppCircle_Advertiser_TOS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6DA1821D7BC009ABA8A /* Flurry_AppCircle_Advertiser_TOS.pdf */; };
 		ADDBE76C1821D7BC009ABA8A /* Flurry_AppSpot_Publisher_Platform_TOS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6DB1821D7BC009ABA8A /* Flurry_AppSpot_Publisher_Platform_TOS.pdf */; };
 		ADDBE76D1821D7BC009ABA8A /* Jansson-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE6DC1821D7BC009ABA8A /* Jansson-LICENSE.txt */; };
+		ADF6F9A91824827E003D7D45 /* buttonDone_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A31824827E003D7D45 /* buttonDone_up-hd.png */; };
+		ADF6F9AA1824827E003D7D45 /* buttonDone_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A41824827E003D7D45 /* buttonDone_up-ipadhd.png */; };
+		ADF6F9AB1824827E003D7D45 /* buttonDone_up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A51824827E003D7D45 /* buttonDone_up.png */; };
+		ADF6F9AC1824827E003D7D45 /* tutorialScreen-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A61824827E003D7D45 /* tutorialScreen-hd.png */; };
+		ADF6F9AD1824827E003D7D45 /* tutorialScreen-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A71824827E003D7D45 /* tutorialScreen-ipadhd.png */; };
+		ADF6F9AE1824827E003D7D45 /* tutorialScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF6F9A81824827E003D7D45 /* tutorialScreen.png */; };
 		C0272F7717DE26C9006106BB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F7617DE26C9006106BB /* Default.png */; };
 		C0272F7B17DE26DF006106BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F7A17DE26DF006106BB /* Default-568h@2x.png */; };
 		C0272F7D17DE26F4006106BB /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C0272F7C17DE26F4006106BB /* Default-Portrait~ipad.png */; };
@@ -1151,6 +1157,12 @@
 		ADDBE6DA1821D7BC009ABA8A /* Flurry_AppCircle_Advertiser_TOS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Flurry_AppCircle_Advertiser_TOS.pdf; sourceTree = "<group>"; };
 		ADDBE6DB1821D7BC009ABA8A /* Flurry_AppSpot_Publisher_Platform_TOS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Flurry_AppSpot_Publisher_Platform_TOS.pdf; sourceTree = "<group>"; };
 		ADDBE6DC1821D7BC009ABA8A /* Jansson-LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Jansson-LICENSE.txt"; sourceTree = "<group>"; };
+		ADF6F9A31824827E003D7D45 /* buttonDone_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonDone_up-hd.png"; path = "Resources/Z_IMAGES/buttonDone_up-hd.png"; sourceTree = "<group>"; };
+		ADF6F9A41824827E003D7D45 /* buttonDone_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonDone_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonDone_up-ipadhd.png"; sourceTree = "<group>"; };
+		ADF6F9A51824827E003D7D45 /* buttonDone_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonDone_up.png; path = Resources/Z_IMAGES/buttonDone_up.png; sourceTree = "<group>"; };
+		ADF6F9A61824827E003D7D45 /* tutorialScreen-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorialScreen-hd.png"; path = "Resources/Z_IMAGES/tutorialScreen-hd.png"; sourceTree = "<group>"; };
+		ADF6F9A71824827E003D7D45 /* tutorialScreen-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorialScreen-ipadhd.png"; path = "Resources/Z_IMAGES/tutorialScreen-ipadhd.png"; sourceTree = "<group>"; };
+		ADF6F9A81824827E003D7D45 /* tutorialScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tutorialScreen.png; path = Resources/Z_IMAGES/tutorialScreen.png; sourceTree = "<group>"; };
 		C0272F7617DE26C9006106BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		C0272F7A17DE26DF006106BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C0272F7C17DE26F4006106BB /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -2047,6 +2059,12 @@
 		ACDC23FF17912B2500280F36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ADF6F9A31824827E003D7D45 /* buttonDone_up-hd.png */,
+				ADF6F9A41824827E003D7D45 /* buttonDone_up-ipadhd.png */,
+				ADF6F9A51824827E003D7D45 /* buttonDone_up.png */,
+				ADF6F9A61824827E003D7D45 /* tutorialScreen-hd.png */,
+				ADF6F9A71824827E003D7D45 /* tutorialScreen-ipadhd.png */,
+				ADF6F9A81824827E003D7D45 /* tutorialScreen.png */,
 				ADA45D291820D85B004BCDAD /* inGameBG-hd.pvr.ccz */,
 				ADA45D2A1820D85B004BCDAD /* inGameBG-ipadhd.pvr.ccz */,
 				ADA45D2B1820D85B004BCDAD /* inGameBG.pvr.ccz */,
@@ -2421,6 +2439,7 @@
 				ACDC228F1791014500280F36 /* iTunesArtwork.png in Resources */,
 				ADA45D311820D85B004BCDAD /* inGameBG.pvr.ccz in Resources */,
 				ACDC23CD1791015300280F36 /* ChangeLog in Resources */,
+				ADF6F9AC1824827E003D7D45 /* tutorialScreen-hd.png in Resources */,
 				ADDBE71B1821D7BC009ABA8A /* all_5f.html in Resources */,
 				001DA1261822B1D800B8BF1D /* README.md in Resources */,
 				001DA16F1822B1D800B8BF1D /* MPCloseButtonX.png in Resources */,
@@ -2441,6 +2460,7 @@
 				ACDC241917912B4300280F36 /* gem3.png in Resources */,
 				ADDBE74A1821D7BC009ABA8A /* functions_70.html in Resources */,
 				ADDBE7621821D7BC009ABA8A /* Flurry iOS-4.x-Upgrade-README .pdf in Resources */,
+				ADF6F9A91824827E003D7D45 /* buttonDone_up-hd.png in Resources */,
 				ACDC241A17912B4300280F36 /* gem4-hd.png in Resources */,
 				001DA1701822B1D800B8BF1D /* MPCloseButtonX@2x.png in Resources */,
 				AD93642D181EF3010091F54C /* buttonNoAds_up-hd.png in Resources */,
@@ -2465,6 +2485,7 @@
 				ADA45D341820D85B004BCDAD /* menuBG.pvr.ccz in Resources */,
 				ACDC241F17912B4300280F36 /* gem6.png in Resources */,
 				AD936431181EF3010091F54C /* buttonRestore_up-ipadhd.png in Resources */,
+				ADF6F9AA1824827E003D7D45 /* buttonDone_up-ipadhd.png in Resources */,
 				AD93642F181EF3010091F54C /* buttonNoAds_up.png in Resources */,
 				ADDBE7501821D7BC009ABA8A /* functions_76.html in Resources */,
 				ADDBE75B1821D7BC009ABA8A /* sync_off.png in Resources */,
@@ -2487,12 +2508,14 @@
 				AC527B5A1792CCCD00D4306E /* backBtn-hd.png in Resources */,
 				AC527B5B1792CCCD00D4306E /* backBtn.png in Resources */,
 				ADDBE6E11821D7BC009ABA8A /* annotated.html in Resources */,
+				ADF6F9AD1824827E003D7D45 /* tutorialScreen-ipadhd.png in Resources */,
 				ADDBE74E1821D7BC009ABA8A /* functions_73.html in Resources */,
 				ADDBE7461821D7BC009ABA8A /* functions_69.html in Resources */,
 				AC527B5C1792CCCD00D4306E /* timeBar-hd.png in Resources */,
 				ADDBE7611821D7BC009ABA8A /* tabs.css in Resources */,
 				ADDBE72F1821D7BC009ABA8A /* all_72.html in Resources */,
 				ADDBE6EC1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.html in Resources */,
+				ADF6F9AE1824827E003D7D45 /* tutorialScreen.png in Resources */,
 				AD606EF9181F07B0006E89F2 /* buttonMultiplay_up-hd.png in Resources */,
 				AC527B5D1792CCCD00D4306E /* timeBar.png in Resources */,
 				ADDBE6FE1821D7BC009ABA8A /* ftv2mlastnode.png in Resources */,
@@ -2537,6 +2560,7 @@
 				5E6F6D5517ABD2130008100D /* clear.mp3 in Resources */,
 				ADDBE7661821D7BC009ABA8A /* FlurryiOSReleaseNotesv4.3.0.pdf in Resources */,
 				5E6F6D5717ABD2130008100D /* gameover.mp3 in Resources */,
+				ADF6F9AB1824827E003D7D45 /* buttonDone_up.png in Resources */,
 				5E6F6D5817ABD2130008100D /* gameplay.mp3 in Resources */,
 				ADDBE6E41821D7BC009ABA8A /* bdwn.png in Resources */,
 				ADDBE7271821D7BC009ABA8A /* all_67.html in Resources */,
