@@ -11,6 +11,7 @@
 #import "IntroLayer.h"
 #import "GameMain.h"
 
+#define highScoreKey @"highScoreKey"
 
 #pragma mark - IntroLayer
 
@@ -63,9 +64,16 @@
     tutorial.position=ccp(size.width/2 , size.height/2);
     [self addChild:tutorial];
     
+    // skip the tutorial if they have a high score
+    savedHighScore = [[NSUserDefaults standardUserDefaults] integerForKey:highScoreKey];
+    
+    if (savedHighScore > 0) {
+        [self scheduleOnce:@selector(makeTransition:) delay:0];
+    }
+    else {
+        [self scheduleOnce:@selector(makeTransition:) delay:8];
+    }
 	
-	// In one second transition to the new scene: Why wait here?
-	[self scheduleOnce:@selector(makeTransition:) delay:6];
 }
 
 -(void) makeTransition:(ccTime)dt
