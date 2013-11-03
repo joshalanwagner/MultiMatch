@@ -229,12 +229,15 @@ CGSize ws;
 
         // WOW text.
         wowText = [CCLabelBMFont labelWithString:@"" fntFile:@"illuminateYellow.fnt"];
-        wowText.position = ccp(ws.width/2, - topBar.boundingBox.size.height - wowText.contentSize.height/2);
+        wowText.anchorPoint = ccp(0.5,1.0);
+        wowText.position = ccp(ws.width/2, -topBar.boundingBox.size.height );
         wowText.opacity = 0;
         if (ws.height != 1024) {
             wowText.scale = 0.9;
         }
         [inGame addChild:wowText];
+        
+
         
         // TIMER BAR
         // Tray
@@ -246,6 +249,12 @@ CGSize ws;
             timeBarTray.scale=1.0/1.2;
         }
 
+        // Bump text
+        bumpText = [CCLabelBMFont labelWithString:@"+X seconds" fntFile:@"illuminateYellow.fnt"];
+        bumpText.position = ccp(ws.width/2, -ws.height + topBar.boundingBox.size.height);
+        bumpText.scale = 0.6;
+        bumpText.opacity = 0;
+        [inGame addChild:bumpText];
         
         // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
@@ -846,34 +855,51 @@ CGSize ws;
                 
                 // WOW text
                 
-                if (arrayOfGemsToRemove.count >= 12) {
+                if (arrayOfGemsToRemove.count > 11) {
                     [wowText setString:@"INSANITY"];
+                    [bumpText setString:@"+10 seconds"];
+                    time += 10*20;
                 }
                 else if (arrayOfGemsToRemove.count == 11) {
                     [wowText setString:@"INCREDIBLE"];
+                    [bumpText setString:@"+8 seconds"];
+                    time += 8*20;
                 }
                 else if (arrayOfGemsToRemove.count == 10) {
                     [wowText setString:@"AMAZING"];
+                    [bumpText setString:@"+6 seconds"];
+                    time += 6*20;
                 }
                 else if (arrayOfGemsToRemove.count == 9) {
                     [wowText setString:@"STUNNING"];
+                    [bumpText setString:@"+4 seconds"];
+                    time += 4*20;
                 }
                 else if (arrayOfGemsToRemove.count == 8) {
                     [wowText setString:@"OUTSTANDING"];
+                    [bumpText setString:@"+3 seconds"];
+                    time += 3*20;
                 }
                 else if (arrayOfGemsToRemove.count == 7) {
                     [wowText setString:@"EXCELLENT"];
+                    [bumpText setString:@"+2 seconds"];
+                    time += 2*20;
                 }
                 else if (arrayOfGemsToRemove.count == 6) {
                     [wowText setString:@"NICE"];
+                    [bumpText setString:@"+1 seconds"];
+                    time += 1*20;
                 }
-                else if (arrayOfGemsToRemove.count <= 6) {
+                else if (arrayOfGemsToRemove.count < 6) {
                     [wowText setString:@""];
+                    
                 }
                 
                 if (arrayOfGemsToRemove.count > 5){
-                    id wowFade = [CCFadeOut actionWithDuration:2.5];
+                    id wowFade = [CCFadeOut actionWithDuration:3.0];
                     [wowText runAction:[CCSequence actions:wowFade, nil]];
+                    id bumpFade = [CCFadeOut actionWithDuration:4.0];
+                    [bumpText runAction:[CCSequence actions:bumpFade, nil]];
                 }
                 // This is an action on the guys, which holds up the drop.
                 id scaleXY=[CCScaleTo actionWithDuration:0.06 scale:0.2];

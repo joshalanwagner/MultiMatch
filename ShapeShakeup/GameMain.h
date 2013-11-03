@@ -65,6 +65,7 @@
     CCLabelTTF * hsLabel;
     CCLabelBMFont * timeText;
     CCLabelBMFont * wowText;
+    CCLabelBMFont * bumpText;
     
     int vNum;
     
