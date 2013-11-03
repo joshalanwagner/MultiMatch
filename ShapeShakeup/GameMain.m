@@ -233,14 +233,11 @@ CGSize ws;
         timeBarTray=[CCSprite spriteWithFile:@"timeBarTray.png"];
         timeBarTray.anchorPoint=ccp(0.5,0);
         timeBarTray.position=ccp(ws.width/2.0 ,-ws.height);
-        if(ws.height == 1024)
-        {
-            timeBarTray.scale = 1.0;
-        }
-        else
+        if(ws.height != 1024)
         {
             timeBarTray.scale=1.0/1.2;
         }
+
         
         // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
@@ -942,21 +939,18 @@ CGSize ws;
                                 CGPoint diff = ccpSub(a, b);
                                 float rads = atan2f( diff.y, diff.x);
                                 float degs = -CC_RADIANS_TO_DEGREES(rads);
-                                CGRect lineRect;
                                 
-                                if(diff.x !=0 && diff.y!=0)
-                                {
-                                    lineRect = CGRectMake(0, 0, gemWid+abs(diff.x/2), 10.0*sd.scaleFactorY);
-                                }
-                                else
-                                {
-                                    lineRect = CGRectMake(0, 0, gemWid, 10.0*sd.scaleFactorY);
-                                }
-                                // Dragging connector line???
-                                CCSprite *line = [CCSprite spriteWithFile:@"line.png" rect:lineRect];
+                                // Dragging connector line
+                                CCSprite *line = [CCSprite spriteWithFile:@"line.png"];
                                 [line setAnchorPoint:ccp(0.0f, 0.5f)];
                                 [line setPosition:b];
                                 [line setRotation: degs];
+                                
+                                if(diff.x !=0 && diff.y!=0) // if diagonal
+                                {
+                                    [line setScaleX:1.6];
+                                }
+
                                 [gemsCMC addChild:line z:-1];
                                 [arrayOfLines addObject:line];
                             }

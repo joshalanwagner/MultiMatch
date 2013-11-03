@@ -312,6 +312,8 @@
 		AD45D78D1825E36900985EE1 /* buttonBack_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */; };
 		AD45D78E1825E36900985EE1 /* buttonBack_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */; };
 		AD45D78F1825E36900985EE1 /* buttonBack_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78C1825E36900985EE1 /* buttonBack_up.png */; };
+		AD45D7921825FEF000985EE1 /* line-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7901825FEF000985EE1 /* line-hd.png */; };
+		AD45D7931825FEF000985EE1 /* line-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7911825FEF000985EE1 /* line-ipadhd.png */; };
 		AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */; };
 		AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */; };
 		AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */; };
@@ -1003,6 +1005,8 @@
 		AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonBack_up-hd.png"; path = "Resources/Z_IMAGES/buttonBack_up-hd.png"; sourceTree = "<group>"; };
 		AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonBack_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonBack_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD45D78C1825E36900985EE1 /* buttonBack_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonBack_up.png; path = Resources/Z_IMAGES/buttonBack_up.png; sourceTree = "<group>"; };
+		AD45D7901825FEF000985EE1 /* line-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line-hd.png"; path = "Resources/Z_IMAGES/line-hd.png"; sourceTree = "<group>"; };
+		AD45D7911825FEF000985EE1 /* line-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line-ipadhd.png"; path = "Resources/Z_IMAGES/line-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-hd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-hd.png"; sourceTree = "<group>"; };
 		AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboards_up.png; path = Resources/Z_IMAGES/buttonLeaderboards_up.png; sourceTree = "<group>"; };
@@ -2077,6 +2081,8 @@
 		ACDC23FF17912B2500280F36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AD45D7901825FEF000985EE1 /* line-hd.png */,
+				AD45D7911825FEF000985EE1 /* line-ipadhd.png */,
 				AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */,
 				AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */,
 				AD45D78C1825E36900985EE1 /* buttonBack_up.png */,
@@ -2463,6 +2469,7 @@
 				001DA1331822B1D800B8BF1D /* README.markdown in Resources */,
 				ADDBE7671821D7BC009ABA8A /* Avro-LICENSE.txt in Resources */,
 				ADDBE72B1821D7BC009ABA8A /* all_6c.html in Resources */,
+				AD45D7921825FEF000985EE1 /* line-hd.png in Resources */,
 				ACDC228F1791014500280F36 /* iTunesArtwork.png in Resources */,
 				ADA45D311820D85B004BCDAD /* inGameBG.pvr.ccz in Resources */,
 				ACDC23CD1791015300280F36 /* ChangeLog in Resources */,
@@ -2514,6 +2521,7 @@
 				ACDC241F17912B4300280F36 /* gem6.png in Resources */,
 				AD936431181EF3010091F54C /* buttonRestore_up-ipadhd.png in Resources */,
 				ADF6F9AA1824827E003D7D45 /* buttonDone_up-ipadhd.png in Resources */,
+				AD45D7931825FEF000985EE1 /* line-ipadhd.png in Resources */,
 				AD93642F181EF3010091F54C /* buttonNoAds_up.png in Resources */,
 				AD45D78F1825E36900985EE1 /* buttonBack_up.png in Resources */,
 				ADDBE7501821D7BC009ABA8A /* functions_76.html in Resources */,
