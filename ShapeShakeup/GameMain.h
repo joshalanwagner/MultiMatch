@@ -63,9 +63,8 @@
     CCLabelTTF * newHighText;
     CCLabelTTF * highScoreText;
     CCLabelTTF * hsLabel;
-    //CCLabelBMFont *scoreText;
-    //CCLabelBMFont *scoreText2;
     CCLabelBMFont * timeText;
+    CCLabelBMFont * wowText;
     
     int vNum;
     

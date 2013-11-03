@@ -226,7 +226,15 @@ CGSize ws;
 
         [topBar addChild:backBtn];
         [topBar addChild:scoreTextTTF];
-        
+
+        // WOW text.
+        wowText = [CCLabelBMFont labelWithString:@"" fntFile:@"illuminateYellow.fnt"];
+        wowText.position = ccp(ws.width/2, - topBar.boundingBox.size.height - wowText.contentSize.height/2);
+        wowText.opacity = 0;
+        if (ws.height != 1024) {
+            wowText.scale = 0.9;
+        }
+        [inGame addChild:wowText];
         
         // TIMER BAR
         // Tray
@@ -262,6 +270,8 @@ CGSize ws;
         [timeBarTray addChild:timeText];
         
         [self addSingleTouch];
+        
+
         
         // GAME OVER Dialog
         gameOver=[[CCSprite alloc]init];
@@ -833,7 +843,38 @@ CGSize ws;
                                                          selector : @selector(removeVisualLabel : data:)
                                                               data:scoreVisual];
                 [scoreVisual runAction:[CCSequence actions:fadein,actionRemove, nil]];
-
+                
+                // WOW text
+                
+                if (arrayOfGemsToRemove.count >= 12) {
+                    [wowText setString:@"INSANITY"];
+                }
+                else if (arrayOfGemsToRemove.count == 11) {
+                    [wowText setString:@"INCREDIBLE"];
+                }
+                else if (arrayOfGemsToRemove.count == 10) {
+                    [wowText setString:@"AMAZING"];
+                }
+                else if (arrayOfGemsToRemove.count == 9) {
+                    [wowText setString:@"STUNNING"];
+                }
+                else if (arrayOfGemsToRemove.count == 8) {
+                    [wowText setString:@"OUTSTANDING"];
+                }
+                else if (arrayOfGemsToRemove.count == 7) {
+                    [wowText setString:@"EXCELLENT"];
+                }
+                else if (arrayOfGemsToRemove.count == 6) {
+                    [wowText setString:@"NICE"];
+                }
+                else if (arrayOfGemsToRemove.count <= 6) {
+                    [wowText setString:@""];
+                }
+                
+                if (arrayOfGemsToRemove.count > 5){
+                    id wowFade = [CCFadeOut actionWithDuration:2.5];
+                    [wowText runAction:[CCSequence actions:wowFade, nil]];
+                }
                 // This is an action on the guys, which holds up the drop.
                 id scaleXY=[CCScaleTo actionWithDuration:0.06 scale:0.2];
                 id moveXEase=[CCEaseIn actionWithAction:scaleXY];
