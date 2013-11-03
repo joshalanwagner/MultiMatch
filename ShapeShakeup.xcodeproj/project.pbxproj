@@ -303,6 +303,15 @@
 		AD3EF721181F8BB800766A47 /* buttonMainMenu_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF71E181F8BB800766A47 /* buttonMainMenu_up-hd.png */; };
 		AD3EF722181F8BB800766A47 /* buttonMainMenu_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF71F181F8BB800766A47 /* buttonMainMenu_up-ipadhd.png */; };
 		AD3EF723181F8BB800766A47 /* buttonMainMenu_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3EF720181F8BB800766A47 /* buttonMainMenu_up.png */; };
+		AD45D7841825D6FF00985EE1 /* illuminateYellow-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AD45D77E1825D6FF00985EE1 /* illuminateYellow-hd.fnt */; };
+		AD45D7851825D6FF00985EE1 /* illuminateYellow-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D77F1825D6FF00985EE1 /* illuminateYellow-hd.png */; };
+		AD45D7861825D6FF00985EE1 /* illuminateYellow-ipadhd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7801825D6FF00985EE1 /* illuminateYellow-ipadhd.fnt */; };
+		AD45D7871825D6FF00985EE1 /* illuminateYellow-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7811825D6FF00985EE1 /* illuminateYellow-ipadhd.png */; };
+		AD45D7881825D6FF00985EE1 /* illuminateYellow.fnt in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7821825D6FF00985EE1 /* illuminateYellow.fnt */; };
+		AD45D7891825D6FF00985EE1 /* illuminateYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7831825D6FF00985EE1 /* illuminateYellow.png */; };
+		AD45D78D1825E36900985EE1 /* buttonBack_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */; };
+		AD45D78E1825E36900985EE1 /* buttonBack_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */; };
+		AD45D78F1825E36900985EE1 /* buttonBack_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78C1825E36900985EE1 /* buttonBack_up.png */; };
 		AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */; };
 		AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */; };
 		AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */; };
@@ -985,6 +994,15 @@
 		AD3EF71E181F8BB800766A47 /* buttonMainMenu_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonMainMenu_up-hd.png"; path = "Resources/Z_IMAGES/buttonMainMenu_up-hd.png"; sourceTree = "<group>"; };
 		AD3EF71F181F8BB800766A47 /* buttonMainMenu_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonMainMenu_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonMainMenu_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD3EF720181F8BB800766A47 /* buttonMainMenu_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonMainMenu_up.png; path = Resources/Z_IMAGES/buttonMainMenu_up.png; sourceTree = "<group>"; };
+		AD45D77E1825D6FF00985EE1 /* illuminateYellow-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "illuminateYellow-hd.fnt"; path = "Resources/Z_IMAGES/illuminateYellow-hd.fnt"; sourceTree = "<group>"; };
+		AD45D77F1825D6FF00985EE1 /* illuminateYellow-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "illuminateYellow-hd.png"; path = "Resources/Z_IMAGES/illuminateYellow-hd.png"; sourceTree = "<group>"; };
+		AD45D7801825D6FF00985EE1 /* illuminateYellow-ipadhd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "illuminateYellow-ipadhd.fnt"; path = "Resources/Z_IMAGES/illuminateYellow-ipadhd.fnt"; sourceTree = "<group>"; };
+		AD45D7811825D6FF00985EE1 /* illuminateYellow-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "illuminateYellow-ipadhd.png"; path = "Resources/Z_IMAGES/illuminateYellow-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7821825D6FF00985EE1 /* illuminateYellow.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = illuminateYellow.fnt; path = Resources/Z_IMAGES/illuminateYellow.fnt; sourceTree = "<group>"; };
+		AD45D7831825D6FF00985EE1 /* illuminateYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = illuminateYellow.png; path = Resources/Z_IMAGES/illuminateYellow.png; sourceTree = "<group>"; };
+		AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonBack_up-hd.png"; path = "Resources/Z_IMAGES/buttonBack_up-hd.png"; sourceTree = "<group>"; };
+		AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonBack_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonBack_up-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D78C1825E36900985EE1 /* buttonBack_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonBack_up.png; path = Resources/Z_IMAGES/buttonBack_up.png; sourceTree = "<group>"; };
 		AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-hd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-hd.png"; sourceTree = "<group>"; };
 		AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboards_up.png; path = Resources/Z_IMAGES/buttonLeaderboards_up.png; sourceTree = "<group>"; };
@@ -2059,6 +2077,15 @@
 		ACDC23FF17912B2500280F36 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AD45D78A1825E36900985EE1 /* buttonBack_up-hd.png */,
+				AD45D78B1825E36900985EE1 /* buttonBack_up-ipadhd.png */,
+				AD45D78C1825E36900985EE1 /* buttonBack_up.png */,
+				AD45D77E1825D6FF00985EE1 /* illuminateYellow-hd.fnt */,
+				AD45D77F1825D6FF00985EE1 /* illuminateYellow-hd.png */,
+				AD45D7801825D6FF00985EE1 /* illuminateYellow-ipadhd.fnt */,
+				AD45D7811825D6FF00985EE1 /* illuminateYellow-ipadhd.png */,
+				AD45D7821825D6FF00985EE1 /* illuminateYellow.fnt */,
+				AD45D7831825D6FF00985EE1 /* illuminateYellow.png */,
 				ADF6F9A31824827E003D7D45 /* buttonDone_up-hd.png */,
 				ADF6F9A41824827E003D7D45 /* buttonDone_up-ipadhd.png */,
 				ADF6F9A51824827E003D7D45 /* buttonDone_up.png */,
@@ -2446,6 +2473,7 @@
 				ADDBE76A1821D7BC009ABA8A /* Flurry-LICENSE.txt in Resources */,
 				ACDC241417912B4300280F36 /* gem1-hd.png in Resources */,
 				ADDBE6DF1821D7BC009ABA8A /* _flurry_ad_delegate_8h_source.html in Resources */,
+				AD45D78E1825E36900985EE1 /* buttonBack_up-ipadhd.png in Resources */,
 				5E879A121807C1D10089BC1D /* gem1b-ipadhd.png in Resources */,
 				AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */,
 				5E879A151807C1D10089BC1D /* gem2b-ipadhd.png in Resources */,
@@ -2487,6 +2515,7 @@
 				AD936431181EF3010091F54C /* buttonRestore_up-ipadhd.png in Resources */,
 				ADF6F9AA1824827E003D7D45 /* buttonDone_up-ipadhd.png in Resources */,
 				AD93642F181EF3010091F54C /* buttonNoAds_up.png in Resources */,
+				AD45D78F1825E36900985EE1 /* buttonBack_up.png in Resources */,
 				ADDBE7501821D7BC009ABA8A /* functions_76.html in Resources */,
 				ADDBE75B1821D7BC009ABA8A /* sync_off.png in Resources */,
 				ADDBE7581821D7BC009ABA8A /* search_l.png in Resources */,
@@ -2517,6 +2546,7 @@
 				ADDBE6EC1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.html in Resources */,
 				ADF6F9AE1824827E003D7D45 /* tutorialScreen.png in Resources */,
 				AD606EF9181F07B0006E89F2 /* buttonMultiplay_up-hd.png in Resources */,
+				AD45D7881825D6FF00985EE1 /* illuminateYellow.fnt in Resources */,
 				AC527B5D1792CCCD00D4306E /* timeBar.png in Resources */,
 				ADDBE6FE1821D7BC009ABA8A /* ftv2mlastnode.png in Resources */,
 				ADDBE7351821D7BC009ABA8A /* classes_66.html in Resources */,
@@ -2541,6 +2571,7 @@
 				001DA14F1822B1D800B8BF1D /* LICENSE in Resources */,
 				ADDBE6F21821D7BC009ABA8A /* doxygen.css in Resources */,
 				ADDBE7481821D7BC009ABA8A /* functions_6c.html in Resources */,
+				AD45D7841825D6FF00985EE1 /* illuminateYellow-hd.fnt in Resources */,
 				AD3EF70A181F3A9800766A47 /* topBar-ipadhd.png in Resources */,
 				ADDBE75D1821D7BC009ABA8A /* tab_a.png in Resources */,
 				ADDBE7311821D7BC009ABA8A /* all_73.html in Resources */,
@@ -2559,6 +2590,7 @@
 				5E6F6D5417ABD2130008100D /* button.mp3 in Resources */,
 				5E6F6D5517ABD2130008100D /* clear.mp3 in Resources */,
 				ADDBE7661821D7BC009ABA8A /* FlurryiOSReleaseNotesv4.3.0.pdf in Resources */,
+				AD45D7871825D6FF00985EE1 /* illuminateYellow-ipadhd.png in Resources */,
 				5E6F6D5717ABD2130008100D /* gameover.mp3 in Resources */,
 				ADF6F9AB1824827E003D7D45 /* buttonDone_up.png in Resources */,
 				5E6F6D5817ABD2130008100D /* gameplay.mp3 in Resources */,
@@ -2579,12 +2611,14 @@
 				AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */,
 				AD936419181EDD2D0091F54C /* buttonPlay_up-ipadhd.png in Resources */,
 				5E17732717DD8D3E007FBB46 /* timeBar-ipadhd.png in Resources */,
+				AD45D78D1825E36900985EE1 /* buttonBack_up-hd.png in Resources */,
 				AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */,
 				5E879A1A1807C1D10089BC1D /* gem4b-hd.png in Resources */,
 				ADDBE71D1821D7BC009ABA8A /* all_61.html in Resources */,
 				AD93641A181EDD2D0091F54C /* buttonPlay_up.png in Resources */,
 				ADDBE75A1821D7BC009ABA8A /* search_r.png in Resources */,
 				5E17732A17DD8D3E007FBB46 /* gem5-ipadhd.png in Resources */,
+				AD45D7891825D6FF00985EE1 /* illuminateYellow.png in Resources */,
 				ADDBE7601821D7BC009ABA8A /* tab_s.png in Resources */,
 				AD3EF703181F26FB00766A47 /* timeBarTray-hd.png in Resources */,
 				ADDBE7051821D7BC009ABA8A /* ftv2splitbar.png in Resources */,
@@ -2598,6 +2632,7 @@
 				ADDBE7651821D7BC009ABA8A /* FlurryiOSAnalyticsREADMEv4.3.0.pdf in Resources */,
 				5E879A1D1807C1D10089BC1D /* gem5b-hd.png in Resources */,
 				ADDBE75F1821D7BC009ABA8A /* tab_h.png in Resources */,
+				AD45D7861825D6FF00985EE1 /* illuminateYellow-ipadhd.fnt in Resources */,
 				5E17732E17DD8D3E007FBB46 /* gem2-ipadhd.png in Resources */,
 				ADDBE7071821D7BC009ABA8A /* functions.html in Resources */,
 				ADDBE70F1821D7BC009ABA8A /* nav_f.png in Resources */,
@@ -2640,6 +2675,7 @@
 				C0272F9317DE29A4006106BB /* Icon@144.png in Resources */,
 				AD3EF718181F790B00766A47 /* lockup-hd.png in Resources */,
 				ADDBE6FD1821D7BC009ABA8A /* ftv2link.png in Resources */,
+				AD45D7851825D6FF00985EE1 /* illuminateYellow-hd.png in Resources */,
 				C0C864E8180F22A8007C8291 /* Icon@76.png in Resources */,
 				ADDBE71F1821D7BC009ABA8A /* all_63.html in Resources */,
 				ADDBE7541821D7BC009ABA8A /* pages_64.html in Resources */,

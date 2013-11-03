@@ -63,8 +63,9 @@
     CCLabelTTF * newHighText;
     CCLabelTTF * highScoreText;
     CCLabelTTF * hsLabel;
-    CCLabelBMFont *scoreText;
-    CCLabelBMFont *scoreText2;
+    //CCLabelBMFont *scoreText;
+    //CCLabelBMFont *scoreText2;
+    CCLabelBMFont * timeText;
     
     int vNum;
     
@@ -80,7 +81,7 @@
     int hNum;
     int score;
     int savedHighScore;
-    float time;
+    int time;
     
     BOOL moveAble;
     

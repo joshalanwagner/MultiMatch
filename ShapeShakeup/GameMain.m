@@ -1,11 +1,3 @@
-//
-//  HelloWorldLayer.m
-//  JellyMania
-//
-//  Created by Chris on 13-7-13.
-//  Copyright AppyPocket 2013. All rights reserved.
-//
-
 
 // Import the interfaces
 #import "GameMain.h"
@@ -79,13 +71,13 @@ CGSize ws;
         
         
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 10 ;
+       gameTime = 60 * 20 ;
         
         // number of rows and columns
         hNum=6;
         if (ws.height==568) {
             vNum=8;
-            ip5OffSet = 50.0;
+            ip5OffSet = 40.0;
         }
         
         else{
@@ -205,43 +197,42 @@ CGSize ws;
         IGBG.position=ccp(ws.width/2,0);
         
         // game grid
+        // This should just be centered.
         gemsCMC=[[CCSprite alloc]init];
-        gemsCMC.position=ccp(gemWid/2+2+1 , -100 * sd.scaleFactorY);
+        gemsCMC.position=ccp(gemWid/2+3 , -66 * sd.scaleFactorY - ip5OffSet);
         [inGame addChild:gemsCMC];
         [inGame addChild:IGBG z:-1];
 
         inGame.visible=NO;
         [self addChild:inGame];
         
+        // TOP BAR
         topBar=[CCSprite spriteWithFile:@"topBar.png"];
-        topBar.anchorPoint=ccp(0,1);
+        topBar.anchorPoint=ccp(0,0.9); // move it up a bit
         topBar.position=ccp(0,0);
         [inGame addChild:topBar];
         
-        // QUIT GAME
-        backBtn=[self createButtonWithFile:@"backBtn.png" sel:@selector(backHandler)];
-         backBtn.position=ccp(ws.width-40*sd.scaleFactorX,-20*sd.scaleFactorY); //// 74
-        [inGame addChild:backBtn];
+        // quit game
+        backBtn=[self createButtonWithFile:@"buttonBack_up.png" sel:@selector(backHandler)];
+        backBtn.position=ccp(20.0 * sd.scaleFactorX, topBar.contentSize.height * .5);
+        
         
         // Current Score
         scoreTextTTF = [CCLabelTTF labelWithString:@"99999999999" fontName:FONT_NAME fontSize:25.0*sd.scaleFactorY];
         scoreTextTTF.anchorPoint=ccp(0.5,0.5);
         [scoreTextTTF setString:[NSString stringWithFormat:@"0"]];
-        scoreTextTTF.position=ccp(ws.width/2 , -topBar.contentSize.height * .5);
+        scoreTextTTF.position=ccp(ws.width/2 , topBar.contentSize.height * .45);
         scoreTextTTF.color = kFontColor;
-        
-        if(ws.height == 1024 && [UIScreen mainScreen].scale == 2)
-        {
-            scoreTextTTF.position=ccp(90*sd.scaleFactorX,-18*sd.scaleFactorY+15.0);
-            backBtn.position=ccp(ws.width-40*sd.scaleFactorX,-20*sd.scaleFactorY+15.0);
-        }
+
+        [topBar addChild:backBtn];
+        [topBar addChild:scoreTextTTF];
         
         
         // TIMER BAR
         // Tray
         timeBarTray=[CCSprite spriteWithFile:@"timeBarTray.png"];
-        timeBarTray.anchorPoint=ccp(0,0);
-        timeBarTray.position=ccp(0,-ws.height);
+        timeBarTray.anchorPoint=ccp(0.5,0);
+        timeBarTray.position=ccp(ws.width/2.0 ,-ws.height);
         if(ws.height == 1024)
         {
             timeBarTray.scale = 1.0;
@@ -254,15 +245,24 @@ CGSize ws;
         // Bar
         timeBar=[CCSprite spriteWithFile:@"timeBar.png"];
         timeBar.anchorPoint=ccp(0,0.5);
-        timeBar.position=ccp(timeBarTray.boundingBox.size.height*0.16, -ws.height + (timeBarTray.boundingBox.size.height/2));
+        timeBar.position=ccp(timeBarTray.boundingBox.size.height*0.16, timeBarTray.boundingBox.size.height/2 + 1.0);
         timeBar.scaleX= ws.width/10;
 
+        // Time Remaining Text - countdown timer
+        timeText = [CCLabelBMFont labelWithString:@"0:00" fntFile:@"illuminateYellow.fnt"];
+        timeText.scale = 0.5;
+        timeText.anchorPoint=ccp(0.5,0.5);
+        
+        // I can't figure out how to avoid this: (jw)
+        if(ws.height == 1024) {
+            timeText.position=ccp(ws.width * 0.5 ,timeBarTray.boundingBox.size.height * 0.4);
+        }
+        else {
+            timeText.position=ccp(ws.width * 0.6 ,timeBarTray.boundingBox.size.height * 0.45);
+        }
         [inGame addChild:timeBarTray];
-        
-        [inGame addChild:timeBar];
-        
-        [inGame addChild:scoreTextTTF];
-        
+        [timeBarTray addChild:timeBar];
+        [timeBarTray addChild:timeText];
         
         [self addSingleTouch];
         
@@ -1074,6 +1074,14 @@ CGSize ws;
 -(void)loop{
     time-=1;
     
+    // countdown timer
+     NSUInteger seconds = time / 60;
+     NSUInteger min = seconds / 60;
+     NSUInteger sec = seconds % 60;
+     NSString *secondsStringFormat = (sec > 9) ? @"%u" : @"0%u";
+     NSString *secondsString = [NSString stringWithFormat:secondsStringFormat, sec];
+     [timeText setString:[NSString stringWithFormat:@"%u:%@", min, secondsString ]];
+    
     // I don't understand what's causing this discrepancy -JW
    if(ws.height == 1024)
     {
@@ -1126,6 +1134,14 @@ CGSize ws;
         else {
             [newHighText setVisible:NO];
         }
+        // Don't show 'Well Played' text if they didn't play.
+        if (score > 0) {
+            [wellPlayedText setVisible:YES];
+        }
+        else {
+            [wellPlayedText setVisible:NO];
+        }
+        
         
         // show Mopub ads
         if (interstitial.ready) {
@@ -1146,7 +1162,7 @@ CGSize ws;
     
     gameIsOver=NO;
     moveAble=YES;
-    time=gameTime;
+    time = gameTime;
     
     score=0;
     
