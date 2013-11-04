@@ -13,6 +13,7 @@
 #import "SharedData.h"
 #import "SimpleAudioEngine.h"
 #import "Flurry.h"
+#import "AnimationHelper.h"
 
 
 @implementation AppController
@@ -122,7 +123,8 @@
 	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
 	navController_.navigationBarHidden = YES;
  
-	
+    [AnimationHelper setup];
+    
 	// set the Navigation Controller as the root view controller
 //	[window_ addSubview:navController_.view];	// Generates flicker.
 	[window_ setRootViewController:navController_];

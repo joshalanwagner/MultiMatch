@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000E3D9C182806830020C9DF /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E3D9B182806830020C9DF /* AnimationHelper.m */; };
 		001DA11C1822B1D800B8BF1D /* MPGoogleAdMobBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 001DA0531822B1D800B8BF1D /* MPGoogleAdMobBannerCustomEvent.m */; };
 		001DA11D1822B1D800B8BF1D /* MPGoogleAdMobInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 001DA0551822B1D800B8BF1D /* MPGoogleAdMobInterstitialCustomEvent.m */; };
 		001DA11E1822B1D800B8BF1D /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 001DA0601822B1D800B8BF1D /* libGoogleAdMobAds.a */; };
@@ -499,6 +500,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000E3D9A1828067A0020C9DF /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
+		000E3D9B182806830020C9DF /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
 		001DA0521822B1D800B8BF1D /* MPGoogleAdMobBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGoogleAdMobBannerCustomEvent.h; sourceTree = "<group>"; };
 		001DA0531822B1D800B8BF1D /* MPGoogleAdMobBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGoogleAdMobBannerCustomEvent.m; sourceTree = "<group>"; };
 		001DA0541822B1D800B8BF1D /* MPGoogleAdMobInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGoogleAdMobInterstitialCustomEvent.h; sourceTree = "<group>"; };
@@ -1775,6 +1778,8 @@
 				5E91F84417D4510300A2C6FA /* SharedData.m */,
 				5E8A0E2017AF691400F93C07 /* GameMain.m */,
 				5E8A0E2117AF691400F93C07 /* GameMain.h */,
+				000E3D9A1828067A0020C9DF /* AnimationHelper.h */,
+				000E3D9B182806830020C9DF /* AnimationHelper.m */,
 				5E6F6D4517ABD0010008100D /* InApp */,
 				ACDC243817914C8300280F36 /* Gem.h */,
 				ACDC243917914C8300280F36 /* Gem.m */,
@@ -3006,6 +3011,7 @@
 				001DA1571822B1D800B8BF1D /* MRCommand.m in Sources */,
 				001DA1561822B1D800B8BF1D /* MRCalendarManager.m in Sources */,
 				ACDC23D31791015300280F36 /* matrix.c in Sources */,
+				000E3D9C182806830020C9DF /* AnimationHelper.m in Sources */,
 				ACDC23D51791015300280F36 /* mat3.c in Sources */,
 				ACDC23D71791015300280F36 /* mat4.c in Sources */,
 				ACDC23D91791015300280F36 /* neon_matrix_impl.c in Sources */,
