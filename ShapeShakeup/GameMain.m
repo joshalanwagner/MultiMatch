@@ -6,6 +6,7 @@
 // Needed to obtain the Navigation Controller
 #import "AppController.h"
 #import "Gem.h"
+#import "AnimationHelper.h"
 #pragma mark - GameMain
 
 
@@ -844,6 +845,18 @@ CGSize ws;
                 [scoreVisual setPosition:gem.position];
                 scoreVisual.color = kFontColor;
                 [gemsCMC addChild:scoreVisual z:10];
+                
+                // burst animation
+                CCSprite *burstSprite = [CCSprite spriteWithSpriteFrameName:@"burst1_00000.png"];
+                burstSprite.position = scoreVisual.position;
+                [gemsCMC addChild:burstSprite];
+                BurstColor color = [gem->type integerValue];
+                CCAnimate *burstAnimation = [AnimationHelper burstAnimationWithColor:color];
+                [burstSprite runAction:
+                 [CCSequence actions:
+                  burstAnimation,
+                  [CCFadeOut actionWithDuration:0.3],
+                  [CCCallBlockN actionWithBlock:^(CCNode *node) { [node removeFromParentAndCleanup:YES]; } ], nil]];
                 
                 //  guys don't wait for this to finish before dropping down.
                 id fadein = [CCFadeOut actionWithDuration:1.5];

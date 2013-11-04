@@ -8,13 +8,10 @@
     NSString *prefix = [NSString stringWithFormat:@"burst%d", color];
     for (int i = 0; i < burstAnimationFrameCount; i++) {
         NSString *s = [NSString stringWithFormat:(i < 10 ? @"%@_0000%u.png" : @"%@_000%u.png"), prefix, i];
-        //[frames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:s]];
-        NSLog(@"%@", s);
+        [frames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:s]];
     }
-    
     static const CGFloat burstAnimationFrameRate = 1.0 / 30.0;
-    return [CCAnimate actionWithAnimation:
-            [CCAnimation animationWithSpriteFrames:frames delay:burstAnimationFrameRate]];
+    return [CCAnimate actionWithAnimation:[CCAnimation animationWithSpriteFrames:frames delay:burstAnimationFrameRate]];
 }
 
 + (void) setup {
