@@ -314,6 +314,42 @@
 		AD45D78F1825E36900985EE1 /* buttonBack_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D78C1825E36900985EE1 /* buttonBack_up.png */; };
 		AD45D7921825FEF000985EE1 /* line-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7901825FEF000985EE1 /* line-hd.png */; };
 		AD45D7931825FEF000985EE1 /* line-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7911825FEF000985EE1 /* line-ipadhd.png */; };
+		AD45D7E11827429C00985EE1 /* burst1-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7BD1827429C00985EE1 /* burst1-hd.plist */; };
+		AD45D7E21827429C00985EE1 /* burst1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7BE1827429C00985EE1 /* burst1-hd.png */; };
+		AD45D7E31827429C00985EE1 /* burst1-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7BF1827429C00985EE1 /* burst1-ipadhd.plist */; };
+		AD45D7E41827429C00985EE1 /* burst1-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C01827429C00985EE1 /* burst1-ipadhd.png */; };
+		AD45D7E51827429C00985EE1 /* burst1.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C11827429C00985EE1 /* burst1.plist */; };
+		AD45D7E61827429C00985EE1 /* burst1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C21827429C00985EE1 /* burst1.png */; };
+		AD45D7E71827429C00985EE1 /* burst2-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C31827429C00985EE1 /* burst2-hd.plist */; };
+		AD45D7E81827429C00985EE1 /* burst2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C41827429C00985EE1 /* burst2-hd.png */; };
+		AD45D7E91827429C00985EE1 /* burst2-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C51827429C00985EE1 /* burst2-ipadhd.plist */; };
+		AD45D7EA1827429C00985EE1 /* burst2-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C61827429C00985EE1 /* burst2-ipadhd.png */; };
+		AD45D7EB1827429C00985EE1 /* burst2.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C71827429C00985EE1 /* burst2.plist */; };
+		AD45D7EC1827429C00985EE1 /* burst2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C81827429C00985EE1 /* burst2.png */; };
+		AD45D7ED1827429C00985EE1 /* burst3-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7C91827429C00985EE1 /* burst3-hd.plist */; };
+		AD45D7EE1827429C00985EE1 /* burst3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CA1827429C00985EE1 /* burst3-hd.png */; };
+		AD45D7EF1827429C00985EE1 /* burst3-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CB1827429C00985EE1 /* burst3-ipadhd.plist */; };
+		AD45D7F01827429C00985EE1 /* burst3-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CC1827429C00985EE1 /* burst3-ipadhd.png */; };
+		AD45D7F11827429C00985EE1 /* burst3.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CD1827429C00985EE1 /* burst3.plist */; };
+		AD45D7F21827429C00985EE1 /* burst3.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CE1827429C00985EE1 /* burst3.png */; };
+		AD45D7F31827429C00985EE1 /* burst4-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7CF1827429C00985EE1 /* burst4-hd.plist */; };
+		AD45D7F41827429C00985EE1 /* burst4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D01827429C00985EE1 /* burst4-hd.png */; };
+		AD45D7F51827429C00985EE1 /* burst4-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D11827429C00985EE1 /* burst4-ipadhd.plist */; };
+		AD45D7F61827429C00985EE1 /* burst4-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D21827429C00985EE1 /* burst4-ipadhd.png */; };
+		AD45D7F71827429C00985EE1 /* burst4.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D31827429C00985EE1 /* burst4.plist */; };
+		AD45D7F81827429C00985EE1 /* burst4.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D41827429C00985EE1 /* burst4.png */; };
+		AD45D7F91827429C00985EE1 /* burst5-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D51827429C00985EE1 /* burst5-hd.plist */; };
+		AD45D7FA1827429C00985EE1 /* burst5-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D61827429C00985EE1 /* burst5-hd.png */; };
+		AD45D7FB1827429C00985EE1 /* burst5-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D71827429C00985EE1 /* burst5-ipadhd.plist */; };
+		AD45D7FC1827429C00985EE1 /* burst5-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D81827429C00985EE1 /* burst5-ipadhd.png */; };
+		AD45D7FD1827429C00985EE1 /* burst5.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7D91827429C00985EE1 /* burst5.plist */; };
+		AD45D7FE1827429C00985EE1 /* burst5.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DA1827429C00985EE1 /* burst5.png */; };
+		AD45D7FF1827429C00985EE1 /* burst6-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DB1827429C00985EE1 /* burst6-hd.plist */; };
+		AD45D8001827429C00985EE1 /* burst6-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DC1827429C00985EE1 /* burst6-hd.png */; };
+		AD45D8011827429C00985EE1 /* burst6-ipadhd.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DD1827429C00985EE1 /* burst6-ipadhd.plist */; };
+		AD45D8021827429C00985EE1 /* burst6-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DE1827429C00985EE1 /* burst6-ipadhd.png */; };
+		AD45D8031827429C00985EE1 /* burst6.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7DF1827429C00985EE1 /* burst6.plist */; };
+		AD45D8041827429C00985EE1 /* burst6.png in Resources */ = {isa = PBXBuildFile; fileRef = AD45D7E01827429C00985EE1 /* burst6.png */; };
 		AD606EF6181F07B0006E89F2 /* buttonLeaderboards_up-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */; };
 		AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */; };
 		AD606EF8181F07B0006E89F2 /* buttonLeaderboards_up.png in Resources */ = {isa = PBXBuildFile; fileRef = AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */; };
@@ -1007,6 +1043,42 @@
 		AD45D78C1825E36900985EE1 /* buttonBack_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonBack_up.png; path = Resources/Z_IMAGES/buttonBack_up.png; sourceTree = "<group>"; };
 		AD45D7901825FEF000985EE1 /* line-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line-hd.png"; path = "Resources/Z_IMAGES/line-hd.png"; sourceTree = "<group>"; };
 		AD45D7911825FEF000985EE1 /* line-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line-ipadhd.png"; path = "Resources/Z_IMAGES/line-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7BD1827429C00985EE1 /* burst1-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst1-hd.plist"; path = "Resources/Z_ANIMATIONS/burst1-hd.plist"; sourceTree = "<group>"; };
+		AD45D7BE1827429C00985EE1 /* burst1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst1-hd.png"; path = "Resources/Z_ANIMATIONS/burst1-hd.png"; sourceTree = "<group>"; };
+		AD45D7BF1827429C00985EE1 /* burst1-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst1-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst1-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7C01827429C00985EE1 /* burst1-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst1-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst1-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7C11827429C00985EE1 /* burst1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst1.plist; path = Resources/Z_ANIMATIONS/burst1.plist; sourceTree = "<group>"; };
+		AD45D7C21827429C00985EE1 /* burst1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst1.png; path = Resources/Z_ANIMATIONS/burst1.png; sourceTree = "<group>"; };
+		AD45D7C31827429C00985EE1 /* burst2-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst2-hd.plist"; path = "Resources/Z_ANIMATIONS/burst2-hd.plist"; sourceTree = "<group>"; };
+		AD45D7C41827429C00985EE1 /* burst2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst2-hd.png"; path = "Resources/Z_ANIMATIONS/burst2-hd.png"; sourceTree = "<group>"; };
+		AD45D7C51827429C00985EE1 /* burst2-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst2-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst2-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7C61827429C00985EE1 /* burst2-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst2-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst2-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7C71827429C00985EE1 /* burst2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst2.plist; path = Resources/Z_ANIMATIONS/burst2.plist; sourceTree = "<group>"; };
+		AD45D7C81827429C00985EE1 /* burst2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst2.png; path = Resources/Z_ANIMATIONS/burst2.png; sourceTree = "<group>"; };
+		AD45D7C91827429C00985EE1 /* burst3-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst3-hd.plist"; path = "Resources/Z_ANIMATIONS/burst3-hd.plist"; sourceTree = "<group>"; };
+		AD45D7CA1827429C00985EE1 /* burst3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst3-hd.png"; path = "Resources/Z_ANIMATIONS/burst3-hd.png"; sourceTree = "<group>"; };
+		AD45D7CB1827429C00985EE1 /* burst3-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst3-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst3-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7CC1827429C00985EE1 /* burst3-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst3-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst3-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7CD1827429C00985EE1 /* burst3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst3.plist; path = Resources/Z_ANIMATIONS/burst3.plist; sourceTree = "<group>"; };
+		AD45D7CE1827429C00985EE1 /* burst3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst3.png; path = Resources/Z_ANIMATIONS/burst3.png; sourceTree = "<group>"; };
+		AD45D7CF1827429C00985EE1 /* burst4-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst4-hd.plist"; path = "Resources/Z_ANIMATIONS/burst4-hd.plist"; sourceTree = "<group>"; };
+		AD45D7D01827429C00985EE1 /* burst4-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst4-hd.png"; path = "Resources/Z_ANIMATIONS/burst4-hd.png"; sourceTree = "<group>"; };
+		AD45D7D11827429C00985EE1 /* burst4-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst4-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst4-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7D21827429C00985EE1 /* burst4-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst4-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst4-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7D31827429C00985EE1 /* burst4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst4.plist; path = Resources/Z_ANIMATIONS/burst4.plist; sourceTree = "<group>"; };
+		AD45D7D41827429C00985EE1 /* burst4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst4.png; path = Resources/Z_ANIMATIONS/burst4.png; sourceTree = "<group>"; };
+		AD45D7D51827429C00985EE1 /* burst5-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst5-hd.plist"; path = "Resources/Z_ANIMATIONS/burst5-hd.plist"; sourceTree = "<group>"; };
+		AD45D7D61827429C00985EE1 /* burst5-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst5-hd.png"; path = "Resources/Z_ANIMATIONS/burst5-hd.png"; sourceTree = "<group>"; };
+		AD45D7D71827429C00985EE1 /* burst5-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst5-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst5-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7D81827429C00985EE1 /* burst5-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst5-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst5-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7D91827429C00985EE1 /* burst5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst5.plist; path = Resources/Z_ANIMATIONS/burst5.plist; sourceTree = "<group>"; };
+		AD45D7DA1827429C00985EE1 /* burst5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst5.png; path = Resources/Z_ANIMATIONS/burst5.png; sourceTree = "<group>"; };
+		AD45D7DB1827429C00985EE1 /* burst6-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst6-hd.plist"; path = "Resources/Z_ANIMATIONS/burst6-hd.plist"; sourceTree = "<group>"; };
+		AD45D7DC1827429C00985EE1 /* burst6-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst6-hd.png"; path = "Resources/Z_ANIMATIONS/burst6-hd.png"; sourceTree = "<group>"; };
+		AD45D7DD1827429C00985EE1 /* burst6-ipadhd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "burst6-ipadhd.plist"; path = "Resources/Z_ANIMATIONS/burst6-ipadhd.plist"; sourceTree = "<group>"; };
+		AD45D7DE1827429C00985EE1 /* burst6-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burst6-ipadhd.png"; path = "Resources/Z_ANIMATIONS/burst6-ipadhd.png"; sourceTree = "<group>"; };
+		AD45D7DF1827429C00985EE1 /* burst6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = burst6.plist; path = Resources/Z_ANIMATIONS/burst6.plist; sourceTree = "<group>"; };
+		AD45D7E01827429C00985EE1 /* burst6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burst6.png; path = Resources/Z_ANIMATIONS/burst6.png; sourceTree = "<group>"; };
 		AD606EF0181F07B0006E89F2 /* buttonLeaderboards_up-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-hd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-hd.png"; sourceTree = "<group>"; };
 		AD606EF1181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "buttonLeaderboards_up-ipadhd.png"; path = "Resources/Z_IMAGES/buttonLeaderboards_up-ipadhd.png"; sourceTree = "<group>"; };
 		AD606EF2181F07B0006E89F2 /* buttonLeaderboards_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonLeaderboards_up.png; path = Resources/Z_IMAGES/buttonLeaderboards_up.png; sourceTree = "<group>"; };
@@ -1720,6 +1792,7 @@
 		ACDC22761791014300280F36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD45D7BC1827428A00985EE1 /* animations */,
 				ADDBE5161821CB51009ABA8A /* iconsAndLaunchImages */,
 				5E6F6D4C17ABD2130008100D /* Sounds */,
 				AC527B5E1792D5EA00D4306E /* fonts */,
@@ -2187,6 +2260,49 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		AD45D7BC1827428A00985EE1 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				AD45D7BD1827429C00985EE1 /* burst1-hd.plist */,
+				AD45D7BE1827429C00985EE1 /* burst1-hd.png */,
+				AD45D7BF1827429C00985EE1 /* burst1-ipadhd.plist */,
+				AD45D7C01827429C00985EE1 /* burst1-ipadhd.png */,
+				AD45D7C11827429C00985EE1 /* burst1.plist */,
+				AD45D7C21827429C00985EE1 /* burst1.png */,
+				AD45D7C31827429C00985EE1 /* burst2-hd.plist */,
+				AD45D7C41827429C00985EE1 /* burst2-hd.png */,
+				AD45D7C51827429C00985EE1 /* burst2-ipadhd.plist */,
+				AD45D7C61827429C00985EE1 /* burst2-ipadhd.png */,
+				AD45D7C71827429C00985EE1 /* burst2.plist */,
+				AD45D7C81827429C00985EE1 /* burst2.png */,
+				AD45D7C91827429C00985EE1 /* burst3-hd.plist */,
+				AD45D7CA1827429C00985EE1 /* burst3-hd.png */,
+				AD45D7CB1827429C00985EE1 /* burst3-ipadhd.plist */,
+				AD45D7CC1827429C00985EE1 /* burst3-ipadhd.png */,
+				AD45D7CD1827429C00985EE1 /* burst3.plist */,
+				AD45D7CE1827429C00985EE1 /* burst3.png */,
+				AD45D7CF1827429C00985EE1 /* burst4-hd.plist */,
+				AD45D7D01827429C00985EE1 /* burst4-hd.png */,
+				AD45D7D11827429C00985EE1 /* burst4-ipadhd.plist */,
+				AD45D7D21827429C00985EE1 /* burst4-ipadhd.png */,
+				AD45D7D31827429C00985EE1 /* burst4.plist */,
+				AD45D7D41827429C00985EE1 /* burst4.png */,
+				AD45D7D51827429C00985EE1 /* burst5-hd.plist */,
+				AD45D7D61827429C00985EE1 /* burst5-hd.png */,
+				AD45D7D71827429C00985EE1 /* burst5-ipadhd.plist */,
+				AD45D7D81827429C00985EE1 /* burst5-ipadhd.png */,
+				AD45D7D91827429C00985EE1 /* burst5.plist */,
+				AD45D7DA1827429C00985EE1 /* burst5.png */,
+				AD45D7DB1827429C00985EE1 /* burst6-hd.plist */,
+				AD45D7DC1827429C00985EE1 /* burst6-hd.png */,
+				AD45D7DD1827429C00985EE1 /* burst6-ipadhd.plist */,
+				AD45D7DE1827429C00985EE1 /* burst6-ipadhd.png */,
+				AD45D7DF1827429C00985EE1 /* burst6.plist */,
+				AD45D7E01827429C00985EE1 /* burst6.png */,
+			);
+			name = animations;
+			sourceTree = "<group>";
+		};
 		ADDBE5161821CB51009ABA8A /* iconsAndLaunchImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2465,6 +2581,8 @@
 				ACDC227E1791014300280F36 /* fps_images-hd.png in Resources */,
 				ADDBE6FB1821D7BC009ABA8A /* ftv2folderopen.png in Resources */,
 				ACDC22801791014300280F36 /* fps_images-ipadhd.png in Resources */,
+				AD45D7F81827429C00985EE1 /* burst4.png in Resources */,
+				AD45D7EA1827429C00985EE1 /* burst2-ipadhd.png in Resources */,
 				AD3EF70B181F3A9800766A47 /* topBar.png in Resources */,
 				001DA1331822B1D800B8BF1D /* README.markdown in Resources */,
 				ADDBE7671821D7BC009ABA8A /* Avro-LICENSE.txt in Resources */,
@@ -2472,10 +2590,13 @@
 				AD45D7921825FEF000985EE1 /* line-hd.png in Resources */,
 				ACDC228F1791014500280F36 /* iTunesArtwork.png in Resources */,
 				ADA45D311820D85B004BCDAD /* inGameBG.pvr.ccz in Resources */,
+				AD45D7ED1827429C00985EE1 /* burst3-hd.plist in Resources */,
 				ACDC23CD1791015300280F36 /* ChangeLog in Resources */,
 				ADF6F9AC1824827E003D7D45 /* tutorialScreen-hd.png in Resources */,
+				AD45D7EB1827429C00985EE1 /* burst2.plist in Resources */,
 				ADDBE71B1821D7BC009ABA8A /* all_5f.html in Resources */,
 				001DA1261822B1D800B8BF1D /* README.md in Resources */,
+				AD45D7FF1827429C00985EE1 /* burst6-hd.plist in Resources */,
 				001DA16F1822B1D800B8BF1D /* MPCloseButtonX.png in Resources */,
 				ADDBE76A1821D7BC009ABA8A /* Flurry-LICENSE.txt in Resources */,
 				ACDC241417912B4300280F36 /* gem1-hd.png in Resources */,
@@ -2484,6 +2605,7 @@
 				5E879A121807C1D10089BC1D /* gem1b-ipadhd.png in Resources */,
 				AD606EF7181F07B0006E89F2 /* buttonLeaderboards_up-ipadhd.png in Resources */,
 				5E879A151807C1D10089BC1D /* gem2b-ipadhd.png in Resources */,
+				AD45D7EF1827429C00985EE1 /* burst3-ipadhd.plist in Resources */,
 				ACDC241517912B4300280F36 /* gem1.png in Resources */,
 				ADDBE7121821D7BC009ABA8A /* navtree.css in Resources */,
 				ACDC241617912B4300280F36 /* gem2-hd.png in Resources */,
@@ -2494,16 +2616,19 @@
 				ADDBE6EA1821D7BC009ABA8A /* dir_06ddf14fa534fb1f5dcdc04179449962.html in Resources */,
 				ACDC241917912B4300280F36 /* gem3.png in Resources */,
 				ADDBE74A1821D7BC009ABA8A /* functions_70.html in Resources */,
+				AD45D7F01827429C00985EE1 /* burst3-ipadhd.png in Resources */,
 				ADDBE7621821D7BC009ABA8A /* Flurry iOS-4.x-Upgrade-README .pdf in Resources */,
 				ADF6F9A91824827E003D7D45 /* buttonDone_up-hd.png in Resources */,
 				ACDC241A17912B4300280F36 /* gem4-hd.png in Resources */,
 				001DA1701822B1D800B8BF1D /* MPCloseButtonX@2x.png in Resources */,
+				AD45D7FC1827429C00985EE1 /* burst5-ipadhd.png in Resources */,
 				AD93642D181EF3010091F54C /* buttonNoAds_up-hd.png in Resources */,
 				ADDBE7181821D7BC009ABA8A /* protocol_flurry_ad_delegate-p.html in Resources */,
 				ACDC241B17912B4300280F36 /* gem4.png in Resources */,
 				ADDBE6E81821D7BC009ABA8A /* closed.png in Resources */,
 				ADDBE6EE1821D7BC009ABA8A /* dir_626cdc68af6b2fcc47f4a8746763e21a.html in Resources */,
 				5E879A201807C1D10089BC1D /* gem6b-hd.png in Resources */,
+				AD45D7E11827429C00985EE1 /* burst1-hd.plist in Resources */,
 				ADDBE7001821D7BC009ABA8A /* ftv2mo.png in Resources */,
 				001DA1251822B1D800B8BF1D /* LICENSE.txt in Resources */,
 				ACDC241C17912B4300280F36 /* gem5-hd.png in Resources */,
@@ -2516,9 +2641,13 @@
 				ACDC241E17912B4300280F36 /* gem6-hd.png in Resources */,
 				ADDBE7011821D7BC009ABA8A /* ftv2node.png in Resources */,
 				5E879A1B1807C1D10089BC1D /* gem4b-ipadhd.png in Resources */,
+				AD45D7E71827429C00985EE1 /* burst2-hd.plist in Resources */,
 				ADDBE7161821D7BC009ABA8A /* pages.html in Resources */,
 				ADA45D341820D85B004BCDAD /* menuBG.pvr.ccz in Resources */,
 				ACDC241F17912B4300280F36 /* gem6.png in Resources */,
+				AD45D8011827429C00985EE1 /* burst6-ipadhd.plist in Resources */,
+				AD45D7EC1827429C00985EE1 /* burst2.png in Resources */,
+				AD45D7E81827429C00985EE1 /* burst2-hd.png in Resources */,
 				AD936431181EF3010091F54C /* buttonRestore_up-ipadhd.png in Resources */,
 				ADF6F9AA1824827E003D7D45 /* buttonDone_up-ipadhd.png in Resources */,
 				AD45D7931825FEF000985EE1 /* line-ipadhd.png in Resources */,
@@ -2535,8 +2664,11 @@
 				5E879A1F1807C1D10089BC1D /* gem5b.png in Resources */,
 				ADDBE7251821D7BC009ABA8A /* all_66.html in Resources */,
 				ACDC242917912BA300280F36 /* mainMenuBG.png in Resources */,
+				AD45D7F11827429C00985EE1 /* burst3.plist in Resources */,
+				AD45D8021827429C00985EE1 /* burst6-ipadhd.png in Resources */,
 				ADDBE7061821D7BC009ABA8A /* ftv2vertline.png in Resources */,
 				ADDBE7441821D7BC009ABA8A /* functions_67.html in Resources */,
+				AD45D7F71827429C00985EE1 /* burst4.plist in Resources */,
 				ADDBE75E1821D7BC009ABA8A /* tab_b.png in Resources */,
 				ACDC2430179134A500280F36 /* moreAppsBtn-hd.png in Resources */,
 				AD606EFB181F07B0006E89F2 /* buttonMultiplay_up.png in Resources */,
@@ -2547,20 +2679,26 @@
 				ADDBE6E11821D7BC009ABA8A /* annotated.html in Resources */,
 				ADF6F9AD1824827E003D7D45 /* tutorialScreen-ipadhd.png in Resources */,
 				ADDBE74E1821D7BC009ABA8A /* functions_73.html in Resources */,
+				AD45D8001827429C00985EE1 /* burst6-hd.png in Resources */,
 				ADDBE7461821D7BC009ABA8A /* functions_69.html in Resources */,
+				AD45D7F51827429C00985EE1 /* burst4-ipadhd.plist in Resources */,
 				AC527B5C1792CCCD00D4306E /* timeBar-hd.png in Resources */,
 				ADDBE7611821D7BC009ABA8A /* tabs.css in Resources */,
 				ADDBE72F1821D7BC009ABA8A /* all_72.html in Resources */,
 				ADDBE6EC1821D7BC009ABA8A /* dir_2c12105386bcc5c3935feab96f296a41.html in Resources */,
 				ADF6F9AE1824827E003D7D45 /* tutorialScreen.png in Resources */,
+				AD45D8041827429C00985EE1 /* burst6.png in Resources */,
 				AD606EF9181F07B0006E89F2 /* buttonMultiplay_up-hd.png in Resources */,
 				AD45D7881825D6FF00985EE1 /* illuminateYellow.fnt in Resources */,
 				AC527B5D1792CCCD00D4306E /* timeBar.png in Resources */,
 				ADDBE6FE1821D7BC009ABA8A /* ftv2mlastnode.png in Resources */,
+				AD45D7FA1827429C00985EE1 /* burst5-hd.png in Resources */,
+				AD45D7F31827429C00985EE1 /* burst4-hd.plist in Resources */,
 				ADDBE7351821D7BC009ABA8A /* classes_66.html in Resources */,
 				001DA1321822B1D800B8BF1D /* LICENSE.txt in Resources */,
 				ADDBE7021821D7BC009ABA8A /* ftv2ns.png in Resources */,
 				5EE142B917ABA11F0007E256 /* freeBtn-hd.png in Resources */,
+				AD45D7EE1827429C00985EE1 /* burst3-hd.png in Resources */,
 				ADA45D331820D85B004BCDAD /* menuBG-ipadhd.pvr.ccz in Resources */,
 				ADDBE7641821D7BC009ABA8A /* FlurryiOSAdvertisingREADMEv4.3.0.pdf in Resources */,
 				ADDBE76D1821D7BC009ABA8A /* Jansson-LICENSE.txt in Resources */,
@@ -2569,6 +2707,7 @@
 				5E879A211807C1D10089BC1D /* gem6b-ipadhd.png in Resources */,
 				5EE142BA17ABA11F0007E256 /* freeBtn.png in Resources */,
 				ADDBE70D1821D7BC009ABA8A /* interface_flurry_ads.html in Resources */,
+				AD45D7F91827429C00985EE1 /* burst5-hd.plist in Resources */,
 				5E879A141807C1D10089BC1D /* gem2b-hd.png in Resources */,
 				ADDBE76C1821D7BC009ABA8A /* Flurry_AppSpot_Publisher_Platform_TOS.pdf in Resources */,
 				5E879A221807C1D10089BC1D /* gem6b.png in Resources */,
@@ -2577,13 +2716,17 @@
 				ADDBE7111821D7BC009ABA8A /* nav_h.png in Resources */,
 				ADDBE75C1821D7BC009ABA8A /* sync_on.png in Resources */,
 				001DA14F1822B1D800B8BF1D /* LICENSE in Resources */,
+				AD45D7FD1827429C00985EE1 /* burst5.plist in Resources */,
+				AD45D7E61827429C00985EE1 /* burst1.png in Resources */,
 				ADDBE6F21821D7BC009ABA8A /* doxygen.css in Resources */,
+				AD45D7E91827429C00985EE1 /* burst2-ipadhd.plist in Resources */,
 				ADDBE7481821D7BC009ABA8A /* functions_6c.html in Resources */,
 				AD45D7841825D6FF00985EE1 /* illuminateYellow-hd.fnt in Resources */,
 				AD3EF70A181F3A9800766A47 /* topBar-ipadhd.png in Resources */,
 				ADDBE75D1821D7BC009ABA8A /* tab_a.png in Resources */,
 				ADDBE7311821D7BC009ABA8A /* all_73.html in Resources */,
 				5E879A111807C1D10089BC1D /* gem1b-hd.png in Resources */,
+				AD45D7FB1827429C00985EE1 /* burst5-ipadhd.plist in Resources */,
 				ADDBE6FC1821D7BC009ABA8A /* ftv2lastnode.png in Resources */,
 				AD3EF71A181F790B00766A47 /* lockup.png in Resources */,
 				5E879A171807C1D10089BC1D /* gem3b-hd.png in Resources */,
@@ -2627,16 +2770,19 @@
 				ADDBE75A1821D7BC009ABA8A /* search_r.png in Resources */,
 				5E17732A17DD8D3E007FBB46 /* gem5-ipadhd.png in Resources */,
 				AD45D7891825D6FF00985EE1 /* illuminateYellow.png in Resources */,
+				AD45D7E41827429C00985EE1 /* burst1-ipadhd.png in Resources */,
 				ADDBE7601821D7BC009ABA8A /* tab_s.png in Resources */,
 				AD3EF703181F26FB00766A47 /* timeBarTray-hd.png in Resources */,
 				ADDBE7051821D7BC009ABA8A /* ftv2splitbar.png in Resources */,
 				ADDBE76B1821D7BC009ABA8A /* Flurry_AppCircle_Advertiser_TOS.pdf in Resources */,
+				AD45D8031827429C00985EE1 /* burst6.plist in Resources */,
 				5EE06105180ABD3D0052684A /* line.png in Resources */,
 				ADDBE6E51821D7BC009ABA8A /* class_flurry-members.html in Resources */,
 				5E17732B17DD8D3E007FBB46 /* gem6-ipadhd.png in Resources */,
 				ADDBE6F31821D7BC009ABA8A /* doxygen.png in Resources */,
 				5E17732D17DD8D3E007FBB46 /* gem1-ipadhd.png in Resources */,
 				ADDBE6FF1821D7BC009ABA8A /* ftv2mnode.png in Resources */,
+				AD45D7E21827429C00985EE1 /* burst1-hd.png in Resources */,
 				ADDBE7651821D7BC009ABA8A /* FlurryiOSAnalyticsREADMEv4.3.0.pdf in Resources */,
 				5E879A1D1807C1D10089BC1D /* gem5b-hd.png in Resources */,
 				ADDBE75F1821D7BC009ABA8A /* tab_h.png in Resources */,
@@ -2644,6 +2790,7 @@
 				5E17732E17DD8D3E007FBB46 /* gem2-ipadhd.png in Resources */,
 				ADDBE7071821D7BC009ABA8A /* functions.html in Resources */,
 				ADDBE70F1821D7BC009ABA8A /* nav_f.png in Resources */,
+				AD45D7E31827429C00985EE1 /* burst1-ipadhd.plist in Resources */,
 				AD936432181EF3010091F54C /* buttonRestore_up.png in Resources */,
 				AD3EF705181F26FB00766A47 /* timeBarTray.png in Resources */,
 				5E17732F17DD8D3E007FBB46 /* gem3-ipadhd.png in Resources */,
@@ -2653,6 +2800,7 @@
 				ADDBE73A1821D7BC009ABA8A /* functions_61.html in Resources */,
 				ADA45D321820D85B004BCDAD /* menuBG-hd.pvr.ccz in Resources */,
 				ADDBE7681821D7BC009ABA8A /* Flurry AppCircle Advertiser TOS FINAL August 1, 2012.pdf in Resources */,
+				AD45D7F61827429C00985EE1 /* burst4-ipadhd.png in Resources */,
 				ADDBE6E91821D7BC009ABA8A /* deprecated.html in Resources */,
 				5E17733217DD8D3E007FBB46 /* freeBtn-ipadhd.png in Resources */,
 				ADDBE7421821D7BC009ABA8A /* functions_66.html in Resources */,
@@ -2660,6 +2808,7 @@
 				ADDBE6F91821D7BC009ABA8A /* ftv2doc.png in Resources */,
 				001DA1711822B1D800B8BF1D /* MRAID.bundle in Resources */,
 				ADDBE7171821D7BC009ABA8A /* protocol_flurry_ad_delegate-p-members.html in Resources */,
+				AD45D7F21827429C00985EE1 /* burst3.png in Resources */,
 				5E17733317DD8D3E007FBB46 /* backBtn-ipadhd.png in Resources */,
 				C0272F7717DE26C9006106BB /* Default.png in Resources */,
 				ADDBE6E01821D7BC009ABA8A /* _flurry_ads_8h_source.html in Resources */,
@@ -2667,6 +2816,7 @@
 				ADDBE6E71821D7BC009ABA8A /* classes.html in Resources */,
 				C0272F7D17DE26F4006106BB /* Default-Portrait~ipad.png in Resources */,
 				AD3EF721181F8BB800766A47 /* buttonMainMenu_up-hd.png in Resources */,
+				AD45D7F41827429C00985EE1 /* burst4-hd.png in Resources */,
 				C0272F8117DE274F006106BB /* Default-Portrait@2x~ipad.png in Resources */,
 				ADDBE6F81821D7BC009ABA8A /* ftv2cl.png in Resources */,
 				5E879A1C1807C1D10089BC1D /* gem4b.png in Resources */,
@@ -2686,7 +2836,9 @@
 				AD45D7851825D6FF00985EE1 /* illuminateYellow-hd.png in Resources */,
 				C0C864E8180F22A8007C8291 /* Icon@76.png in Resources */,
 				ADDBE71F1821D7BC009ABA8A /* all_63.html in Resources */,
+				AD45D7FE1827429C00985EE1 /* burst5.png in Resources */,
 				ADDBE7541821D7BC009ABA8A /* pages_64.html in Resources */,
+				AD45D7E51827429C00985EE1 /* burst1.plist in Resources */,
 				C0C864E9180F22A8007C8291 /* Icon@120.png in Resources */,
 				C0C864EA180F22A8007C8291 /* Icon@152.png in Resources */,
 				ADDBE6FA1821D7BC009ABA8A /* ftv2folderclosed.png in Resources */,
