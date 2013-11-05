@@ -10,7 +10,7 @@
         NSString *s = [NSString stringWithFormat:(i < 10 ? @"%@_0000%u.png" : @"%@_000%u.png"), prefix, i];
         [frames addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:s]];
     }
-    static const CGFloat burstAnimationFrameRate = 1.0 / 30.0;
+    static const CGFloat burstAnimationFrameRate = 1.0 / 15.0;
     return [CCAnimate actionWithAnimation:[CCAnimation animationWithSpriteFrames:frames delay:burstAnimationFrameRate]];
 }
 

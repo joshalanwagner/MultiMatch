@@ -849,7 +849,7 @@ CGSize ws;
                 // burst animation
                 CCSprite *burstSprite = [CCSprite spriteWithSpriteFrameName:@"burst1_00000.png"];
                 burstSprite.position = scoreVisual.position;
-                [gemsCMC addChild:burstSprite];
+                [gemsCMC addChild:burstSprite z:-2];
                 BurstColor color = [gem->type integerValue];
                 CCAnimate *burstAnimation = [AnimationHelper burstAnimationWithColor:color];
                 [burstSprite runAction:
