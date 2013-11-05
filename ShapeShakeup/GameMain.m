@@ -72,7 +72,7 @@ CGSize ws;
         
         
         //  Gameplay duration (one minute blitz)
-       gameTime = 60 * 20 ;
+       gameTime = 60 * 60 ;
         
         // number of rows and columns
         hNum=6;
@@ -870,38 +870,38 @@ CGSize ws;
                 
                 if (arrayOfGemsToRemove.count > 11) {
                     [wowText setString:@"INSANITY"];
-                    [bumpText setString:@"+10 seconds"];
-                    time += 10*20;
-                }
-                else if (arrayOfGemsToRemove.count == 11) {
-                    [wowText setString:@"INCREDIBLE"];
-                    [bumpText setString:@"+8 seconds"];
-                    time += 8*20;
-                }
-                else if (arrayOfGemsToRemove.count == 10) {
-                    [wowText setString:@"AMAZING"];
-                    [bumpText setString:@"+6 seconds"];
-                    time += 6*20;
-                }
-                else if (arrayOfGemsToRemove.count == 9) {
-                    [wowText setString:@"STUNNING"];
-                    [bumpText setString:@"+4 seconds"];
-                    time += 4*20;
-                }
-                else if (arrayOfGemsToRemove.count == 8) {
-                    [wowText setString:@"OUTSTANDING"];
                     [bumpText setString:@"+3 seconds"];
                     time += 3*20;
                 }
-                else if (arrayOfGemsToRemove.count == 7) {
-                    [wowText setString:@"EXCELLENT"];
+                else if (arrayOfGemsToRemove.count == 11) {
+                    [wowText setString:@"INCREDIBLE"];
                     [bumpText setString:@"+2 seconds"];
                     time += 2*20;
                 }
-                else if (arrayOfGemsToRemove.count == 6) {
-                    [wowText setString:@"NICE"];
+                else if (arrayOfGemsToRemove.count == 10) {
+                    [wowText setString:@"AMAZING"];
+                    [bumpText setString:@"+2 seconds"];
+                    time += 2*20;
+                }
+                else if (arrayOfGemsToRemove.count == 9) {
+                    [wowText setString:@"STUNNING"];
                     [bumpText setString:@"+1 seconds"];
                     time += 1*20;
+                }
+                else if (arrayOfGemsToRemove.count == 8) {
+                    [wowText setString:@"OUTSTANDING"];
+                    [bumpText setString:@"+1 seconds"];
+                    time += 1*20;
+                }
+                else if (arrayOfGemsToRemove.count == 7) {
+                    [wowText setString:@"EXCELLENT"];
+                    [bumpText setString:@"+1 seconds"];
+                    time += 1*20;
+                }
+                else if (arrayOfGemsToRemove.count == 6) {
+                    [wowText setString:@"NICE"];
+                    //[bumpText setString:@"+1 seconds"];
+                    //time += 1*20;
                 }
                 else if (arrayOfGemsToRemove.count < 6) {
                     [wowText setString:@""];

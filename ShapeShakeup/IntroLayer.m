@@ -59,20 +59,19 @@
     mainMenuBG.position=ccp(size.width/2 , size.height/2);
     [self addChild:mainMenuBG];
     
-    // tutorial image
-    tutorial=[[CCSprite alloc]initWithFile:@"tutorialScreen.png"];
-    tutorial.position=ccp(size.width/2 , size.height/2);
-    [self addChild:tutorial];
-    
     // skip the tutorial if they have a high score
     savedHighScore = [[NSUserDefaults standardUserDefaults] integerForKey:highScoreKey];
     
-    if (savedHighScore > 0) {
-        [self scheduleOnce:@selector(makeTransition:) delay:0];
+    // tutorial image
+    if (savedHighScore < 1) {
+        tutorial=[[CCSprite alloc]initWithFile:@"tutorialScreen.png"];
+        tutorial.position=ccp(size.width/2 , size.height/2);
+        [self addChild:tutorial];
     }
-    else {
-        [self scheduleOnce:@selector(makeTransition:) delay:8];
-    }
+
+    [self scheduleOnce:@selector(makeTransition:) delay:(savedHighScore > 0) ? 0 : 8]; //8
+    
+
 	
 }
 
