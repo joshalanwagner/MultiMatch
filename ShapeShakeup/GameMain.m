@@ -1160,11 +1160,11 @@ CGSize ws;
     // I don't understand what's causing this discrepancy -JW
    if(ws.height == 1024)
     {
-    timeBar.scaleX= (ws.width/10) * 0.965 * (time/gameTime);
+    timeBar.scaleX= (timeBarTray.boundingBox.size.width/10) * 0.965 * (time/gameTime);
     }
     else
     {
-        timeBar.scaleX= (ws.width/5) * 0.965 *(time/gameTime);
+        timeBar.scaleX= (timeBarTray.boundingBox.size.width/5) * 1.16 *(time/gameTime);
     }
     
     if (time<=0) {
