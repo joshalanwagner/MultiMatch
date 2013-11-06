@@ -97,7 +97,6 @@
 		001DA1731822B22D00B8BF1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001DA1721822B22D00B8BF1D /* CoreLocation.framework */; };
 		001DA1751822B27A00B8BF1D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001DA1741822B27A00B8BF1D /* iAd.framework */; };
 		001DA1771822B29000B8BF1D /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001DA1761822B29000B8BF1D /* PassKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		5E17732117DD8D3E007FBB46 /* mainMenuBG-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E17730D17DD8D3D007FBB46 /* mainMenuBG-ipadhd.png */; };
 		5E17732217DD8D3E007FBB46 /* moreAppsBtn-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E17730E17DD8D3D007FBB46 /* moreAppsBtn-ipadhd.png */; };
 		5E17732717DD8D3E007FBB46 /* timeBar-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E17731317DD8D3E007FBB46 /* timeBar-ipadhd.png */; };
 		5E17732A17DD8D3E007FBB46 /* gem5-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E17731617DD8D3E007FBB46 /* gem5-ipadhd.png */; };
@@ -282,8 +281,6 @@
 		ACDC241D17912B4300280F36 /* gem5.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC240917912B4300280F36 /* gem5.png */; };
 		ACDC241E17912B4300280F36 /* gem6-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC240A17912B4300280F36 /* gem6-hd.png */; };
 		ACDC241F17912B4300280F36 /* gem6.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC240B17912B4300280F36 /* gem6.png */; };
-		ACDC242217912B4300280F36 /* mainMenuBG-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC240E17912B4300280F36 /* mainMenuBG-hd.png */; };
-		ACDC242917912BA300280F36 /* mainMenuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC242817912BA300280F36 /* mainMenuBG.png */; };
 		ACDC2430179134A500280F36 /* moreAppsBtn-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC242E179134A500280F36 /* moreAppsBtn-hd.png */; };
 		ACDC2431179134A500280F36 /* moreAppsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = ACDC242F179134A500280F36 /* moreAppsBtn.png */; };
 		ACDC243A17914C8300280F36 /* Gem.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC243917914C8300280F36 /* Gem.m */; };
@@ -687,7 +684,6 @@
 		001DA1721822B22D00B8BF1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		001DA1741822B27A00B8BF1D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		001DA1761822B29000B8BF1D /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		5E17730D17DD8D3D007FBB46 /* mainMenuBG-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenuBG-ipadhd.png"; path = "Resources/Z_IMAGES/mainMenuBG-ipadhd.png"; sourceTree = "<group>"; };
 		5E17730E17DD8D3D007FBB46 /* moreAppsBtn-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moreAppsBtn-ipadhd.png"; path = "Resources/Z_IMAGES/moreAppsBtn-ipadhd.png"; sourceTree = "<group>"; };
 		5E17731317DD8D3E007FBB46 /* timeBar-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "timeBar-ipadhd.png"; path = "Resources/Z_IMAGES/timeBar-ipadhd.png"; sourceTree = "<group>"; };
 		5E17731617DD8D3E007FBB46 /* gem5-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gem5-ipadhd.png"; path = "Resources/Z_IMAGES/gem5-ipadhd.png"; sourceTree = "<group>"; };
@@ -1012,8 +1008,6 @@
 		ACDC240917912B4300280F36 /* gem5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gem5.png; path = Resources/Z_IMAGES/gem5.png; sourceTree = "<group>"; };
 		ACDC240A17912B4300280F36 /* gem6-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gem6-hd.png"; path = "Resources/Z_IMAGES/gem6-hd.png"; sourceTree = "<group>"; };
 		ACDC240B17912B4300280F36 /* gem6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gem6.png; path = Resources/Z_IMAGES/gem6.png; sourceTree = "<group>"; };
-		ACDC240E17912B4300280F36 /* mainMenuBG-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenuBG-hd.png"; path = "Resources/Z_IMAGES/mainMenuBG-hd.png"; sourceTree = "<group>"; };
-		ACDC242817912BA300280F36 /* mainMenuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuBG.png; path = Resources/Z_IMAGES/mainMenuBG.png; sourceTree = "<group>"; };
 		ACDC242E179134A500280F36 /* moreAppsBtn-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moreAppsBtn-hd.png"; path = "Resources/Z_IMAGES/moreAppsBtn-hd.png"; sourceTree = "<group>"; };
 		ACDC242F179134A500280F36 /* moreAppsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moreAppsBtn.png; path = Resources/Z_IMAGES/moreAppsBtn.png; sourceTree = "<group>"; };
 		ACDC243817914C8300280F36 /* Gem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gem.h; sourceTree = "<group>"; };
@@ -2228,7 +2222,6 @@
 				5E879A0B1807C1D10089BC1D /* gem6b-hd.png */,
 				5E879A0C1807C1D10089BC1D /* gem6b-ipadhd.png */,
 				5E879A0D1807C1D10089BC1D /* gem6b.png */,
-				5E17730D17DD8D3D007FBB46 /* mainMenuBG-ipadhd.png */,
 				5E17730E17DD8D3D007FBB46 /* moreAppsBtn-ipadhd.png */,
 				5E17731317DD8D3E007FBB46 /* timeBar-ipadhd.png */,
 				5E17731617DD8D3E007FBB46 /* gem5-ipadhd.png */,
@@ -2257,8 +2250,6 @@
 				ACDC240917912B4300280F36 /* gem5.png */,
 				ACDC240A17912B4300280F36 /* gem6-hd.png */,
 				ACDC240B17912B4300280F36 /* gem6.png */,
-				ACDC240E17912B4300280F36 /* mainMenuBG-hd.png */,
-				ACDC242817912BA300280F36 /* mainMenuBG.png */,
 				ACDC242E179134A500280F36 /* moreAppsBtn-hd.png */,
 				ACDC242F179134A500280F36 /* moreAppsBtn.png */,
 			);
@@ -2667,10 +2658,8 @@
 				ADDBE7151821D7BC009ABA8A /* open.png in Resources */,
 				ADDBE7531821D7BC009ABA8A /* nomatches.html in Resources */,
 				AD3EF704181F26FB00766A47 /* timeBarTray-ipadhd.png in Resources */,
-				ACDC242217912B4300280F36 /* mainMenuBG-hd.png in Resources */,
 				5E879A1F1807C1D10089BC1D /* gem5b.png in Resources */,
 				ADDBE7251821D7BC009ABA8A /* all_66.html in Resources */,
-				ACDC242917912BA300280F36 /* mainMenuBG.png in Resources */,
 				AD45D7F11827429C00985EE1 /* burst3.plist in Resources */,
 				AD45D8021827429C00985EE1 /* burst6-ipadhd.png in Resources */,
 				ADDBE7061821D7BC009ABA8A /* ftv2vertline.png in Resources */,
@@ -2759,7 +2748,6 @@
 				AD3EF723181F8BB800766A47 /* buttonMainMenu_up.png in Resources */,
 				ADDBE7381821D7BC009ABA8A /* functions_5f.html in Resources */,
 				ADDBE6DE1821D7BC009ABA8A /* _flurry_8h_source.html in Resources */,
-				5E17732117DD8D3E007FBB46 /* mainMenuBG-ipadhd.png in Resources */,
 				ADDBE7101821D7BC009ABA8A /* nav_g.png in Resources */,
 				ADDBE6F71821D7BC009ABA8A /* ftv2blank.png in Resources */,
 				5E17732217DD8D3E007FBB46 /* moreAppsBtn-ipadhd.png in Resources */,
