@@ -64,7 +64,7 @@ CGSize ws;
         [interstitial loadAd];
         
         // Start Music
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.m4a" loop:YES];
         float ip5OffSet;
         
         sd = [SharedData getSharedInstance];
@@ -152,9 +152,9 @@ CGSize ws;
         startBtn=[self createButtonWithFile:@"buttonPlay_up.png" sel:@selector(startBtnHandler)];
         [mainMenuSprite addChild:startBtn];
 
-        // Nextpeer Multiplayer
-        multiPlayerBtn = [self createButtonWithFile:@"buttonMultiplay_up.png" sel:@selector(multiPlayerBtnHandler)];
-        [mainMenuSprite addChild:multiPlayerBtn];
+        // Nextpeer Multiplayer - Hiding for now
+        //multiPlayerBtn = [self createButtonWithFile:@"buttonMultiplay_up.png" sel:@selector(multiPlayerBtnHandler)];
+        //[mainMenuSprite addChild:multiPlayerBtn];
         
         // Game Center Leaderboards
         leaderBtn = [self createButtonWithFile:@"buttonLeaderboards_up.png" sel:@selector(leaderBtnHandler)];
@@ -168,8 +168,8 @@ CGSize ws;
 
         // position buttons
         startBtn.position=ccp(ws.width/2,ws.height * 0.5);
-        multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (60 * sd.scaleFactorY));
-        leaderBtn.position = ccp(ws.width/2 , multiPlayerBtn.position.y - (60 * sd.scaleFactorY));
+        //multiPlayerBtn.position = ccp (ws.width/2 , startBtn.position.y - (60 * sd.scaleFactorY));
+        leaderBtn.position = ccp(ws.width/2 , startBtn.position.y - (60 * sd.scaleFactorY));
         
         // Buttons are ignoring anchorpoint >:(
         // button.contentSizes are not behaving as expected >:(
@@ -346,9 +346,9 @@ CGSize ws;
     }*/
     
     [self unschedule:@selector(loop)];
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.m4a" loop:YES];
 
     
     if (gameOver.visible==NO) {
@@ -365,9 +365,9 @@ CGSize ws;
     }
      */
     
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.mp3" loop:YES];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.m4a" loop:YES];
 
     
     gameOver.visible=NO;
@@ -900,7 +900,7 @@ CGSize ws;
                 }
                 else if (arrayOfGemsToRemove.count == 6) {
                     [wowText setString:@"NICE"];
-                    //[bumpText setString:@"+1 seconds"];
+                    [bumpText setString:@""];
                     //time += 1*20;
                 }
                 else if (arrayOfGemsToRemove.count < 6) {
@@ -914,6 +914,7 @@ CGSize ws;
                     id bumpFade = [CCFadeOut actionWithDuration:4.0];
                     [bumpText runAction:[CCSequence actions:bumpFade, nil]];
                 }
+                
                 // This is an action on the guys, which holds up the drop.
                 id scaleXY=[CCScaleTo actionWithDuration:0.06 scale:0.2];
                 id moveXEase=[CCEaseIn actionWithAction:scaleXY];
@@ -1104,7 +1105,7 @@ CGSize ws;
     [arrayOfLines release];
     arrayOfLines = nil;
     
-    [[SimpleAudioEngine sharedEngine] playEffect:@"clear.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"clear.m4a"];
     [self addNewGemsToTheTop];
 }
 
@@ -1168,7 +1169,7 @@ CGSize ws;
     
     if (time<=0) {
         [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"gameover.mp3"];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"gameover.m4a"];
         NSString *category =[[[NSBundle mainBundle] bundleIdentifier] stringByAppendingString:@".leaderboard"];
         GKScore *scoreReporter = [[[GKScore alloc] initWithCategory:category] autorelease];
         scoreReporter.value = score;
@@ -1287,9 +1288,9 @@ CGSize ws;
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
     {}
     */
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.m4a" loop:YES];
     
     [self createGameWithHNum:hNum _vNum:vNum];
     mainMenuSprite.visible=NO;
@@ -1317,23 +1318,23 @@ CGSize ws;
 // Nextpeer multiplayer
 -(void) multiPlayerBtnHandler{
     
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.mp3" loop:YES];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameplay.m4a" loop:YES];
         [Nextpeer launchDashboard];
         isMultiPlayer = true;
 }
 
 -(void) leaderBtnHandler{
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     AppController* app = (AppController*)[[UIApplication sharedApplication] delegate];
     [app showLeaderboard];
 }
 -(void) removAdBtnHandler{
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     [[InAppManager sharedManager] addPaymentToPaymentQueueForProductKey:REMOVE_AD_ID];
 }
 -(void) restorBtnHandler{
-    [[SimpleAudioEngine sharedEngine] playEffect:@"button.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"button.caf"];
     [[InAppManager sharedManager] restorePurchases];
 }
 
