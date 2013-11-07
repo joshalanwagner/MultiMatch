@@ -1243,7 +1243,8 @@ CGSize ws;
     
     [scoreTextTTF setString:[NSString stringWithFormat:@"%i",score]];
     
-    [self schedule:@selector(loop) interval:1/60.0];
+    [self schedule:@selector(loop) interval:1/90.0];
+    // 1/60 is too slow, maybe too much processing in the loop? 1/90 seems perfect though?
     
     for (int j=0; j<_vNum; j++) {
         for (int i=0; i<_hNum; i++) {
