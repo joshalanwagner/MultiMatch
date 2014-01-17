@@ -14,15 +14,22 @@
 #import "SimpleAudioEngine.h"
 #import "Flurry.h"
 #import "AnimationHelper.h"
-
+#define moPubAdUnitID_fullScreenTablet @"c43a5a0bd76a4f168cc3304186afe165"
+#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640"
+#define iPadDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 @implementation AppController
 
-@synthesize window=window_, navController=navController_, director=director_;
+@synthesize window=window_, navController=navController_, director=director_, moPubInterstitial;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Interstitial ad placeholder
+
+    // instantiate MPInterstitialAdController for Mopub ads
+    NSString *adUnitID = iPadDevice ? moPubAdUnitID_fullScreenTablet : moPubAdUnitID_fullScreenPhone;
+    self.moPubInterstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:adUnitID];
+    moPubInterstitial.delegate = self;
+    [moPubInterstitial loadAd];
     
     //Flurry
     [Flurry setCrashReportingEnabled:YES];
@@ -324,5 +331,43 @@
     }
     [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
 }
+
+
+- (void) showMoPubAd {
+    NSLog(@"MOPUB (Treegem): attempting to show ad (moPubInterstitial: %@, moPubInterstitial.ready: %u)", moPubInterstitial, moPubInterstitial.ready);
+    if (moPubInterstitial.ready) {
+        [moPubInterstitial showFromViewController:self.navController];
+    } else {
+        // not ready => attempt to load another ad for next
+        // ad opportunity (level complete, failed etc)
+        [moPubInterstitial loadAd];
+    }
+}
+
+#pragma mark -
+#pragma mark MPInterstitialAdControllerDelegate
+
+- (void) interstitialDidDisappear:(MPInterstitialAdController *) interstitial {
+    NSLog(@"MOPUB (Treegem): interstitialDidDisappear (interstitial is %@)", interstitial);
+    // interstitial disappeared => attempt to load another ad
+    // for next ad opportunity (level complete, failed etc)
+    [interstitial loadAd];
+}
+
+- (void) interstitialDidLoadAd:(MPInterstitialAdController *) interstitial {
+    NSLog(@"MOPUB (Treegem): interstitialDidLoadAd (interstitial is %@)", interstitial);
+}
+
+- (void) interstitialDidFailToLoadAd:(MPInterstitialAdController *) interstitial {
+    NSLog(@"MOPUB (Treegem): interstitialDidFailToLoadAd (interstitial is %@)", interstitial);
+    // don't give up!
+    [interstitial loadAd];
+}
+
+- (void) interstitialDidExpire:(MPInterstitialAdController *) interstitial {
+    NSLog(@"MOPUB (Treegem): interstitialDidExpire (interstitial is %@)", interstitial);
+}
+
+
 @end
 

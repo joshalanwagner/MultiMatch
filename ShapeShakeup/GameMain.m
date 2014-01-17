@@ -19,14 +19,21 @@
 #define FONT_NAME @ "Illuminate"
 #define highScoreKey @"highScoreKey"
 
-#define moPubAdUnitID_fullScreenTablet @"c43a5a0bd76a4f168cc3304186afe165"
-#define moPubAdUnitID_fullScreenPhone @"0bcd9c2054ac4c3bac098963b5aab640"
-#define iPadDevice (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+@interface GameMain (GameLayerAds)
+- (void) showAds;
+@end
 
 // GameMain implementation
 CGSize ws;
 @implementation GameMain
-@synthesize interstitial;
+
+- (void) showAds {
+    // MoPub on all devices
+    AppController *a = (AppController *)[CCDirector sharedDirector].delegate;
+    NSLog(@"MOPUB (Treegem): attempting to show ad (AppController is %@)", a);
+    [a showMoPubAd];
+}
+
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -50,18 +57,6 @@ CGSize ws;
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super initWithColor:ccc4(0,0, 0, 1)]) ) {
-        
-        // interstitial ad placeholder
-        /*
-        if(![[NSUserDefaults standardUserDefaults] boolForKey:@"removeAd"])
-        {
-        } */
-        
-        // instantiate MPInterstitialAdController for Mopub ads
-        NSString *adUnitID = iPadDevice ? moPubAdUnitID_fullScreenTablet : moPubAdUnitID_fullScreenPhone;
-        self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:adUnitID];
-        interstitial.delegate = self;
-        [interstitial loadAd];
         
         // Start Music
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"menu.m4a" loop:YES];
@@ -186,7 +181,6 @@ CGSize ws;
             restoreBtn.position = ccp((ws.width/2) + (startBtn.contentSize.width*0.175) ,
                                       removAdBtn.position.y);
         }
-            
             
         // IN GAME
         inGame=[[CCSprite alloc]init];
@@ -1217,12 +1211,8 @@ CGSize ws;
             [wellPlayedText setVisible:NO];
         }
         
-        
         // show Mopub ads
-        if (interstitial.ready) {
-            AppController *appController = (AppController *)[UIApplication sharedApplication].delegate;
-            [interstitial showFromViewController:appController.navController];
-        }
+        [self showAds];
         
         [self unschedule:_cmd];
     }
@@ -1353,7 +1343,6 @@ CGSize ws;
 
 - (void) dealloc
 {
-    [interstitial release];
 	[super dealloc];
 }
 
